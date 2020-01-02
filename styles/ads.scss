@@ -1,0 +1,25 @@
+.ads {
+  .google-results {
+    direction: rtl;
+    .result {
+      width: 100%;
+      margin: 10px 0;
+      h3 {
+        background: #4285F4;
+        width: 50%;
+        height: 10px;
+      }
+      p.link {
+        background: #0F9D58;
+        width: 20%;
+        height: 10px;
+        margin: 5px 0;
+      }
+      p.description {
+        background: #f2f2f2;
+        width: 20%;
+        height: 30px;
+      }
+    }
+  }
+}

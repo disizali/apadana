@@ -6,7 +6,28 @@
     transform: rotate(360deg);
   }
 }
-
+$windLeftAfterStart: 12px;
+$windLeftBeforeStart: 16px;
+@keyframes wind-after {
+  from {
+    top: 25px;
+    left: $windLeftAfterStart;
+  }
+  to {
+    top: 30px;
+    left: $windLeftAfterStart - 4px;
+  }
+}
+@keyframes wind-before {
+  from {
+    top: 25px;
+    left: $windLeftBeforeStart;
+  }
+  to {
+    top: 30px;
+    left: $windLeftBeforeStart - 4px;
+  }
+}
 .plans {
   .plan {
     height: 200px;
@@ -15,13 +36,63 @@
     background: #f1f1f1;
     border-radius: 5px;
     position: relative;
-    button {
-      // transform: skewX(-5deg);
-      position: relative;
-      top: 10px;
-      right: 10px;
+    &:nth-child(3) button i {
+      transform: rotate(-45deg);
     }
-
+    button {
+      background: $mainColor;
+      color: white;
+      position: absolute;
+      left: -10px;
+      bottom: -10px;
+      &:hover .wind:after,
+      &:hover .wind:before {
+        opacity: 1;
+      }
+      &:hover i {
+        margin-top: 0;
+      }
+      i {
+        margin-top: 5px;
+        transition-duration: 0.5s;
+      }
+      .wind {
+        position: relative;
+        &::after {
+          opacity: 0;
+          content: "-";
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          left: $windLeftAfterStart;
+          bottom: 0;
+          top: 25px;
+          animation-name: wind-after;
+          animation-duration: 0.3s;
+          animation-delay: 0.15s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          transform: rotate(130deg);
+          transition-duration: 0.5s;
+        }
+        &::before {
+          content: "-";
+          opacity: 0;
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          left: $windLeftBeforeStart;
+          bottom: 0;
+          top: 25px;
+          animation-name: wind-before;
+          animation-duration: 0.3s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          transform: rotate(130deg);
+          transition-duration: 0.5s;
+        }
+      }
+    }
     img {
       position: absolute;
       width: 160px;
@@ -32,9 +103,7 @@
       animation-name: rotateLoop;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
-      &:hover {
-        animation-duration: 10s;
-      }
+      clip-path: circle();
     }
     .circle {
       height: 150px;
@@ -52,13 +121,18 @@
       position: absolute;
       right: 0;
     }
+    .body{
+      position: relative;
+      right: 20%;
+      width: 60%;
+    }
     .title {
       z-index: 1;
       font-size: 1.5rem;
       right: 10%;
       position: relative;
       color: #292929;
-      h2{
+      h2 {
         position: relative;
         font-family: "Lalezar";
       }
@@ -68,16 +142,9 @@
         font-size: 1.5rem;
       }
     }
-    .body{
-      position: relative;
-      right: 40px;
-    }
   }
 }
 .apadana {
   direction: rtl;
   text-align: right;
-  h1 {
-    font-family: "Lalezar";
-  }
 }

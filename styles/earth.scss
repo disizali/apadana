@@ -3,8 +3,8 @@ body {
   margin: 0px;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+  overflow: hidden;
 }
 a {
   color: #0078ff;
@@ -21,6 +21,18 @@ $transitionDuration: 0.3s;
 $seoColor: rgb(17, 187, 244);
 $samplesColor: rgba(228, 0, 124, 1);
 .dots {
+  .active {
+    .background {
+      width: 100%;
+    }
+    span {
+      color: white;
+    }
+    .line {
+      width : 30px;
+    }
+  }
+
   .line {
     position: absolute;
     height: 1px;
@@ -39,6 +51,7 @@ $samplesColor: rgba(228, 0, 124, 1);
     line-height: 40px;
     font-size: 1.1rem;
     color: #7d7d7d;
+    padding: 0 10px;
   }
   i {
     right: 0;
@@ -54,9 +67,10 @@ $samplesColor: rgba(228, 0, 124, 1);
   .background {
     position: absolute;
     width: 0;
-    right: 50px;
+    right: 30px;
     height: 40px;
     transition: width $transitionDuration ($transitionDuration / 1.5);
+    border-radius: 5px 5px 5px 5px;
   }
   > div {
     position: absolute;
@@ -68,14 +82,17 @@ $samplesColor: rgba(228, 0, 124, 1);
       color: white;
     }
     &:hover > .line {
-      width: 60px;
+      width: 30px;
+    }
+    &:hover > .background {
+      width: 100%;
     }
   }
   .dot-1 {
     right: 12.2%;
     top: 20%;
     i {
-      background: rgba(251, 112, 71, 1);
+      background: $mainColor;
     }
     .background {
       background-image: linear-gradient(
@@ -84,11 +101,9 @@ $samplesColor: rgba(228, 0, 124, 1);
         rgba(251, 112, 71, 1) 124.3%
       );
     }
-    &:hover > .background {
-      width: 190px;
-    }
+
     &:hover > i {
-      background-color: $seoColor;
+      background-color: $mainColor;
     }
   }
   .dot-2 {
@@ -96,9 +111,6 @@ $samplesColor: rgba(228, 0, 124, 1);
     top: 35%;
     .background {
       background-color: gold;
-    }
-    &:hover > .background {
-      width: 120px;
     }
     &:hover > i {
       background-color: gold;
@@ -114,9 +126,6 @@ $samplesColor: rgba(228, 0, 124, 1);
         rgba(228, 0, 124, 1) 88.7%
       );
     }
-    &:hover > .background {
-      width: 120px;
-    }
     &:hover > i {
       background-color: $samplesColor;
     }
@@ -131,9 +140,6 @@ $samplesColor: rgba(228, 0, 124, 1);
         rgba(228, 0, 124, 1) 88.7%
       );
     }
-    &:hover > .background {
-      width: 120px;
-    }
     &:hover > i {
       background-color: $samplesColor;
     }
@@ -147,10 +153,6 @@ $samplesColor: rgba(228, 0, 124, 1);
         rgba(240, 19, 77, 1) 22.2%,
         rgba(228, 0, 124, 1) 88.7%
       );
-    }
-    
-    &:hover > .background {
-      width: 120px;
     }
     &:hover > i {
       background-color: $samplesColor;

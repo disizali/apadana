@@ -93,6 +93,82 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Ads.jsx":
+/*!****************************!*\
+  !*** ./components/Ads.jsx ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Ads; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Ads.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("div", {
+      className: "ads",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      title: "\u062A\u0628\u0644\u06CC\u063A\u0627\u062A \u062F\u0631 \u06AF\u0648\u06AF\u0644",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "google-results",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, [...Array(10).keys()].map(item => {
+      return __jsx("div", {
+        className: "result",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      }, __jsx("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }), __jsx("p", {
+        className: "link",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }), __jsx("p", {
+        className: "description",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }));
+    })));
+  }
+
+}
+
+/***/ }),
+
 /***/ "./components/Apadana.jsx":
 /*!********************************!*\
   !*** ./components/Apadana.jsx ***!
@@ -114,27 +190,21 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "apadana",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 5
       },
       __self: this
-    }, __jsx("h1", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 7
-      },
-      __self: this
-    }, "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627"), __jsx("div", {
+    }, __jsx("div", {
       className: "plans d-flex flex-column",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 6
       },
       __self: this
     }, __jsx("div", {
       className: "plan d-flex justify-content-start align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 7
       },
       __self: this
     }, __jsx("img", {
@@ -142,61 +212,89 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 8
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 9
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 10
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 11
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 12
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0634\u062E\u0635\u06CC"), __jsx("strong", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 13
       },
       __self: this
     }, "\u06F2\u066C\u06F0\u06F0\u06F0\u066C\u06F0\u06F0\u06F0 \u062A\u0648\u0645\u0627\u0646")), __jsx("div", {
-      className: "mr-auto w-50 body",
+      className: "body",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 15
       },
       __self: this
     }, "\u062F\u0631 \u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC \u0645\u0634\u062A\u0631\u06CC \u0631\u0627\u06CC\u06AF\u0627\u0646 \u0627\u0633\u062A. \u0634\u0645\u0627 \u0645\u06CC\u062A\u0648\u0627\u0646\u06CC\u062F \u0627\u0632 \u0637\u0631\u06CC\u0642 \u0641\u0631\u0645 \u0647\u0627\u06CC \u062A\u0645\u0627\u0633 \u0628\u0627 \u0645\u0627 \u0648 \u06CC\u0627 \u0633\u0627\u0645\u0627\u0646\u0647 \u0645\u0634\u062A\u0631\u06CC\u0627\u0646 \u0627\u0642\u062F\u0627\u0645 \u0628\u0647 \u062A\u0645\u0627\u0633 \u0646\u0645\u0627\u06CC\u06CC\u062F ."), __jsx("button", {
-      className: "btn btn-warning float-left mr-auto mt-auto px-4",
+      className: "btn px-4 d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fal fa-rocket mx-1",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 21
       },
       __self: this
-    }, "\u062E\u0631\u06CC\u062F")), __jsx("div", {
+    }), __jsx("div", {
+      className: "wind",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    })), __jsx("span", {
+      className: "mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, "\u0634\u0631\u0648\u0639 \u06A9\u0634\u0648\u0631\u06CC \u0634\u062F\u0646"))), __jsx("div", {
       className: "plan d-flex justify-content-start align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25
+        lineNumber: 27
       },
       __self: this
     }, __jsx("img", {
@@ -204,61 +302,89 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 28
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 27
+        lineNumber: 29
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 30
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 31
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 30
+        lineNumber: 32
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0634\u0631\u06A9\u062A\u06CC"), __jsx("strong", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 31
+        lineNumber: 33
       },
       __self: this
     }, "\u06F4\u066C\u06F0\u06F0\u06F0\u066C\u06F0\u06F0\u06F0 \u062A\u0648\u0645\u0627\u0646")), __jsx("div", {
-      className: "mr-auto w-50 body",
+      className: "body",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 35
       },
       __self: this
     }, "\u062F\u0631 \u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC \u0645\u0634\u062A\u0631\u06CC \u0631\u0627\u06CC\u06AF\u0627\u0646 \u0627\u0633\u062A. \u0634\u0645\u0627 \u0645\u06CC\u062A\u0648\u0627\u0646\u06CC\u062F \u0627\u0632 \u0637\u0631\u06CC\u0642 \u0641\u0631\u0645 \u0647\u0627\u06CC \u062A\u0645\u0627\u0633 \u0628\u0627 \u0645\u0627 \u0648 \u06CC\u0627 \u0633\u0627\u0645\u0627\u0646\u0647 \u0645\u0634\u062A\u0631\u06CC\u0627\u0646 \u0627\u0642\u062F\u0627\u0645 \u0628\u0647 \u062A\u0645\u0627\u0633 \u0646\u0645\u0627\u06CC\u06CC\u062F ."), __jsx("button", {
-      className: "btn btn-warning float-left mr-auto mt-auto px-4",
+      className: "btn float-left mr-auto mt-auto px-4 d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 39
       },
       __self: this
-    }, "\u062E\u0631\u06CC\u062F")), __jsx("div", {
-      className: "plan d-flex justify-content-start align-items-center",
+    }, __jsx("div", {
+      className: "d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "far fa-rocket mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "wind",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 42
+      },
+      __self: this
+    })), __jsx("span", {
+      className: "mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, "\u0634\u0631\u0648\u0639 \u062C\u0647\u0627\u0646\u06CC \u0634\u062F\u0646"))), __jsx("div", {
+      className: "plan d-flex justify-content-start align-items-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
       },
       __self: this
     }, __jsx("img", {
@@ -266,62 +392,129 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 48
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 44
+        lineNumber: 49
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 50
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 51
       },
       __self: this
     }, __jsx("h2", {
       className: "gold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 52
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0627\u062E\u062A\u0635\u0627\u0635\u06CC"), __jsx("strong", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 53
       },
       __self: this
     }, "\u062A\u0645\u0627\u0633 \u0628\u06AF\u06CC\u0631\u06CC\u062F ")), __jsx("div", {
-      className: "mr-auto w-50 body",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51
-      },
-      __self: this
-    }, "\u062F\u0631 \u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC \u0645\u0634\u062A\u0631\u06CC \u0631\u0627\u06CC\u06AF\u0627\u0646 \u0627\u0633\u062A. \u0634\u0645\u0627 \u0645\u06CC\u062A\u0648\u0627\u0646\u06CC\u062F \u0627\u0632 \u0637\u0631\u06CC\u0642 \u0641\u0631\u0645 \u0647\u0627\u06CC \u062A\u0645\u0627\u0633 \u0628\u0627 \u0645\u0627 \u0648 \u06CC\u0627 \u0633\u0627\u0645\u0627\u0646\u0647 \u0645\u0634\u062A\u0631\u06CC\u0627\u0646 \u0627\u0642\u062F\u0627\u0645 \u0628\u0647 \u062A\u0645\u0627\u0633 \u0646\u0645\u0627\u06CC\u06CC\u062F ."), __jsx("button", {
-      className: "btn btn-warning float-left mr-auto mt-auto px-4",
+      className: "body",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 55
       },
       __self: this
-    }, "\u062E\u0631\u06CC\u062F"))));
+    }, "\u062F\u0631 \u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC \u0645\u0634\u062A\u0631\u06CC \u0631\u0627\u06CC\u06AF\u0627\u0646 \u0627\u0633\u062A. \u0634\u0645\u0627 \u0645\u06CC\u062A\u0648\u0627\u0646\u06CC\u062F \u0627\u0632 \u0637\u0631\u06CC\u0642 \u0641\u0631\u0645 \u0647\u0627\u06CC \u062A\u0645\u0627\u0633 \u0628\u0627 \u0645\u0627 \u0648 \u06CC\u0627 \u0633\u0627\u0645\u0627\u0646\u0647 \u0645\u0634\u062A\u0631\u06CC\u0627\u0646 \u0627\u0642\u062F\u0627\u0645 \u0628\u0647 \u062A\u0645\u0627\u0633 \u0646\u0645\u0627\u06CC\u06CC\u062F ."), __jsx("button", {
+      className: "btn float-left mr-auto mt-auto px-4 d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "far fa-space-shuttle mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "wind",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: this
+    })), __jsx("span", {
+      className: "mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }, "\u0634\u0631\u0648\u0639 \u06A9\u0647\u06A9\u0634\u0627\u0646\u06CC \u0634\u062F\u0646")))));
   }
 
 }
 /* harmony default export */ __webpack_exports__["default"] = (Apadana);
+
+/***/ }),
+
+/***/ "./components/Develop.jsx":
+/*!********************************!*\
+  !*** ./components/Develop.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Develop; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Develop.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      title: "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0648 \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }));
+  }
+
+}
 
 /***/ }),
 
@@ -346,202 +539,242 @@ class Earth extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
+    const {
+      changeTab,
+      tab
+    } = this.props;
     return __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 9
       },
       __self: this
     }, __jsx("script", {
       src: "https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 10
       },
       __self: this
     }), __jsx("canvas", {
       id: "earth",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 11
       },
       __self: this
     }), __jsx("div", {
       className: "dots",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "dot-1 d-flex align-items-center",
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 12
       },
       __self: this
-    }, __jsx("i", {
+    }, __jsx("div", {
+      className: `dot-1 d-flex align-items-center ${tab == 1 && "active"}`,
+      onClick: () => changeTab(1),
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13
       },
       __self: this
-    }), __jsx("div", {
-      className: "line",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14
-      },
-      __self: this
-    }), __jsx("div", {
-      className: "background",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15
-      },
-      __self: this
-    }), __jsx("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 16
-      },
-      __self: this
-    }, "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627")), __jsx("div", {
-      className: "dot-2 d-flex align-items-center",
+    }, __jsx("i", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 18
       },
       __self: this
-    }, __jsx("i", {
+    }), __jsx("div", {
+      className: "line",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 19
       },
       __self: this
     }), __jsx("div", {
-      className: "line",
+      className: "background",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 20
       },
       __self: this
-    }), __jsx("div", {
-      className: "background",
+    }), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 21
       },
       __self: this
-    }), __jsx("span", {
+    }, "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627")), __jsx("div", {
+      className: `dot-2 d-flex align-items-center ${tab == 2 && "active"}`,
+      onClick: () => changeTab(2),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
-      },
-      __self: this
-    }, "\u0633\u0626\u0648 \u0648 \u062A\u0648\u0644\u06CC\u062F \u0645\u062D\u062A\u0648\u0627")), __jsx("div", {
-      className: "dot-3 d-flex align-items-center",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 23
       },
       __self: this
     }, __jsx("i", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }), __jsx("div", {
-      className: "line",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: this
-    }), __jsx("div", {
-      className: "background",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: this
-    }), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 28
       },
       __self: this
-    }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0648 \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646")), __jsx("div", {
-      className: "dot-4 d-flex align-items-center",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30
-      },
-      __self: this
-    }, __jsx("i", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31
-      },
-      __self: this
     }), __jsx("div", {
       className: "line",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 32
+        lineNumber: 29
       },
       __self: this
     }), __jsx("div", {
       className: "background",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33
+        lineNumber: 30
       },
       __self: this
     }), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 31
       },
       __self: this
-    }, "\u062A\u0628\u0644\u06CC\u063A\u0627\u062A \u062F\u0631 \u06AF\u0648\u06AF\u0644")), __jsx("div", {
-      className: "dot-5 d-flex align-items-center",
+    }, "\u0633\u0626\u0648 \u0648 \u062A\u0648\u0644\u06CC\u062F \u0645\u062D\u062A\u0648\u0627")), __jsx("div", {
+      className: `dot-3 d-flex align-items-center ${tab == 3 && "active"}`,
+      onClick: () => changeTab(3),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36
+        lineNumber: 33
       },
       __self: this
     }, __jsx("i", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 37
-      },
-      __self: this
-    }), __jsx("div", {
-      className: "line",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 38
       },
       __self: this
     }), __jsx("div", {
-      className: "background",
+      className: "line",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 39
       },
       __self: this
-    }), __jsx("span", {
+    }), __jsx("div", {
+      className: "background",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 40
+      },
+      __self: this
+    }), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0648 \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646")), __jsx("div", {
+      className: `dot-4 d-flex align-items-center ${tab == 4 && "active"}`,
+      onClick: () => changeTab(4),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    }, __jsx("i", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "line",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "background",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }, "\u062A\u0628\u0644\u06CC\u063A\u0627\u062A \u062F\u0631 \u06AF\u0648\u06AF\u0644")), __jsx("div", {
+      className: `dot-5 d-flex align-items-center ${tab == 5 && "active"}`,
+      onClick: () => changeTab(5),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, __jsx("i", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 58
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "line",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "background",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
       },
       __self: this
     }, "\u0646\u0645\u0648\u0646\u0647 \u06A9\u0627\u0631 \u0647\u0627"))));
   }
 
 }
+
+/***/ }),
+
+/***/ "./components/Footer.jsx":
+/*!*******************************!*\
+  !*** ./components/Footer.jsx ***!
+  \*******************************/
+/*! exports provided: Footer, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Footer", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Footer.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+class Footer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("footer", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 5
+      },
+      __self: this
+    });
+  }
+
+}
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
 
 /***/ }),
 
@@ -559,8 +792,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/index.scss */ "./styles/index.scss");
 /* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar */ "./components/Navbar.jsx");
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Footer */ "./components/Footer.jsx");
 var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Layout.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -568,10 +805,267 @@ class Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     return __jsx("main", {
       __source: {
         fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, __jsx(_Navbar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }), this.props.children, __jsx(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./components/Navbar.jsx":
+/*!*******************************!*\
+  !*** ./components/Navbar.jsx ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Navbar; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Navbar.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("nav", {
+      className: "d-flex justify-content-between",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 5
+      },
+      __self: this
+    }, __jsx("h1", {
+      className: "mr-2 mt-2",
+      __source: {
+        fileName: _jsxFileName,
         lineNumber: 6
       },
       __self: this
-    }, this.props.children);
+    }, "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627"), __jsx("div", {
+      className: "d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, __jsx("button", {
+      className: "btn btn-light",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-user-astronaut mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }), __jsx("span", {
+      className: "mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, "\u0645\u0634\u0627\u0648\u0631\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646")), __jsx("div", {
+      className: "d-flex numbers text-left align-items-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fal fa-satellite-dish mx-1 justify-content-around",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "d-flex flex-column",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, __jsx("strong", {
+      className: "mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, "\u06F0\u06F2\u06F1-\u06F4\u06F4\u06F2\u06F5\u06F9\u06F6\u06F8\u06F8"), __jsx("strong", {
+      className: "mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, "\u06F0\u06F2\u06F1-\u06F4\u06F4\u06F2\u06F5\u06F9\u06F6\u06F1\u06F1")))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./components/Samples.jsx":
+/*!********************************!*\
+  !*** ./components/Samples.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Samples; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Samples.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+class Samples extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      title: "\u0646\u0645\u0648\u0646\u0647 \u06A9\u0627\u0631\u0647\u0627",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./components/Seo.jsx":
+/*!****************************!*\
+  !*** ./components/Seo.jsx ***!
+  \****************************/
+/*! exports provided: Seo, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Seo", function() { return Seo; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Seo.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+class Seo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("div", {
+      className: "seo",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      title: "\u0633\u0626\u0648",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }));
+  }
+
+}
+/* harmony default export */ __webpack_exports__["default"] = (Seo);
+
+/***/ }),
+
+/***/ "./components/Sky.jsx":
+/*!****************************!*\
+  !*** ./components/Sky.jsx ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SkyBanner; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Sky.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const countOfStars = 200;
+const countOfMeteors = 10;
+class SkyBanner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("div", {
+      className: "sky",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, [...Array(countOfStars).keys()].map(item => {
+      return __jsx("div", {
+        className: `star star-${item}`,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      });
+    }), [...Array(countOfMeteors).keys()].map(item => {
+      return __jsx("div", {
+        className: `meteor meteor-${item}`,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      });
+    }), __jsx("h1", {
+      className: "text-white h-100 align-items-center d-flex justify-content-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, this.props.title)));
   }
 
 }
@@ -604,40 +1098,126 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Earth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Earth */ "./components/Earth.jsx");
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.jsx");
 /* harmony import */ var _components_Apadana__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Apadana */ "./components/Apadana.jsx");
+/* harmony import */ var _components_Seo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Seo */ "./components/Seo.jsx");
+/* harmony import */ var _components_Develop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Develop */ "./components/Develop.jsx");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_Ads__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Ads */ "./components/Ads.jsx");
+/* harmony import */ var _components_Samples__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Samples */ "./components/Samples.jsx");
 var _jsxFileName = "/Users/imac/Desktop/APADANA/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
+
+
+
+
+
 class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tab: 4
+    };
+    this.changeTab = this.changeTab.bind(this);
+  }
+
+  changeTab(tab) {
+    this.setState({
+      tab
+    });
+  }
+
+  getContent() {
+    const {
+      tab
+    } = this.state;
+
+    switch (tab) {
+      case 1:
+        return __jsx(_components_Apadana__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 24
+          },
+          __self: this
+        });
+
+      case 2:
+        return __jsx(_components_Seo__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26
+          },
+          __self: this
+        });
+
+      case 3:
+        return __jsx(_components_Develop__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28
+          },
+          __self: this
+        });
+
+      case 4:
+        return __jsx(_components_Ads__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30
+          },
+          __self: this
+        });
+
+      case 5:
+        return __jsx(_components_Samples__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32
+          },
+          __self: this
+        });
+    }
+  }
+
   render() {
     return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 37
       },
       __self: this
-    }, __jsx(_components_Earth__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 10
+        lineNumber: 38
+      },
+      __self: this
+    }, __jsx("title", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }, "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627")), __jsx(_components_Earth__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      changeTab: this.changeTab,
+      tab: this.state.tab,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
       },
       __self: this
     }), __jsx("div", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 42
       },
       __self: this
-    }, __jsx(_components_Apadana__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12
-      },
-      __self: this
-    })));
+    }, this.getContent()));
   }
 
 }
@@ -1074,6 +1654,17 @@ module.exports = __webpack_require__(/*! /Users/imac/Desktop/APADANA/pages/index
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/parse-int");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 

@@ -1,0 +1,36 @@
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 60px;
+  direction: rtl;
+  text-align: right;
+  h1 {
+    font-family: "Lalezar";
+  }
+  div {
+    position: relative;
+    &:hover > .numbers {
+      right: -100%;
+    }
+    button {
+      z-index: 1;
+    }
+    .numbers {
+      position: absolute;
+      right: 0;
+      transition-duration: 1s;
+      direction: ltr;
+      i {
+        font-size: 1.5rem;
+      }
+      strong {
+        text-align: left;
+      }
+    }
+    span {
+      position: relative;
+    }
+  }
+}

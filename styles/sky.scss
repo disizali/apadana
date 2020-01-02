@@ -1,0 +1,39 @@
+$countOfStars: 200;
+.sky {
+  height: 150px;
+  width: 900px;
+  border-radius: 5px 5px 0 0;
+  //   background-image: linear-gradient(60.6deg, #070b34 11.2%, #141852 91.1%);
+  background-color: rgb(58, 58, 58);
+
+  position: relative;
+  .star {
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0.2;
+  }
+
+  @for $i from 0 through $countOfStars {
+    .star-#{$i} {
+      left: (random(900)) + px;
+      top: (random(150)) + px;
+      position: absolute;
+      animation-duration: 5;
+      animation-name: starAnimation-#{$i};
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+}
+
+@for $i from 0 through $countOfStars {
+  @keyframes starAnimation-#{$i} {
+    from {
+      transform: translateX(0) translateY(0);
+    }
+    to {
+      transform: translateX(random(50) + px) translateY(random(50) + px);
+    }
+  }
+}
