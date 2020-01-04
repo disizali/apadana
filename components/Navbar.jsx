@@ -3,7 +3,9 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav className="d-flex justify-content-between">
-        <h1 className="mr-2 mt-2">ویرا وب آپادانا</h1>
+        <div className="d-flex">
+          <img src="/images/logo_full.png" width="150" />
+        </div>
         <div className="d-flex">
           <button className="btn btn-light">
             <i className="fas fa-user-astronaut mx-1" />

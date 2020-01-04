@@ -7,10 +7,7 @@ export default class SkyBanner extends Component {
     return (
       <div className="sky">
         {[...Array(countOfStars).keys()].map(item => {
-          return <div className={`star star-${item}`} />;
-        })}
-        {[...Array(countOfMeteors).keys()].map(item => {
-          return <div className={`meteor meteor-${item}`} />;
+          return <div className={`star star-${item}`} key={item}/>;
         })}
         <h1 className="text-white h-100 align-items-center d-flex justify-content-center">
           <span>{this.props.title}</span>
@@ -18,4 +15,4 @@ export default class SkyBanner extends Component {
       </div>
     );
   }
-}
+} 

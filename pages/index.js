@@ -11,7 +11,7 @@ import Samples from "../components/Samples";
 export default class index extends Component {
   constructor(props) {
     super(props);
-    this.state = { tab: 4 };
+    this.state = { tab: 1 };
     this.changeTab = this.changeTab.bind(this);
   }
   changeTab(tab) {

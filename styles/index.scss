@@ -5,6 +5,7 @@
 @import "content/index.scss";
 @import "navbar";
 @import "footer";
-@import "sky";
-@import "seo";
-@import "ads";
+
+.rtl {
+  direction: rtl;
+}

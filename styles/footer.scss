@@ -1,9 +1,18 @@
 footer {
   position: fixed;
   bottom: 0;
-  z-index: 0;
   width: 100vw;
-  opacity: 0.08;
-  background: red;
-  height: 7px;
+  img {
+    width: 100%;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+  div {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0.8rem;
+  }
 }
