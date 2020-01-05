@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import _ from "lodash";
+import persianJs from "persianjs";
+
 const personalArray = [
   { icon: "globe", text: "دامنه رایگان", active: true },
   { icon: "server", text: "سرور رایگان", active: true },
@@ -39,7 +41,7 @@ const organisationArray = [
   { icon: "globe", text: "دامنه رایگان", active: true },
   { icon: "server", text: "سرور رایگان", active: true },
   { icon: "ad", text: "50 لیر ترکیه تبلیغ رایگان در گوگل", active: true },
-  { icon: "lock-alt", text: "SSL", active: true },
+  { icon: "lock-alt", text: "SSL رایگان", active: true },
   { icon: "palette", text: "قالب اختصاصی", active: false, price: 3000000 },
   { icon: "shopping-bag", text: "فروشگاه", active: false, price: 4000000 },
   { icon: "users", text: "باشگاه مشتریان", active: false, price: 4000000 },
@@ -49,7 +51,7 @@ const organisationArray = [
 const customizeArray = [
   { icon: "globe", text: "دامنه رایگان", active: true },
   { icon: "server", text: "سرور رایگان", active: true },
-  { icon: "ad", text: "50 لیر ترکیه تبلیغ رایگان در گوگل", active: true },
+  { icon: "ad", text: "200 لیر ترکیه تبلیغ رایگان در گوگل", active: true },
   { icon: "lock-alt", text: "SSL", active: true },
   { icon: "palette", text: "قالب اختصاصی", active: true },
   { icon: "shopping-bag", text: "فروشگاه", active: true },
@@ -58,6 +60,11 @@ const customizeArray = [
   { icon: "mobile", text: "اپلیکیشن موبایل", active: true },
   { icon: "project-diagram", text: "CRM", active: true },
   { icon: "clipboard-list", text: "سیستم رزرواسیون", active: true },
+  {
+    icon: "smile-wink",
+    text: "و هر چیزی که شما نیاز داشته باشید ...",
+    active: true
+  }
 ];
 export class Apadana extends Component {
   constructor(props) {
@@ -96,7 +103,10 @@ export class Apadana extends Component {
             <div className="title">
               <h2>پلن شخصی</h2>
               <strong className="text-success">
-                {this.getTotalPrice("personal")}
+                {persianJs(this.getTotalPrice("personal"))
+                  .englishNumber()
+                  .toString()}{" "}
+                تومان
               </strong>
             </div>
             <div className="d-flex flex-column body">
@@ -106,9 +116,10 @@ export class Apadana extends Component {
               <ul className="features d-flex">
                 {personalArray
                   .filter(item => item.active)
-                  .map(item => {
+                  .map((item, index) => {
                     return (
                       <li
+                        key={index}
                         className={`feature rounded d-flex align-items-center ml-2 active`}
                       >
                         <i className={`fal fa-${item.icon} mx-1`} />
@@ -117,8 +128,11 @@ export class Apadana extends Component {
                     );
                   })}
               </ul>
-              <p className="text-dark mt-3">
-                امکانات سفارشی ( در صورت نیاز کلیک کنید )
+              <p className="text-dark mt-3 description">
+                <span className="text-dark">امکانات سفارشی</span>
+                <span className="text-muted mr-1">
+                  ( در صورت نیاز کلیک کنید )
+                </span>
               </p>
               <ul className="features d-flex">
                 {personalArray
@@ -126,6 +140,7 @@ export class Apadana extends Component {
                   .map((item, index) => {
                     return (
                       <li
+                        key={index}
                         className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
                           this.state.personal,
                           { data: item.text }
@@ -161,7 +176,10 @@ export class Apadana extends Component {
             <div className="title">
               <h2>پلن شرکتی</h2>
               <strong className="text-success">
-                {this.getTotalPrice("organization")}
+                {persianJs(this.getTotalPrice("organization"))
+                  .englishNumber()
+                  .toString()}{" "}
+                تومان
               </strong>
             </div>
             <div className="d-flex flex-column body">
@@ -172,12 +190,13 @@ export class Apadana extends Component {
                 {_.chunk(
                   organisationArray.filter(item => item.active),
                   3
-                ).map(item => {
+                ).map((item, index) => {
                   return (
-                    <ul className="d-flex pb-1">
-                      {item.map(feature => {
+                    <ul className="d-flex pb-1" key={index}>
+                      {item.map((feature, index) => {
                         return (
                           <li
+                            key={index}
                             className={`feature rounded d-flex align-items-center ml-2 active`}
                           >
                             <i className={`fal fa-${feature.icon} mx-1`} />
@@ -189,15 +208,19 @@ export class Apadana extends Component {
                   );
                 })}
               </ul>
-              <p className="text-dark mt-3">
-                امکانات سفارشی ( در صورت نیاز کلیک کنید )
+              <p className="text-dark mt-3 description">
+                <span className="text-dark">امکانات سفارشی</span>
+                <span className="text-muted mr-1">
+                  ( در صورت نیاز کلیک کنید )
+                </span>
               </p>
               <ul className="features d-flex">
                 {organisationArray
                   .filter(item => !item.active)
-                  .map(item => {
+                  .map((item, index) => {
                     return (
                       <li
+                        key={index}
                         className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
                           this.state.organization,
                           { data: item.text }
@@ -239,19 +262,20 @@ export class Apadana extends Component {
             </div>
             <div className="d-flex flex-column body">
               <p className="text-dark">
-                <b>طراحی سایت برای شرکت ها و سازمان های کوچک</b>
+                <b>طراحی سایت برای شرکت ها اشخاص با امکانات کاملا سفارشی</b>
               </p>
               <ul className="features d-flex flex-column">
                 {_.chunk(
                   customizeArray.filter(item => item.active),
                   3
-                ).map(item => {
+                ).map((item, index) => {
                   return (
-                    <ul className="d-flex pb-1">
-                      {item.map(feature => {
+                    <ul className="d-flex pb-1" key={index}>
+                      {item.map((feature, index) => {
                         return (
                           <li
                             className={`feature rounded d-flex align-items-center ml-2 active`}
+                            key={index}
                           >
                             <i className={`fal fa-${feature.icon} mx-1`} />
                             <span className="mx-1">{feature.text}</span>
@@ -265,9 +289,10 @@ export class Apadana extends Component {
               <ul className="features d-flex">
                 {customizeArray
                   .filter(item => !item.active)
-                  .map(item => {
+                  .map((item, index) => {
                     return (
                       <li
+                        key={index}
                         className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
                           this.state.organization,
                           { data: item.text }

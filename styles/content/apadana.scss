@@ -131,10 +131,16 @@ $windLeftBeforeStart: 16px;
       background: #e6e6e6;
       position: absolute;
       right: 0;
+      border-radius: 0 5px 5px 0;
     }
     .body {
       position: relative;
       right: 20%;
+      .description {
+        .text-muted {
+          font-size: 0.7rem;
+        }
+      }
     }
     ul {
       padding: 0;

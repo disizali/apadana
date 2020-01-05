@@ -19353,10 +19353,13 @@ readers do not read off random characters that represent icons */
     width: 30%;
     background: #e6e6e6;
     position: absolute;
-    right: 0; }
+    right: 0;
+    border-radius: 0 5px 5px 0; }
   .plans .plan .body {
     position: relative;
     right: 20%; }
+    .plans .plan .body .description .text-muted {
+      font-size: 0.7rem; }
   .plans .plan ul {
     padding: 0;
     margin: 0;
@@ -19404,10 +19407,36 @@ readers do not read off random characters that represent icons */
   text-align: right; }
 
 .seo {
-  height: 700px;
+  height: 750px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.198);
   width: 900px; }
+  .seo .row-price {
+    font-size: 1.2rem; }
+  .seo ul.keywoards {
+    list-style: none;
+    height: 300px;
+    padding: 0;
+    overflow-y: scroll; }
+    .seo ul.keywoards li span {
+      cursor: pointer;
+      margin: 10px 0;
+      background: #f1f1f1;
+      border-radius: 10px;
+      width: auto; }
+  .seo .list-selector {
+    list-style: none; }
+    .seo .list-selector li {
+      transition-duration: 0.3s;
+      cursor: pointer; }
+  .seo .discounts ul {
+    list-style-type: none; }
+    .seo .discounts ul.items li {
+      font-size: 0.7rem; }
+  .seo .discounts .discount-title {
+    font-size: 0.8rem; }
+  .seo .discounts .discount-status {
+    font-size: 0.7rem; }
 
 .ads .google-results {
   direction: rtl; }
@@ -19452,1175 +19481,1175 @@ readers do not read off random characters that represent icons */
     background: white;
     opacity: 0.2; }
   .sky .star-0 {
-    left: 447px;
-    top: 128px;
+    left: 862px;
+    top: 72px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-0;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-1 {
-    left: 878px;
-    top: 11px;
+    left: 893px;
+    top: 2px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-1;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-2 {
-    left: 820px;
-    top: 39px;
+    left: 803px;
+    top: 133px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-2;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-3 {
-    left: 100px;
-    top: 150px;
+    left: 426px;
+    top: 102px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-3;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-4 {
-    left: 570px;
-    top: 111px;
+    left: 271px;
+    top: 49px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-4;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-5 {
-    left: 897px;
-    top: 29px;
+    left: 385px;
+    top: 106px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-5;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-6 {
-    left: 176px;
-    top: 110px;
+    left: 777px;
+    top: 24px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-6;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-7 {
-    left: 96px;
-    top: 122px;
+    left: 229px;
+    top: 101px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-7;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-8 {
-    left: 311px;
-    top: 61px;
+    left: 212px;
+    top: 7px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-8;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-9 {
-    left: 411px;
-    top: 30px;
+    left: 661px;
+    top: 130px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-9;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-10 {
-    left: 791px;
-    top: 7px;
+    left: 87px;
+    top: 75px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-10;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-11 {
-    left: 648px;
-    top: 25px;
+    left: 41px;
+    top: 49px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-11;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-12 {
-    left: 761px;
-    top: 84px;
+    left: 450px;
+    top: 128px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-12;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-13 {
-    left: 278px;
-    top: 134px;
+    left: 689px;
+    top: 26px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-13;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-14 {
-    left: 757px;
-    top: 32px;
+    left: 176px;
+    top: 145px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-14;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-15 {
-    left: 653px;
-    top: 53px;
+    left: 440px;
+    top: 119px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-15;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-16 {
-    left: 391px;
-    top: 1px;
+    left: 336px;
+    top: 146px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-16;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-17 {
-    left: 754px;
-    top: 27px;
+    left: 615px;
+    top: 13px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-17;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-18 {
-    left: 576px;
-    top: 34px;
+    left: 582px;
+    top: 88px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-18;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-19 {
-    left: 83px;
-    top: 68px;
+    left: 511px;
+    top: 76px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-19;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-20 {
-    left: 242px;
-    top: 31px;
+    left: 794px;
+    top: 40px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-20;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-21 {
-    left: 372px;
-    top: 96px;
+    left: 580px;
+    top: 65px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-21;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-22 {
-    left: 142px;
-    top: 119px;
+    left: 578px;
+    top: 113px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-22;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-23 {
-    left: 356px;
-    top: 110px;
+    left: 129px;
+    top: 149px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-23;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-24 {
-    left: 382px;
-    top: 42px;
+    left: 165px;
+    top: 109px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-24;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-25 {
-    left: 445px;
-    top: 136px;
+    left: 56px;
+    top: 95px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-25;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-26 {
-    left: 489px;
-    top: 111px;
+    left: 140px;
+    top: 138px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-26;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-27 {
-    left: 423px;
-    top: 43px;
+    left: 515px;
+    top: 125px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-27;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-28 {
-    left: 758px;
-    top: 105px;
+    left: 355px;
+    top: 104px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-28;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-29 {
-    left: 816px;
-    top: 89px;
+    left: 876px;
+    top: 60px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-29;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-30 {
-    left: 540px;
-    top: 120px;
+    left: 662px;
+    top: 12px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-30;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-31 {
-    left: 627px;
-    top: 25px;
+    left: 494px;
+    top: 79px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-31;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-32 {
-    left: 637px;
-    top: 15px;
+    left: 855px;
+    top: 141px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-32;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-33 {
-    left: 596px;
-    top: 102px;
+    left: 456px;
+    top: 19px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-33;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-34 {
-    left: 532px;
-    top: 49px;
+    left: 280px;
+    top: 1px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-34;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-35 {
-    left: 560px;
-    top: 86px;
+    left: 475px;
+    top: 92px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-35;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-36 {
-    left: 564px;
-    top: 99px;
+    left: 203px;
+    top: 7px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-36;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-37 {
-    left: 525px;
-    top: 139px;
+    left: 327px;
+    top: 21px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-37;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-38 {
-    left: 821px;
-    top: 142px;
+    left: 659px;
+    top: 84px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-38;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-39 {
-    left: 153px;
-    top: 74px;
+    left: 112px;
+    top: 48px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-39;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-40 {
-    left: 182px;
-    top: 149px;
+    left: 88px;
+    top: 108px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-40;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-41 {
-    left: 709px;
-    top: 27px;
+    left: 514px;
+    top: 80px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-41;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-42 {
-    left: 704px;
-    top: 67px;
+    left: 415px;
+    top: 104px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-42;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-43 {
-    left: 342px;
-    top: 142px;
+    left: 553px;
+    top: 57px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-43;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-44 {
-    left: 340px;
-    top: 61px;
+    left: 126px;
+    top: 32px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-44;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-45 {
-    left: 486px;
-    top: 101px;
+    left: 460px;
+    top: 77px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-45;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-46 {
-    left: 280px;
-    top: 42px;
+    left: 814px;
+    top: 142px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-46;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-47 {
-    left: 433px;
-    top: 59px;
+    left: 16px;
+    top: 119px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-47;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-48 {
-    left: 57px;
-    top: 150px;
+    left: 343px;
+    top: 139px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-48;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-49 {
-    left: 257px;
-    top: 93px;
+    left: 166px;
+    top: 59px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-49;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-50 {
-    left: 242px;
-    top: 9px;
+    left: 817px;
+    top: 19px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-50;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-51 {
-    left: 208px;
-    top: 38px;
+    left: 759px;
+    top: 123px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-51;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-52 {
-    left: 426px;
-    top: 78px;
+    left: 879px;
+    top: 59px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-52;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-53 {
-    left: 270px;
-    top: 27px;
+    left: 897px;
+    top: 88px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-53;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-54 {
-    left: 68px;
-    top: 32px;
+    left: 70px;
+    top: 30px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-54;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-55 {
-    left: 149px;
-    top: 140px;
+    left: 592px;
+    top: 80px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-55;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-56 {
-    left: 761px;
-    top: 73px;
+    left: 326px;
+    top: 116px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-56;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-57 {
-    left: 218px;
-    top: 91px;
+    left: 704px;
+    top: 81px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-57;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-58 {
-    left: 102px;
-    top: 77px;
+    left: 857px;
+    top: 43px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-58;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-59 {
-    left: 314px;
-    top: 97px;
+    left: 889px;
+    top: 140px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-59;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-60 {
-    left: 428px;
-    top: 15px;
+    left: 503px;
+    top: 139px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-60;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-61 {
-    left: 61px;
-    top: 79px;
+    left: 250px;
+    top: 136px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-61;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-62 {
-    left: 156px;
-    top: 75px;
+    left: 309px;
+    top: 54px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-62;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-63 {
-    left: 447px;
-    top: 145px;
+    left: 889px;
+    top: 27px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-63;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-64 {
-    left: 380px;
-    top: 57px;
+    left: 301px;
+    top: 87px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-64;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-65 {
-    left: 777px;
-    top: 37px;
+    left: 494px;
+    top: 132px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-65;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-66 {
-    left: 591px;
-    top: 17px;
+    left: 545px;
+    top: 57px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-66;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-67 {
-    left: 260px;
-    top: 117px;
+    left: 848px;
+    top: 93px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-67;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-68 {
-    left: 473px;
-    top: 69px;
+    left: 144px;
+    top: 150px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-68;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-69 {
-    left: 33px;
-    top: 107px;
+    left: 151px;
+    top: 95px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-69;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-70 {
-    left: 378px;
-    top: 89px;
+    left: 764px;
+    top: 28px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-70;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-71 {
-    left: 582px;
-    top: 73px;
+    left: 339px;
+    top: 55px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-71;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-72 {
-    left: 68px;
-    top: 48px;
+    left: 494px;
+    top: 130px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-72;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-73 {
-    left: 837px;
-    top: 35px;
+    left: 350px;
+    top: 102px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-73;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-74 {
-    left: 320px;
-    top: 52px;
+    left: 547px;
+    top: 97px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-74;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-75 {
-    left: 461px;
-    top: 88px;
+    left: 657px;
+    top: 60px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-75;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-76 {
-    left: 704px;
-    top: 3px;
+    left: 190px;
+    top: 150px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-76;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-77 {
-    left: 248px;
-    top: 49px;
+    left: 411px;
+    top: 114px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-77;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-78 {
-    left: 606px;
-    top: 105px;
+    left: 26px;
+    top: 106px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-78;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-79 {
-    left: 705px;
-    top: 68px;
+    left: 377px;
+    top: 20px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-79;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-80 {
-    left: 428px;
-    top: 139px;
+    left: 267px;
+    top: 100px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-80;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-81 {
-    left: 213px;
-    top: 94px;
+    left: 738px;
+    top: 137px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-81;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-82 {
-    left: 715px;
-    top: 118px;
+    left: 724px;
+    top: 105px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-82;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-83 {
-    left: 651px;
-    top: 121px;
+    left: 166px;
+    top: 15px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-83;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-84 {
-    left: 27px;
-    top: 85px;
+    left: 490px;
+    top: 120px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-84;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-85 {
-    left: 574px;
-    top: 134px;
+    left: 746px;
+    top: 58px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-85;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-86 {
-    left: 184px;
-    top: 35px;
+    left: 499px;
+    top: 133px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-86;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-87 {
-    left: 659px;
-    top: 31px;
+    left: 700px;
+    top: 71px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-87;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-88 {
-    left: 287px;
-    top: 90px;
+    left: 516px;
+    top: 118px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-88;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-89 {
-    left: 349px;
-    top: 98px;
+    left: 789px;
+    top: 39px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-89;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-90 {
-    left: 680px;
-    top: 136px;
+    left: 62px;
+    top: 32px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-90;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-91 {
-    left: 725px;
-    top: 107px;
+    left: 544px;
+    top: 117px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-91;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-92 {
-    left: 279px;
-    top: 39px;
+    left: 771px;
+    top: 57px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-92;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-93 {
-    left: 386px;
-    top: 128px;
+    left: 825px;
+    top: 76px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-93;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-94 {
-    left: 229px;
-    top: 76px;
+    left: 133px;
+    top: 68px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-94;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-95 {
-    left: 320px;
-    top: 6px;
+    left: 777px;
+    top: 126px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-95;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-96 {
-    left: 810px;
-    top: 70px;
+    left: 739px;
+    top: 23px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-96;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-97 {
-    left: 872px;
-    top: 63px;
+    left: 827px;
+    top: 92px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-97;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-98 {
-    left: 346px;
-    top: 79px;
+    left: 656px;
+    top: 131px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-98;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-99 {
-    left: 899px;
-    top: 28px;
+    left: 377px;
+    top: 129px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-99;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-100 {
-    left: 300px;
-    top: 71px;
+    left: 165px;
+    top: 102px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-100;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-101 {
-    left: 449px;
-    top: 1px;
+    left: 875px;
+    top: 149px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-101;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-102 {
-    left: 1px;
-    top: 144px;
+    left: 53px;
+    top: 3px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-102;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-103 {
-    left: 272px;
-    top: 64px;
+    left: 840px;
+    top: 127px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-103;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-104 {
-    left: 91px;
-    top: 124px;
+    left: 38px;
+    top: 135px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-104;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-105 {
-    left: 813px;
-    top: 94px;
+    left: 778px;
+    top: 102px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-105;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-106 {
-    left: 466px;
-    top: 49px;
+    left: 244px;
+    top: 105px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-106;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-107 {
-    left: 634px;
-    top: 87px;
+    left: 671px;
+    top: 59px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-107;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-108 {
-    left: 890px;
-    top: 120px;
+    left: 186px;
+    top: 19px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-108;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-109 {
-    left: 677px;
-    top: 34px;
+    left: 345px;
+    top: 114px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-109;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-110 {
-    left: 141px;
-    top: 3px;
+    left: 347px;
+    top: 80px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-110;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-111 {
-    left: 140px;
-    top: 130px;
+    left: 706px;
+    top: 61px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-111;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-112 {
-    left: 155px;
-    top: 102px;
+    left: 514px;
+    top: 27px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-112;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-113 {
-    left: 746px;
-    top: 66px;
+    left: 544px;
+    top: 95px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-113;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-114 {
-    left: 244px;
-    top: 76px;
+    left: 616px;
+    top: 121px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-114;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-115 {
-    left: 421px;
-    top: 58px;
+    left: 777px;
+    top: 44px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-115;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-116 {
-    left: 623px;
-    top: 124px;
+    left: 754px;
+    top: 72px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-116;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-117 {
-    left: 541px;
-    top: 51px;
+    left: 656px;
+    top: 17px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-117;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-118 {
-    left: 767px;
-    top: 30px;
+    left: 435px;
+    top: 38px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-118;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-119 {
-    left: 843px;
-    top: 122px;
+    left: 138px;
+    top: 75px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-119;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-120 {
-    left: 725px;
-    top: 58px;
+    left: 282px;
+    top: 113px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-120;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-121 {
-    left: 152px;
-    top: 57px;
+    left: 525px;
+    top: 148px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-121;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-122 {
-    left: 852px;
-    top: 132px;
+    left: 767px;
+    top: 51px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-122;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-123 {
-    left: 182px;
-    top: 25px;
+    left: 296px;
+    top: 81px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-123;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-124 {
-    left: 718px;
-    top: 119px;
+    left: 333px;
+    top: 135px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-124;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-125 {
-    left: 834px;
-    top: 118px;
+    left: 180px;
+    top: 75px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-125;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-126 {
-    left: 206px;
-    top: 108px;
+    left: 412px;
+    top: 19px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-126;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-127 {
-    left: 791px;
-    top: 105px;
+    left: 549px;
+    top: 69px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-127;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-128 {
-    left: 471px;
-    top: 27px;
+    left: 880px;
+    top: 31px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-128;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-129 {
-    left: 728px;
-    top: 102px;
+    left: 246px;
+    top: 17px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-129;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-130 {
-    left: 813px;
-    top: 31px;
+    left: 541px;
+    top: 117px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-130;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-131 {
-    left: 201px;
-    top: 22px;
+    left: 42px;
+    top: 36px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-131;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-132 {
-    left: 436px;
-    top: 134px;
+    left: 84px;
+    top: 74px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-132;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-133 {
-    left: 224px;
-    top: 61px;
+    left: 193px;
+    top: 105px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-133;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-134 {
-    left: 667px;
-    top: 24px;
+    left: 724px;
+    top: 141px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-134;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-135 {
-    left: 900px;
-    top: 138px;
+    left: 504px;
+    top: 99px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-135;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-136 {
-    left: 472px;
-    top: 146px;
+    left: 197px;
+    top: 81px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-136;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-137 {
-    left: 804px;
-    top: 135px;
+    left: 304px;
+    top: 87px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-137;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-138 {
-    left: 225px;
-    top: 122px;
+    left: 1px;
+    top: 77px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-138;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-139 {
-    left: 360px;
-    top: 84px;
+    left: 749px;
+    top: 116px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-139;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-140 {
-    left: 846px;
-    top: 63px;
+    left: 150px;
+    top: 16px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-140;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-141 {
-    left: 618px;
-    top: 135px;
+    left: 142px;
+    top: 79px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-141;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-142 {
-    left: 862px;
-    top: 112px;
+    left: 781px;
+    top: 31px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-142;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-143 {
-    left: 522px;
-    top: 50px;
+    left: 727px;
+    top: 90px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-143;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-144 {
-    left: 577px;
-    top: 149px;
+    left: 557px;
+    top: 48px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-144;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-145 {
-    left: 370px;
-    top: 60px;
+    left: 561px;
+    top: 110px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-145;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-146 {
-    left: 104px;
+    left: 794px;
     top: 92px;
     position: absolute;
     animation-duration: 50s;
@@ -20628,143 +20657,143 @@ readers do not read off random characters that represent icons */
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-147 {
-    left: 496px;
-    top: 44px;
+    left: 675px;
+    top: 121px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-147;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-148 {
-    left: 870px;
-    top: 116px;
+    left: 854px;
+    top: 71px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-148;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-149 {
-    left: 494px;
-    top: 123px;
+    left: 836px;
+    top: 46px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-149;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-150 {
-    left: 275px;
-    top: 39px;
+    left: 144px;
+    top: 72px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-150;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-151 {
-    left: 391px;
-    top: 145px;
+    left: 404px;
+    top: 107px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-151;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-152 {
-    left: 565px;
-    top: 97px;
+    left: 710px;
+    top: 149px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-152;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-153 {
-    left: 597px;
-    top: 96px;
+    left: 503px;
+    top: 62px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-153;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-154 {
-    left: 308px;
-    top: 139px;
+    left: 466px;
+    top: 121px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-154;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-155 {
-    left: 769px;
-    top: 42px;
+    left: 799px;
+    top: 111px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-155;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-156 {
-    left: 538px;
-    top: 119px;
+    left: 513px;
+    top: 100px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-156;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-157 {
-    left: 456px;
-    top: 131px;
+    left: 209px;
+    top: 132px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-157;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-158 {
-    left: 290px;
-    top: 102px;
+    left: 328px;
+    top: 96px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-158;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-159 {
-    left: 486px;
-    top: 102px;
+    left: 767px;
+    top: 86px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-159;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-160 {
-    left: 461px;
-    top: 9px;
+    left: 718px;
+    top: 32px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-160;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-161 {
-    left: 146px;
-    top: 38px;
+    left: 896px;
+    top: 17px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-161;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-162 {
-    left: 20px;
-    top: 115px;
+    left: 111px;
+    top: 20px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-162;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-163 {
-    left: 260px;
-    top: 39px;
+    left: 158px;
+    top: 44px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-163;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-164 {
-    left: 131px;
+    left: 588px;
     top: 62px;
     position: absolute;
     animation-duration: 50s;
@@ -20772,288 +20801,288 @@ readers do not read off random characters that represent icons */
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-165 {
-    left: 375px;
-    top: 132px;
+    left: 187px;
+    top: 126px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-165;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-166 {
-    left: 218px;
-    top: 132px;
+    left: 160px;
+    top: 35px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-166;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-167 {
-    left: 12px;
-    top: 50px;
+    left: 262px;
+    top: 1px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-167;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-168 {
-    left: 43px;
-    top: 52px;
+    left: 439px;
+    top: 136px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-168;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-169 {
-    left: 557px;
-    top: 89px;
+    left: 2px;
+    top: 22px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-169;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-170 {
-    left: 702px;
-    top: 105px;
+    left: 791px;
+    top: 144px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-170;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-171 {
-    left: 200px;
-    top: 41px;
+    left: 700px;
+    top: 50px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-171;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-172 {
-    left: 842px;
-    top: 27px;
+    left: 502px;
+    top: 84px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-172;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-173 {
-    left: 90px;
-    top: 138px;
+    left: 470px;
+    top: 19px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-173;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-174 {
-    left: 830px;
-    top: 43px;
+    left: 671px;
+    top: 57px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-174;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-175 {
-    left: 169px;
-    top: 23px;
+    left: 210px;
+    top: 37px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-175;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-176 {
-    left: 574px;
-    top: 124px;
+    left: 900px;
+    top: 104px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-176;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-177 {
-    left: 446px;
-    top: 106px;
+    left: 417px;
+    top: 26px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-177;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-178 {
-    left: 750px;
-    top: 144px;
+    left: 148px;
+    top: 141px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-178;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-179 {
-    left: 444px;
-    top: 26px;
+    left: 14px;
+    top: 132px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-179;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-180 {
-    left: 263px;
-    top: 103px;
+    left: 251px;
+    top: 114px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-180;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-181 {
-    left: 674px;
-    top: 1px;
+    left: 588px;
+    top: 142px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-181;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-182 {
-    left: 255px;
-    top: 51px;
+    left: 98px;
+    top: 35px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-182;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-183 {
-    left: 400px;
-    top: 10px;
+    left: 568px;
+    top: 50px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-183;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-184 {
-    left: 358px;
-    top: 4px;
+    left: 180px;
+    top: 140px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-184;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-185 {
-    left: 878px;
-    top: 3px;
+    left: 764px;
+    top: 38px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-185;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-186 {
-    left: 235px;
-    top: 46px;
+    left: 779px;
+    top: 60px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-186;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-187 {
-    left: 265px;
-    top: 43px;
+    left: 40px;
+    top: 4px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-187;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-188 {
-    left: 276px;
-    top: 67px;
+    left: 746px;
+    top: 23px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-188;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-189 {
-    left: 80px;
-    top: 117px;
+    left: 690px;
+    top: 150px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-189;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-190 {
-    left: 478px;
-    top: 92px;
+    left: 888px;
+    top: 143px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-190;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-191 {
-    left: 672px;
-    top: 24px;
+    left: 451px;
+    top: 84px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-191;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-192 {
-    left: 522px;
-    top: 63px;
+    left: 400px;
+    top: 1px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-192;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-193 {
-    left: 674px;
-    top: 34px;
+    left: 327px;
+    top: 5px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-193;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-194 {
-    left: 267px;
-    top: 119px;
+    left: 722px;
+    top: 103px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-194;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-195 {
-    left: 694px;
-    top: 106px;
+    left: 772px;
+    top: 150px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-195;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-196 {
-    left: 486px;
-    top: 19px;
+    left: 36px;
+    top: 17px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-196;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-197 {
-    left: 839px;
-    top: 70px;
+    left: 823px;
+    top: 145px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-197;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-198 {
-    left: 36px;
-    top: 53px;
+    left: 606px;
+    top: 112px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-198;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-199 {
-    left: 180px;
-    top: 126px;
+    left: 586px;
+    top: 63px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-199;
     animation-iteration-count: infinite;
     animation-direction: alternate; }
   .sky .star-200 {
-    left: 460px;
-    top: 142px;
+    left: 892px;
+    top: 99px;
     position: absolute;
     animation-duration: 50s;
     animation-name: starAnimation-200;
@@ -21064,1207 +21093,1207 @@ readers do not read off random characters that represent icons */
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 14px); } }
+    transform: translate(25px, 9px); } }
 
 @keyframes starAnimation-1 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(2px, 37px); } }
+    transform: translate(15px, 46px); } }
 
 @keyframes starAnimation-2 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(6px, 39px); } }
+    transform: translate(10px, 8px); } }
 
 @keyframes starAnimation-3 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(15px, 1px); } }
+    transform: translate(7px, 26px); } }
 
 @keyframes starAnimation-4 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(33px, 46px); } }
+    transform: translate(29px, 7px); } }
 
 @keyframes starAnimation-5 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(4px, 31px); } }
+    transform: translate(25px, 24px); } }
 
 @keyframes starAnimation-6 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(47px, 37px); } }
+    transform: translate(16px, 1px); } }
 
 @keyframes starAnimation-7 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(22px, 35px); } }
+    transform: translate(19px, 22px); } }
 
 @keyframes starAnimation-8 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(47px, 50px); } }
+    transform: translate(18px, 47px); } }
 
 @keyframes starAnimation-9 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(50px, 13px); } }
+    transform: translate(13px, 45px); } }
 
 @keyframes starAnimation-10 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 25px); } }
+    transform: translate(34px, 24px); } }
 
 @keyframes starAnimation-11 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(38px, 44px); } }
+    transform: translate(36px, 29px); } }
 
 @keyframes starAnimation-12 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(18px, 8px); } }
+    transform: translate(25px, 48px); } }
 
 @keyframes starAnimation-13 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(34px, 41px); } }
+    transform: translate(37px, 9px); } }
 
 @keyframes starAnimation-14 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(6px, 37px); } }
+    transform: translate(15px, 7px); } }
 
 @keyframes starAnimation-15 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(12px, 24px); } }
+    transform: translate(7px, 27px); } }
 
 @keyframes starAnimation-16 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(10px, 43px); } }
+    transform: translate(49px, 41px); } }
 
 @keyframes starAnimation-17 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(13px, 17px); } }
+    transform: translate(33px, 23px); } }
 
 @keyframes starAnimation-18 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(32px, 30px); } }
+    transform: translate(15px, 43px); } }
 
 @keyframes starAnimation-19 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(39px, 44px); } }
+    transform: translate(34px, 18px); } }
 
 @keyframes starAnimation-20 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 25px); } }
+    transform: translate(46px, 32px); } }
 
 @keyframes starAnimation-21 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(1px, 21px); } }
+    transform: translate(31px, 46px); } }
 
 @keyframes starAnimation-22 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(33px, 43px); } }
+    transform: translate(9px, 43px); } }
 
 @keyframes starAnimation-23 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(30px, 40px); } }
+    transform: translate(28px, 12px); } }
 
 @keyframes starAnimation-24 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(32px, 29px); } }
+    transform: translate(49px, 50px); } }
 
 @keyframes starAnimation-25 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(49px, 22px); } }
+    transform: translate(38px, 42px); } }
 
 @keyframes starAnimation-26 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(33px, 40px); } }
+    transform: translate(21px, 27px); } }
 
 @keyframes starAnimation-27 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(12px, 27px); } }
+    transform: translate(18px, 40px); } }
 
 @keyframes starAnimation-28 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(29px, 18px); } }
+    transform: translate(37px, 2px); } }
 
 @keyframes starAnimation-29 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(9px, 22px); } }
+    transform: translate(23px, 13px); } }
 
 @keyframes starAnimation-30 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(42px, 21px); } }
+    transform: translate(12px, 48px); } }
 
 @keyframes starAnimation-31 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(26px, 18px); } }
+    transform: translate(11px, 11px); } }
 
 @keyframes starAnimation-32 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(26px, 36px); } }
+    transform: translate(48px, 29px); } }
 
 @keyframes starAnimation-33 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(6px, 47px); } }
+    transform: translate(29px, 19px); } }
 
 @keyframes starAnimation-34 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(8px, 45px); } }
+    transform: translate(36px, 5px); } }
 
 @keyframes starAnimation-35 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(18px, 4px); } }
+    transform: translate(19px, 34px); } }
 
 @keyframes starAnimation-36 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(9px, 47px); } }
+    transform: translate(48px, 16px); } }
 
 @keyframes starAnimation-37 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(15px, 26px); } }
+    transform: translate(14px, 32px); } }
 
 @keyframes starAnimation-38 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(48px, 26px); } }
+    transform: translate(48px, 22px); } }
 
 @keyframes starAnimation-39 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(40px, 30px); } }
+    transform: translate(24px, 40px); } }
 
 @keyframes starAnimation-40 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(22px, 43px); } }
+    transform: translate(4px, 18px); } }
 
 @keyframes starAnimation-41 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(11px, 19px); } }
+    transform: translate(43px, 28px); } }
 
 @keyframes starAnimation-42 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(23px, 20px); } }
+    transform: translate(17px, 43px); } }
 
 @keyframes starAnimation-43 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(9px, 35px); } }
+    transform: translate(33px, 32px); } }
 
 @keyframes starAnimation-44 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(13px, 17px); } }
+    transform: translate(7px, 46px); } }
 
 @keyframes starAnimation-45 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(9px, 30px); } }
+    transform: translate(13px, 2px); } }
 
 @keyframes starAnimation-46 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(5px, 26px); } }
+    transform: translate(34px, 4px); } }
 
 @keyframes starAnimation-47 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(15px, 16px); } }
+    transform: translate(27px, 16px); } }
 
 @keyframes starAnimation-48 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(24px, 50px); } }
+    transform: translate(38px, 24px); } }
 
 @keyframes starAnimation-49 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(9px, 42px); } }
+    transform: translate(44px, 5px); } }
 
 @keyframes starAnimation-50 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(42px, 21px); } }
+    transform: translate(4px, 13px); } }
 
 @keyframes starAnimation-51 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 21px); } }
+    transform: translate(49px, 47px); } }
 
 @keyframes starAnimation-52 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(33px, 34px); } }
+    transform: translate(28px, 16px); } }
 
 @keyframes starAnimation-53 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(29px, 46px); } }
+    transform: translate(47px, 40px); } }
 
 @keyframes starAnimation-54 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(17px, 21px); } }
+    transform: translate(1px, 36px); } }
 
 @keyframes starAnimation-55 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(28px, 30px); } }
+    transform: translate(19px, 41px); } }
 
 @keyframes starAnimation-56 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(14px, 18px); } }
+    transform: translate(48px, 23px); } }
 
 @keyframes starAnimation-57 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(22px, 39px); } }
+    transform: translate(37px, 49px); } }
 
 @keyframes starAnimation-58 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(42px, 10px); } }
+    transform: translate(17px, 45px); } }
 
 @keyframes starAnimation-59 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(39px, 50px); } }
+    transform: translate(37px, 6px); } }
 
 @keyframes starAnimation-60 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(7px, 17px); } }
+    transform: translate(47px, 30px); } }
 
 @keyframes starAnimation-61 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(43px, 18px); } }
+    transform: translate(18px, 8px); } }
 
 @keyframes starAnimation-62 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(37px, 14px); } }
+    transform: translate(46px, 25px); } }
 
 @keyframes starAnimation-63 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(18px, 39px); } }
+    transform: translate(39px, 12px); } }
 
 @keyframes starAnimation-64 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(29px, 15px); } }
+    transform: translate(43px, 47px); } }
 
 @keyframes starAnimation-65 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(8px, 47px); } }
+    transform: translate(47px, 44px); } }
 
 @keyframes starAnimation-66 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(23px, 9px); } }
+    transform: translate(32px, 6px); } }
 
 @keyframes starAnimation-67 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(14px, 19px); } }
+    transform: translate(29px, 25px); } }
 
 @keyframes starAnimation-68 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(14px, 2px); } }
+    transform: translate(35px, 11px); } }
 
 @keyframes starAnimation-69 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(42px, 9px); } }
+    transform: translate(20px, 12px); } }
 
 @keyframes starAnimation-70 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(47px, 20px); } }
+    transform: translate(16px, 46px); } }
 
 @keyframes starAnimation-71 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(22px, 38px); } }
+    transform: translate(47px, 11px); } }
 
 @keyframes starAnimation-72 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(7px, 41px); } }
+    transform: translate(10px, 6px); } }
 
 @keyframes starAnimation-73 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(2px, 35px); } }
+    transform: translate(37px, 21px); } }
 
 @keyframes starAnimation-74 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(24px, 15px); } }
+    transform: translate(28px, 46px); } }
 
 @keyframes starAnimation-75 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(2px, 24px); } }
+    transform: translate(41px, 26px); } }
 
 @keyframes starAnimation-76 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 29px); } }
+    transform: translate(50px, 49px); } }
 
 @keyframes starAnimation-77 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(50px, 46px); } }
+    transform: translate(13px, 21px); } }
 
 @keyframes starAnimation-78 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(26px, 35px); } }
+    transform: translate(7px, 6px); } }
 
 @keyframes starAnimation-79 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(20px, 13px); } }
+    transform: translate(43px, 14px); } }
 
 @keyframes starAnimation-80 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(17px, 19px); } }
+    transform: translate(22px, 31px); } }
 
 @keyframes starAnimation-81 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(17px, 8px); } }
+    transform: translate(40px, 47px); } }
 
 @keyframes starAnimation-82 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(5px, 12px); } }
+    transform: translate(17px, 18px); } }
 
 @keyframes starAnimation-83 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(13px, 1px); } }
+    transform: translate(5px, 46px); } }
 
 @keyframes starAnimation-84 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(39px, 9px); } }
+    transform: translate(45px, 5px); } }
 
 @keyframes starAnimation-85 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(50px, 38px); } }
+    transform: translate(14px, 13px); } }
 
 @keyframes starAnimation-86 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(4px, 38px); } }
+    transform: translate(48px, 30px); } }
 
 @keyframes starAnimation-87 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(19px, 48px); } }
+    transform: translate(10px, 9px); } }
 
 @keyframes starAnimation-88 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(2px, 12px); } }
+    transform: translate(43px, 5px); } }
 
 @keyframes starAnimation-89 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(15px, 1px); } }
+    transform: translate(45px, 17px); } }
 
 @keyframes starAnimation-90 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(7px, 41px); } }
+    transform: translate(50px, 3px); } }
 
 @keyframes starAnimation-91 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(14px, 33px); } }
+    transform: translate(2px, 36px); } }
 
 @keyframes starAnimation-92 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(9px, 9px); } }
+    transform: translate(7px, 13px); } }
 
 @keyframes starAnimation-93 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(38px, 49px); } }
+    transform: translate(38px, 35px); } }
 
 @keyframes starAnimation-94 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(12px, 23px); } }
+    transform: translate(48px, 43px); } }
 
 @keyframes starAnimation-95 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(22px, 3px); } }
+    transform: translate(28px, 47px); } }
 
 @keyframes starAnimation-96 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(44px, 1px); } }
+    transform: translate(6px, 38px); } }
 
 @keyframes starAnimation-97 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 48px); } }
+    transform: translate(45px, 32px); } }
 
 @keyframes starAnimation-98 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(41px, 28px); } }
+    transform: translate(30px, 25px); } }
 
 @keyframes starAnimation-99 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(35px, 7px); } }
+    transform: translate(39px, 25px); } }
 
 @keyframes starAnimation-100 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(22px, 12px); } }
+    transform: translate(34px, 46px); } }
 
 @keyframes starAnimation-101 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(14px, 31px); } }
+    transform: translate(17px, 19px); } }
 
 @keyframes starAnimation-102 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(5px, 26px); } }
+    transform: translate(48px, 1px); } }
 
 @keyframes starAnimation-103 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(13px, 32px); } }
+    transform: translate(30px, 41px); } }
 
 @keyframes starAnimation-104 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(49px, 9px); } }
+    transform: translate(13px, 34px); } }
 
 @keyframes starAnimation-105 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(21px, 17px); } }
+    transform: translate(9px, 33px); } }
 
 @keyframes starAnimation-106 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(50px, 14px); } }
+    transform: translate(19px, 43px); } }
 
 @keyframes starAnimation-107 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(5px, 24px); } }
+    transform: translate(16px, 31px); } }
 
 @keyframes starAnimation-108 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(33px, 32px); } }
+    transform: translate(19px, 31px); } }
 
 @keyframes starAnimation-109 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(38px, 30px); } }
+    transform: translate(46px, 45px); } }
 
 @keyframes starAnimation-110 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(34px, 12px); } }
+    transform: translate(6px, 41px); } }
 
 @keyframes starAnimation-111 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(10px, 40px); } }
+    transform: translate(10px, 42px); } }
 
 @keyframes starAnimation-112 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(10px, 10px); } }
+    transform: translate(24px, 39px); } }
 
 @keyframes starAnimation-113 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(19px, 7px); } }
+    transform: translate(3px, 2px); } }
 
 @keyframes starAnimation-114 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(17px, 46px); } }
+    transform: translate(30px, 3px); } }
 
 @keyframes starAnimation-115 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(37px, 24px); } }
+    transform: translate(14px, 23px); } }
 
 @keyframes starAnimation-116 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(14px, 2px); } }
+    transform: translate(12px, 33px); } }
 
 @keyframes starAnimation-117 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(26px, 24px); } }
+    transform: translate(27px, 29px); } }
 
 @keyframes starAnimation-118 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(23px, 24px); } }
+    transform: translate(29px, 30px); } }
 
 @keyframes starAnimation-119 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(24px, 17px); } }
+    transform: translate(44px, 30px); } }
 
 @keyframes starAnimation-120 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 4px); } }
+    transform: translate(16px, 5px); } }
 
 @keyframes starAnimation-121 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(39px, 49px); } }
+    transform: translate(50px, 49px); } }
 
 @keyframes starAnimation-122 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(38px, 14px); } }
+    transform: translate(8px, 4px); } }
 
 @keyframes starAnimation-123 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(25px, 4px); } }
+    transform: translate(15px, 31px); } }
 
 @keyframes starAnimation-124 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(50px, 12px); } }
+    transform: translate(30px, 24px); } }
 
 @keyframes starAnimation-125 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(46px, 16px); } }
+    transform: translate(50px, 50px); } }
 
 @keyframes starAnimation-126 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(50px, 27px); } }
+    transform: translate(28px, 21px); } }
 
 @keyframes starAnimation-127 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(20px, 32px); } }
+    transform: translate(3px, 20px); } }
 
 @keyframes starAnimation-128 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(31px, 37px); } }
+    transform: translate(44px, 16px); } }
 
 @keyframes starAnimation-129 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(47px, 4px); } }
+    transform: translate(22px, 8px); } }
 
 @keyframes starAnimation-130 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(29px, 1px); } }
+    transform: translate(17px, 36px); } }
 
 @keyframes starAnimation-131 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(15px, 27px); } }
+    transform: translate(22px, 16px); } }
 
 @keyframes starAnimation-132 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(49px, 4px); } }
+    transform: translate(46px, 27px); } }
 
 @keyframes starAnimation-133 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(30px, 30px); } }
+    transform: translate(33px, 6px); } }
 
 @keyframes starAnimation-134 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(23px, 30px); } }
+    transform: translate(36px, 29px); } }
 
 @keyframes starAnimation-135 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(41px, 42px); } }
+    transform: translate(15px, 38px); } }
 
 @keyframes starAnimation-136 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(8px, 39px); } }
+    transform: translate(50px, 28px); } }
 
 @keyframes starAnimation-137 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(8px, 47px); } }
+    transform: translate(1px, 16px); } }
 
 @keyframes starAnimation-138 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(8px, 21px); } }
+    transform: translate(37px, 19px); } }
 
 @keyframes starAnimation-139 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(29px, 5px); } }
+    transform: translate(50px, 50px); } }
 
 @keyframes starAnimation-140 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(17px, 32px); } }
+    transform: translate(46px, 4px); } }
 
 @keyframes starAnimation-141 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(16px, 39px); } }
+    transform: translate(31px, 47px); } }
 
 @keyframes starAnimation-142 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(25px, 6px); } }
+    transform: translate(29px, 50px); } }
 
 @keyframes starAnimation-143 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(20px, 25px); } }
+    transform: translate(17px, 2px); } }
 
 @keyframes starAnimation-144 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(20px, 15px); } }
+    transform: translate(41px, 6px); } }
 
 @keyframes starAnimation-145 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(38px, 31px); } }
+    transform: translate(35px, 37px); } }
 
 @keyframes starAnimation-146 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(50px, 16px); } }
+    transform: translate(1px, 41px); } }
 
 @keyframes starAnimation-147 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(21px, 44px); } }
+    transform: translate(24px, 5px); } }
 
 @keyframes starAnimation-148 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(34px, 20px); } }
+    transform: translate(36px, 20px); } }
 
 @keyframes starAnimation-149 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(39px, 49px); } }
+    transform: translate(6px, 49px); } }
 
 @keyframes starAnimation-150 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(3px, 34px); } }
+    transform: translate(36px, 19px); } }
 
 @keyframes starAnimation-151 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(39px, 27px); } }
+    transform: translate(11px, 33px); } }
 
 @keyframes starAnimation-152 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(50px, 7px); } }
+    transform: translate(41px, 10px); } }
 
 @keyframes starAnimation-153 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(17px, 8px); } }
+    transform: translate(45px, 15px); } }
 
 @keyframes starAnimation-154 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(8px, 47px); } }
+    transform: translate(37px, 35px); } }
 
 @keyframes starAnimation-155 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(31px, 30px); } }
+    transform: translate(49px, 25px); } }
 
 @keyframes starAnimation-156 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(41px, 40px); } }
+    transform: translate(14px, 34px); } }
 
 @keyframes starAnimation-157 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(5px, 23px); } }
+    transform: translate(27px, 17px); } }
 
 @keyframes starAnimation-158 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(12px, 24px); } }
+    transform: translate(4px, 5px); } }
 
 @keyframes starAnimation-159 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(4px, 1px); } }
+    transform: translate(48px, 18px); } }
 
 @keyframes starAnimation-160 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(17px, 34px); } }
+    transform: translate(41px, 44px); } }
 
 @keyframes starAnimation-161 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(12px, 13px); } }
+    transform: translate(21px, 21px); } }
 
 @keyframes starAnimation-162 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(31px, 6px); } }
+    transform: translate(37px, 23px); } }
 
 @keyframes starAnimation-163 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(44px, 50px); } }
+    transform: translate(39px, 4px); } }
 
 @keyframes starAnimation-164 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(38px, 6px); } }
+    transform: translate(13px, 15px); } }
 
 @keyframes starAnimation-165 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(42px, 36px); } }
+    transform: translate(50px, 41px); } }
 
 @keyframes starAnimation-166 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(3px, 39px); } }
+    transform: translate(24px, 41px); } }
 
 @keyframes starAnimation-167 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(3px, 18px); } }
+    transform: translate(41px, 46px); } }
 
 @keyframes starAnimation-168 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(48px, 17px); } }
+    transform: translate(36px, 9px); } }
 
 @keyframes starAnimation-169 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(2px, 33px); } }
+    transform: translate(31px, 10px); } }
 
 @keyframes starAnimation-170 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(30px, 3px); } }
+    transform: translate(21px, 48px); } }
 
 @keyframes starAnimation-171 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(33px, 28px); } }
+    transform: translate(27px, 15px); } }
 
 @keyframes starAnimation-172 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(8px, 46px); } }
+    transform: translate(7px, 43px); } }
 
 @keyframes starAnimation-173 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(3px, 12px); } }
+    transform: translate(49px, 49px); } }
 
 @keyframes starAnimation-174 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(1px, 46px); } }
+    transform: translate(19px, 49px); } }
 
 @keyframes starAnimation-175 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(11px, 1px); } }
+    transform: translate(48px, 26px); } }
 
 @keyframes starAnimation-176 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(1px, 38px); } }
+    transform: translate(28px, 22px); } }
 
 @keyframes starAnimation-177 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 30px); } }
+    transform: translate(12px, 22px); } }
 
 @keyframes starAnimation-178 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(20px, 35px); } }
+    transform: translate(2px, 48px); } }
 
 @keyframes starAnimation-179 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(44px, 25px); } }
+    transform: translate(40px, 45px); } }
 
 @keyframes starAnimation-180 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(24px, 27px); } }
+    transform: translate(33px, 20px); } }
 
 @keyframes starAnimation-181 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(41px, 19px); } }
+    transform: translate(7px, 48px); } }
 
 @keyframes starAnimation-182 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(4px, 1px); } }
+    transform: translate(31px, 14px); } }
 
 @keyframes starAnimation-183 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(34px, 47px); } }
+    transform: translate(1px, 46px); } }
 
 @keyframes starAnimation-184 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(9px, 44px); } }
+    transform: translate(20px, 20px); } }
 
 @keyframes starAnimation-185 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(49px, 39px); } }
+    transform: translate(31px, 49px); } }
 
 @keyframes starAnimation-186 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(4px, 50px); } }
+    transform: translate(1px, 28px); } }
 
 @keyframes starAnimation-187 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(41px, 25px); } }
+    transform: translate(43px, 44px); } }
 
 @keyframes starAnimation-188 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(4px, 43px); } }
+    transform: translate(48px, 12px); } }
 
 @keyframes starAnimation-189 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(8px, 45px); } }
+    transform: translate(9px, 9px); } }
 
 @keyframes starAnimation-190 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(10px, 49px); } }
+    transform: translate(33px, 21px); } }
 
 @keyframes starAnimation-191 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(36px, 27px); } }
+    transform: translate(25px, 38px); } }
 
 @keyframes starAnimation-192 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(6px, 1px); } }
+    transform: translate(40px, 12px); } }
 
 @keyframes starAnimation-193 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(38px, 18px); } }
+    transform: translate(20px, 12px); } }
 
 @keyframes starAnimation-194 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(32px, 34px); } }
+    transform: translate(13px, 1px); } }
 
 @keyframes starAnimation-195 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(23px, 2px); } }
+    transform: translate(26px, 35px); } }
 
 @keyframes starAnimation-196 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(27px, 34px); } }
+    transform: translate(46px, 31px); } }
 
 @keyframes starAnimation-197 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(37px, 46px); } }
+    transform: translate(45px, 12px); } }
 
 @keyframes starAnimation-198 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(41px, 48px); } }
+    transform: translate(22px, 2px); } }
 
 @keyframes starAnimation-199 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(48px, 14px); } }
+    transform: translate(24px, 41px); } }
 
 @keyframes starAnimation-200 {
   from {
     transform: translate(0, 0); }
   to {
-    transform: translate(18px, 34px); } }
+    transform: translate(13px, 49px); } }
 
 .samples {
   background: #3a3a3a;
@@ -22324,6 +22353,12 @@ footer {
 
 .rtl {
   direction: rtl; }
+
+.bg-orange {
+  background-color: #fb7047 !important; }
+
+.text-orange {
+  color: #fb7047 !important; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

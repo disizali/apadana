@@ -352,8 +352,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! persianjs */ "persianjs");
+/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(persianjs__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Apadana.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 const personalArray = [{
@@ -408,7 +411,7 @@ const organisationArray = [{
   active: true
 }, {
   icon: "lock-alt",
-  text: "SSL",
+  text: "SSL رایگان",
   active: true
 }, {
   icon: "palette",
@@ -446,7 +449,7 @@ const customizeArray = [{
   active: true
 }, {
   icon: "ad",
-  text: "50 لیر ترکیه تبلیغ رایگان در گوگل",
+  text: "200 لیر ترکیه تبلیغ رایگان در گوگل",
   active: true
 }, {
   icon: "lock-alt",
@@ -479,6 +482,10 @@ const customizeArray = [{
 }, {
   icon: "clipboard-list",
   text: "سیستم رزرواسیون",
+  active: true
+}, {
+  icon: "smile-wink",
+  text: "و هر چیزی که شما نیاز داشته باشید ...",
   active: true
 }];
 class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
@@ -523,21 +530,21 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "apadana",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90
+        lineNumber: 97
       },
       __self: this
     }, __jsx("div", {
       className: "plans d-flex flex-column",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 98
       },
       __self: this
     }, __jsx("div", {
       className: "plan d-flex justify-content-start align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 99
       },
       __self: this
     }, __jsx("img", {
@@ -545,109 +552,125 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 100
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 101
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 102
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 103
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 104
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0634\u062E\u0635\u06CC"), __jsx("strong", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 105
       },
       __self: this
-    }, this.getTotalPrice("personal"))), __jsx("div", {
+    }, persianjs__WEBPACK_IMPORTED_MODULE_2___default()(this.getTotalPrice("personal")).englishNumber().toString(), " ", "\u062A\u0648\u0645\u0627\u0646")), __jsx("div", {
       className: "d-flex flex-column body",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 112
       },
       __self: this
     }, __jsx("p", {
       className: "text-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 113
       },
       __self: this
     }, __jsx("b", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 114
       },
       __self: this
     }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0628\u0631\u0627\u06CC \u0627\u0641\u0631\u0627\u062F \u0628\u0627 \u0647\u0632\u06CC\u0646\u0647 \u06A9\u0645 \u0648 \u0627\u0642\u062A\u0635\u0627\u062F\u06CC")), __jsx("ul", {
       className: "features d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 116
       },
       __self: this
-    }, personalArray.filter(item => item.active).map(item => {
+    }, personalArray.filter(item => item.active).map((item, index) => {
       return __jsx("li", {
+        key: index,
         className: `feature rounded d-flex align-items-center ml-2 active`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 121
         },
         __self: this
       }, __jsx("i", {
         className: `fal fa-${item.icon} mx-1`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 125
         },
         __self: this
       }), __jsx("span", {
         className: "mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 126
         },
         __self: this
       }, item.text));
     })), __jsx("p", {
-      className: "text-dark mt-3",
+      className: "text-dark mt-3 description",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 120
+        lineNumber: 131
       },
       __self: this
-    }, "\u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u0633\u0641\u0627\u0631\u0634\u06CC ( \u062F\u0631 \u0635\u0648\u0631\u062A \u0646\u06CC\u0627\u0632 \u06A9\u0644\u06CC\u06A9 \u06A9\u0646\u06CC\u062F )"), __jsx("ul", {
+    }, __jsx("span", {
+      className: "text-dark",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 132
+      },
+      __self: this
+    }, "\u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u0633\u0641\u0627\u0631\u0634\u06CC"), __jsx("span", {
+      className: "text-muted mr-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 133
+      },
+      __self: this
+    }, "( \u062F\u0631 \u0635\u0648\u0631\u062A \u0646\u06CC\u0627\u0632 \u06A9\u0644\u06CC\u06A9 \u06A9\u0646\u06CC\u062F )")), __jsx("ul", {
       className: "features d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123
+        lineNumber: 137
       },
       __self: this
     }, personalArray.filter(item => !item.active).map((item, index) => {
       return __jsx("li", {
+        key: index,
         className: `feature rounded d-flex align-items-center ml-2 deactive ${lodash__WEBPACK_IMPORTED_MODULE_1___default.a.findIndex(this.state.personal, {
           data: item.text
         }) != -1 && "bg-success text-white selected"}`,
@@ -655,21 +678,21 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 142
         },
         __self: this
       }, __jsx("i", {
         className: `fal fa-${item.icon} mx-1`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 153
         },
         __self: this
       }), __jsx("span", {
         className: "mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 154
         },
         __self: this
       }, item.text));
@@ -677,62 +700,62 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "order btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 160
       },
       __self: this
     }, __jsx("div", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 161
       },
       __self: this
     }, __jsx("i", {
       className: "fal fa-rocket mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 162
       },
       __self: this
     }), __jsx("div", {
       className: "wind",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 163
       },
       __self: this
     })), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 165
       },
       __self: this
     }, "\u0634\u0631\u0648\u0639 \u06A9\u0634\u0648\u0631\u06CC \u0634\u062F\u0646")), __jsx("button", {
       className: "description btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 167
       },
       __self: this
     }, __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 153
+        lineNumber: 168
       },
       __self: this
     }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), __jsx("i", {
       className: "fas fa-sort-down",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 154
+        lineNumber: 169
       },
       __self: this
     }))), __jsx("div", {
       className: "plan d-flex justify-content-start align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157
+        lineNumber: 172
       },
       __self: this
     }, __jsx("img", {
@@ -740,139 +763,156 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158
+        lineNumber: 173
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159
+        lineNumber: 174
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 175
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161
+        lineNumber: 176
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162
+        lineNumber: 177
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0634\u0631\u06A9\u062A\u06CC"), __jsx("strong", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 163
+        lineNumber: 178
       },
       __self: this
-    }, this.getTotalPrice("organization"))), __jsx("div", {
+    }, persianjs__WEBPACK_IMPORTED_MODULE_2___default()(this.getTotalPrice("organization")).englishNumber().toString(), " ", "\u062A\u0648\u0645\u0627\u0646")), __jsx("div", {
       className: "d-flex flex-column body",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167
+        lineNumber: 185
       },
       __self: this
     }, __jsx("p", {
       className: "text-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 168
+        lineNumber: 186
       },
       __self: this
     }, __jsx("b", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 169
+        lineNumber: 187
       },
       __self: this
     }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0628\u0631\u0627\u06CC \u0634\u0631\u06A9\u062A \u0647\u0627 \u0648 \u0633\u0627\u0632\u0645\u0627\u0646 \u0647\u0627\u06CC \u06A9\u0648\u0686\u06A9")), __jsx("ul", {
       className: "features d-flex flex-column",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171
+        lineNumber: 189
       },
       __self: this
-    }, lodash__WEBPACK_IMPORTED_MODULE_1___default.a.chunk(organisationArray.filter(item => item.active), 3).map(item => {
+    }, lodash__WEBPACK_IMPORTED_MODULE_1___default.a.chunk(organisationArray.filter(item => item.active), 3).map((item, index) => {
       return __jsx("ul", {
         className: "d-flex pb-1",
+        key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 195
         },
         __self: this
-      }, item.map(feature => {
+      }, item.map((feature, index) => {
         return __jsx("li", {
+          key: index,
           className: `feature rounded d-flex align-items-center ml-2 active`,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 180
+            lineNumber: 198
           },
           __self: this
         }, __jsx("i", {
           className: `fal fa-${feature.icon} mx-1`,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 183
+            lineNumber: 202
           },
           __self: this
         }), __jsx("span", {
           className: "mx-1",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 184
+            lineNumber: 203
           },
           __self: this
         }, feature.text));
       }));
     })), __jsx("p", {
-      className: "text-dark mt-3",
+      className: "text-dark mt-3 description",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192
+        lineNumber: 211
       },
       __self: this
-    }, "\u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u0633\u0641\u0627\u0631\u0634\u06CC ( \u062F\u0631 \u0635\u0648\u0631\u062A \u0646\u06CC\u0627\u0632 \u06A9\u0644\u06CC\u06A9 \u06A9\u0646\u06CC\u062F )"), __jsx("ul", {
+    }, __jsx("span", {
+      className: "text-dark",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 212
+      },
+      __self: this
+    }, "\u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u0633\u0641\u0627\u0631\u0634\u06CC"), __jsx("span", {
+      className: "text-muted mr-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 213
+      },
+      __self: this
+    }, "( \u062F\u0631 \u0635\u0648\u0631\u062A \u0646\u06CC\u0627\u0632 \u06A9\u0644\u06CC\u06A9 \u06A9\u0646\u06CC\u062F )")), __jsx("ul", {
       className: "features d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 195
+        lineNumber: 217
       },
       __self: this
-    }, organisationArray.filter(item => !item.active).map(item => {
+    }, organisationArray.filter(item => !item.active).map((item, index) => {
       return __jsx("li", {
+        key: index,
         className: `feature rounded d-flex align-items-center ml-2 deactive ${lodash__WEBPACK_IMPORTED_MODULE_1___default.a.findIndex(this.state.organization, {
           data: item.text
         }) != -1 && "bg-success text-white selected"}`,
         onClick: () => this.selectFeature("organization", item.text, item.price),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200
+          lineNumber: 222
         },
         __self: this
       }, __jsx("i", {
         className: `fal fa-${item.icon} mx-1`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 213
+          lineNumber: 236
         },
         __self: this
       }), __jsx("span", {
         className: "mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 214
+          lineNumber: 237
         },
         __self: this
       }, item.text));
@@ -880,63 +920,63 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "order btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 220
+        lineNumber: 243
       },
       __self: this
     }, __jsx("div", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 221
+        lineNumber: 244
       },
       __self: this
     }, __jsx("i", {
       className: "far fa-rocket mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 222
+        lineNumber: 245
       },
       __self: this
     }), __jsx("div", {
       className: "wind",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 223
+        lineNumber: 246
       },
       __self: this
     })), __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 225
+        lineNumber: 248
       },
       __self: this
     }, "\u0634\u0631\u0648\u0639 \u062C\u0647\u0627\u0646\u06CC \u0634\u062F\u0646")), __jsx("button", {
       className: "description btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 227
+        lineNumber: 250
       },
       __self: this
     }, __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 228
+        lineNumber: 251
       },
       __self: this
     }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), __jsx("i", {
       className: "fas fa-sort-down",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 229
+        lineNumber: 252
       },
       __self: this
     }))), __jsx("div", {
       className: "plan d-flex justify-content-start align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 232
+        lineNumber: 255
       },
       __self: this
     }, __jsx("img", {
@@ -944,99 +984,101 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 233
+        lineNumber: 256
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 234
+        lineNumber: 257
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 235
+        lineNumber: 258
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 236
+        lineNumber: 259
       },
       __self: this
     }, __jsx("h2", {
       className: "gold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 237
+        lineNumber: 260
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0627\u062E\u062A\u0635\u0627\u0635\u06CC"), __jsx("strong", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 238
+        lineNumber: 261
       },
       __self: this
     }, "\u062A\u0645\u0627\u0633 \u0628\u06AF\u06CC\u0631\u06CC\u062F ")), __jsx("div", {
       className: "d-flex flex-column body",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 240
+        lineNumber: 263
       },
       __self: this
     }, __jsx("p", {
       className: "text-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 241
+        lineNumber: 264
       },
       __self: this
     }, __jsx("b", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 242
+        lineNumber: 265
       },
       __self: this
-    }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0628\u0631\u0627\u06CC \u0634\u0631\u06A9\u062A \u0647\u0627 \u0648 \u0633\u0627\u0632\u0645\u0627\u0646 \u0647\u0627\u06CC \u06A9\u0648\u0686\u06A9")), __jsx("ul", {
+    }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0628\u0631\u0627\u06CC \u0634\u0631\u06A9\u062A \u0647\u0627 \u0627\u0634\u062E\u0627\u0635 \u0628\u0627 \u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u06A9\u0627\u0645\u0644\u0627 \u0633\u0641\u0627\u0631\u0634\u06CC")), __jsx("ul", {
       className: "features d-flex flex-column",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 244
+        lineNumber: 267
       },
       __self: this
-    }, lodash__WEBPACK_IMPORTED_MODULE_1___default.a.chunk(customizeArray.filter(item => item.active), 3).map(item => {
+    }, lodash__WEBPACK_IMPORTED_MODULE_1___default.a.chunk(customizeArray.filter(item => item.active), 3).map((item, index) => {
       return __jsx("ul", {
         className: "d-flex pb-1",
+        key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 250
+          lineNumber: 273
         },
         __self: this
-      }, item.map(feature => {
+      }, item.map((feature, index) => {
         return __jsx("li", {
           className: `feature rounded d-flex align-items-center ml-2 active`,
+          key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 253
+            lineNumber: 276
           },
           __self: this
         }, __jsx("i", {
           className: `fal fa-${feature.icon} mx-1`,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 256
+            lineNumber: 280
           },
           __self: this
         }), __jsx("span", {
           className: "mx-1",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 257
+            lineNumber: 281
           },
           __self: this
         }, feature.text));
@@ -1045,32 +1087,33 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "features d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 265
+        lineNumber: 289
       },
       __self: this
-    }, customizeArray.filter(item => !item.active).map(item => {
+    }, customizeArray.filter(item => !item.active).map((item, index) => {
       return __jsx("li", {
+        key: index,
         className: `feature rounded d-flex align-items-center ml-2 deactive ${lodash__WEBPACK_IMPORTED_MODULE_1___default.a.findIndex(this.state.organization, {
           data: item.text
         }) != -1 && "bg-success text-white selected"}`,
         onClick: () => this.selectFeature("organization", item.text, item.price),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 270
+          lineNumber: 294
         },
         __self: this
       }, __jsx("i", {
         className: `fal fa-${item.icon} mx-1`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 283
+          lineNumber: 308
         },
         __self: this
       }), __jsx("span", {
         className: "mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 284
+          lineNumber: 309
         },
         __self: this
       }, item.text));
@@ -1078,56 +1121,56 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "order btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 290
+        lineNumber: 315
       },
       __self: this
     }, __jsx("div", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 291
+        lineNumber: 316
       },
       __self: this
     }, __jsx("i", {
       className: "far fa-space-shuttle mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 292
+        lineNumber: 317
       },
       __self: this
     }), __jsx("div", {
       className: "wind",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 293
+        lineNumber: 318
       },
       __self: this
     })), __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 295
+        lineNumber: 320
       },
       __self: this
     }, "\u0634\u0631\u0648\u0639 \u06A9\u0647\u06A9\u0634\u0627\u0646\u06CC \u0634\u062F\u0646")), __jsx("button", {
       className: "description btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 297
+        lineNumber: 322
       },
       __self: this
     }, __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 298
+        lineNumber: 323
       },
       __self: this
     }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), __jsx("i", {
       className: "fas fa-sort-down",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 299
+        lineNumber: 324
       },
       __self: this
     })))));
@@ -1678,30 +1721,689 @@ class Samples extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Seo", function() { return Seo; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/entries */ "./node_modules/@babel/runtime-corejs2/core-js/object/entries.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! persianjs */ "persianjs");
+/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(persianjs__WEBPACK_IMPORTED_MODULE_4__);
+
 var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Seo.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-class Seo extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+
+
+class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      keywords: [],
+      keyword: "",
+      currentPosition: 5,
+      targetPosition: 1,
+      features: []
+    };
+    this.addNewKeyword = this.addNewKeyword.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.getTotalPrice = this.getTotalPrice.bind(this);
+    this.selectFeatures = this.selectFeatures.bind(this);
+  }
+
+  addNewKeyword(e) {
+    const {
+      keywords
+    } = this.state;
+
+    if (e.key == "Enter" && e.target.value && !lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(keywords, e.target.value)) {
+      let newKeywords = [e.target.value];
+
+      if (e.target.value == "salam" || e.target.value == "سلام") {
+        newKeywords.unshift("سلام به روی ماهت");
+      }
+
+      this.setState({
+        keywords: [...newKeywords, ...keywords],
+        keyword: ""
+      });
+    }
+  }
+
+  getTotalPrice() {
+    const {
+      keywords,
+      currentPosition,
+      targetPosition,
+      features
+    } = this.state;
+    let words = {};
+    keywords.forEach(item => {
+      const length = item.split(" ").length;
+      const oldKeywords = words[length] ? words[length] : [];
+      words[length] = [item, ...oldKeywords];
+    });
+
+    if (_babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default()(words).length == 0) {
+      return 0;
+    }
+
+    let totalPrice = _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default()(words).reduce((total, current) => {
+      const [spate, words] = current;
+      return total + 30000000 / spate * words.length;
+    }, 0);
+
+    const newPercents = {
+      1: [0.5, 0],
+      2: [0.8, 0.6],
+      3: [1, 0.7],
+      4: [1.2, 0.9],
+      5: [1.5, 1]
+    };
+    totalPrice = totalPrice * newPercents[currentPosition][targetPosition];
+    if (lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, 1)) totalPrice += 400000;
+    if (lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, 2)) totalPrice += 2000000;
+    totalPrice = totalPrice ? totalPrice : 0;
+    return [persianjs__WEBPACK_IMPORTED_MODULE_4___default()(Math.floor(totalPrice).toLocaleString()).englishNumber().toString(), totalPrice];
+  }
+
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  selectFeatures(feature) {
+    const {
+      features
+    } = this.state;
+
+    if (lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, feature)) {
+      return this.setState({
+        features: features.filter(item => {
+          return item !== feature;
+        })
+      });
+    }
+
+    return this.setState({
+      features: [...features, feature]
+    });
+  }
+
   render() {
+    const {
+      keywords,
+      keyword,
+      currentPosition,
+      targetPosition,
+      features
+    } = this.state;
+    const totalPrice = this.getTotalPrice();
     return __jsx("div", {
       className: "seo",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 97
       },
       __self: this
-    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      title: "\u0633\u0626\u0648",
+    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      title: "\u0633\u0626\u0648 \u0648 \u062A\u0648\u0644\u06CC\u062F \u0645\u062D\u062A\u0648\u0627",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 7
+        lineNumber: 98
       },
       __self: this
-    }));
+    }), __jsx("div", {
+      className: "seo-container d-flex flex-column w-100 mt-5 rtl text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 99
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 100
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "w-50 mx-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 101
+      },
+      __self: this
+    }, __jsx("label", {
+      htmlFor: "keyword",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 102
+      },
+      __self: this
+    }, "\u06A9\u0644\u0645\u0647 \u06A9\u0644\u06CC\u062F\u06CC \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F \u0648 enter \u0628\u0632\u0646\u06CC\u062F"), __jsx("input", {
+      type: "text",
+      className: "form-control",
+      id: "keyword",
+      name: "keyword",
+      onKeyPress: this.addNewKeyword,
+      onChange: this.handleChange,
+      value: keyword,
+      autoComplete: "false",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 105
+      },
+      __self: this
+    }), __jsx("ul", {
+      className: "keywoards",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 115
+      },
+      __self: this
+    }, keywords.map((item, index) => {
+      return __jsx("li", {
+        key: index,
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118
+        },
+        __self: this
+      }, __jsx("span", {
+        className: "p-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 119
+        },
+        __self: this
+      }, item));
+    }))), __jsx("div", {
+      className: "bg-white w-50 mx-2 d-flex flex-column justify-content-between",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 125
+      },
+      __self: this
+    }, __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 126
+      },
+      __self: this
+    }, __jsx("label", {
+      htmlFor: "current-position",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 127
+      },
+      __self: this
+    }, "\u0633\u0627\u06CC\u062A\u062A \u0627\u0644\u0627\u0646 \u0635\u0641\u062D\u0647 \u0686\u0646\u062F\u0645\u0647 \u061F"), __jsx("ul", {
+      className: "list-selector d-flex p-0",
+      id: "current-position",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 130
+      },
+      __self: this
+    }, __jsx("li", {
+      className: `mx-1 p-2 border rounded ${currentPosition === 1 ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.setState({
+        currentPosition: 1
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 131
+      },
+      __self: this
+    }, "\u0627\u0648\u0644"), __jsx("li", {
+      className: `mx-1 p-2 border rounded ${currentPosition === 2 ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.setState({
+        currentPosition: 2
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 141
+      },
+      __self: this
+    }, "\u062F\u0648\u0645"), __jsx("li", {
+      className: `mx-1 p-2 border rounded ${currentPosition === 3 ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.setState({
+        currentPosition: 3
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 151
+      },
+      __self: this
+    }, "\u0633\u0648\u0645"), __jsx("li", {
+      className: `mx-1 p-2 border rounded ${currentPosition === 4 ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.setState({
+        currentPosition: 4
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 161
+      },
+      __self: this
+    }, "\u0686\u0647\u0627\u0631\u0645"), __jsx("li", {
+      className: `mx-1 p-2 border rounded ${currentPosition === 5 ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.setState({
+        currentPosition: 5
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 171
+      },
+      __self: this
+    }, "\u067E\u0646\u062C\u0645 \u06CC\u0627 \u0628\u06CC\u0634\u062A\u0631")), __jsx("label", {
+      htmlFor: "target-position",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 183
+      },
+      __self: this
+    }, "\u0645\u06CC\u062E\u0648\u0627\u06CC \u06A9\u062C\u0627\u06CC \u0635\u0641\u062D\u0647 \u0627\u0648\u0644 \u0628\u0627\u0634\u06CC \u061F"), __jsx("ul", {
+      className: "list-selector d-flex p-0 w-100",
+      id: "target-position",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 186
+      },
+      __self: this
+    }, __jsx("li", {
+      className: `mx-1 p-2 border rounded w-50 ${targetPosition === 0 ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.setState({
+        targetPosition: 0
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 190
+      },
+      __self: this
+    }, "\u0633\u0647 \u062A\u0627\u06CC \u0627\u0648\u0644"), __jsx("li", {
+      className: `mx-1 p-2 border rounded w-50 ${targetPosition === 1 ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.setState({
+        targetPosition: 1
+      }),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 200
+      },
+      __self: this
+    }, "\u0645\u0647\u0645 \u0646\u06CC\u0633\u062A")), __jsx("label", {
+      htmlFor: "target-position",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 212
+      },
+      __self: this
+    }, "\u0686\u0647 \u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u062F\u06CC\u06AF\u0647 \u0627\u06CC \u0644\u0627\u0632\u0645 \u062F\u0627\u0631\u06CC\u062F \u061F"), __jsx("ul", {
+      className: "list-selector d-flex p-0 w-100",
+      id: "target-position",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 215
+      },
+      __self: this
+    }, __jsx("li", {
+      className: `mx-1 p-2 border rounded w-50 ${lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, 1) ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.selectFeatures(1),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 219
+      },
+      __self: this
+    }, "\u06AF\u0648\u06AF\u0644 \u0645\u067E"), __jsx("li", {
+      className: `mx-1 p-2 border rounded w-50 ${lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, 2) ? "bg-primary text-white" : "bg-light"}`,
+      onClick: () => this.selectFeatures(2),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 229
+      },
+      __self: this
+    }, "\u062D\u0627\u0644 \u062E\u0648\u0628 \u06A9\u0646 \u0633\u0627\u06CC\u062A"))), __jsx("div", {
+      className: "d-flex justify-content-between",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 241
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "text-muted",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 242
+      },
+      __self: this
+    }, "\u0642\u06CC\u0645\u062A \u062A\u062E\u0645\u06CC\u0646\u06CC"), __jsx("span", {
+      className: "text-primary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 243
+      },
+      __self: this
+    }, totalPrice[1] == 0 ? __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 245
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-laugh-squint",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 246
+      },
+      __self: this
+    }), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 247
+      },
+      __self: this
+    }, "\u062A\u0627 \u0627\u06CC\u0646\u062C\u0627\u0634 \u06A9\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646\u0647")) : __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 250
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "row-price ml-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 251
+      },
+      __self: this
+    }, totalPrice[0]), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 252
+      },
+      __self: this
+    }, "\u062A\u0648\u0645\u0627\u0646")))))), __jsx("div", {
+      className: "d-flex flex-column discounts",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 259
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "text-success mr-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 260
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-gift",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 261
+      },
+      __self: this
+    }), "\u0647\u062F\u06CC\u0647 \u0647\u0627"), __jsx("ul", {
+      className: "d-flex justify-content-between unstyled p-0  mx-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 264
+      },
+      __self: this
+    }, __jsx("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 265
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "discount-title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 266
+      },
+      __self: this
+    }, "\u0628\u0627 \u06F1\u06F0 \u0645\u06CC\u0644\u06CC\u0648\u0646 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F"), __jsx("b", {
+      className: "bg-light p-1 rounded discount-title border mx-1 text-primary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 267
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-check mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 268
+      },
+      __self: this
+    }), "\u06F4\u06F0\u06F0 \u0644\u06CC\u0631 \u062A\u0628\u0644\u06CC\u063A \u062F\u0631 \u06AF\u0648\u06AF\u0644"), " ", __jsx("span", {
+      className: "discount-title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 271
+      },
+      __self: this
+    }, "\u0627\u0632 \u0645\u0627 \u0647\u062F\u06CC\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F")), __jsx("li", {
+      className: "discount-status",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 273
+      },
+      __self: this
+    }, this.getTotalPrice()[1] >= 10000000 ? __jsx("span", {
+      className: "text-success",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 275
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-grin-hearts ml-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 276
+      },
+      __self: this
+    }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
+      className: "text-muted",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 280
+      },
+      __self: this
+    }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))), __jsx("ul", {
+      className: "d-flex justify-content-between unstyled p-0  mx-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 286
+      },
+      __self: this
+    }, __jsx("li", {
+      className: "d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 287
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "discount-title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 288
+      },
+      __self: this
+    }, "\u0628\u0627 \u06F1\u06F5 \u062A\u0648\u0645\u0646 \u062E\u0631\u06CC\u062F \u0627\u0632 \u0645\u0627 \u0645\u0648\u0627\u0631\u062F \u0631\u0648 \u0628\u0647 \u0631\u0648 \u0631\u0627 \u0628\u0647 \u0635\u0648\u0631\u062A \u0633\u0627\u0644\u0627\u0646\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
+      className: "d-flex p-0 items mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 292
+      },
+      __self: this
+    }, __jsx("li", {
+      className: "bg-light p-1 rounded border mx-1 text-primary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 293
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-check mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 294
+      },
+      __self: this
+    }), "SSL"), __jsx("li", {
+      className: "bg-light p-1 rounded border mx-1 text-primary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 297
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-check mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 298
+      },
+      __self: this
+    }), "\u0633\u0631\u0648\u0631"), __jsx("li", {
+      className: "bg-light p-1 rounded border mx-1 text-primary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 301
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-check mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 302
+      },
+      __self: this
+    }), "\u062F\u0627\u0645\u0646\u0647"))), __jsx("li", {
+      className: "discount-status",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 307
+      },
+      __self: this
+    }, this.getTotalPrice()[1] >= 15000000 ? __jsx("span", {
+      className: "text-success",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 309
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-grin-hearts ml-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 310
+      },
+      __self: this
+    }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
+      className: "text-muted",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 314
+      },
+      __self: this
+    }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))), __jsx("ul", {
+      className: "d-flex justify-content-between unstyled p-0 mx-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 320
+      },
+      __self: this
+    }, __jsx("li", {
+      className: "d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 321
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "discount-title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 322
+      },
+      __self: this
+    }, "\u0628\u0627 \u06F3\u06F0 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F \u066C \u06CC\u06A9 \u0645\u0648\u0631\u062F \u0631\u0627 \u0628\u0647 \u0627\u0646\u062A\u062E\u0627\u0628 \u062E\u0648\u062F \u0647\u062F\u06CC\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
+      className: "d-flex p-0 items mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 325
+      },
+      __self: this
+    }, __jsx("li", {
+      className: "bg-light p-1 rounded border mx-1 text-primary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 326
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-check mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 327
+      },
+      __self: this
+    }), "\u0637\u0631\u0627\u062D\u06CC \u0648\u0628 \u0633\u0627\u06CC\u062A"), __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 330
+      },
+      __self: this
+    }, " \u06CC\u0627 "), __jsx("li", {
+      className: "bg-light p-1 rounded border mx-1 text-primary",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 331
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-check mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 332
+      },
+      __self: this
+    }), "\u0637\u0631\u0627\u062D\u06CC \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646"))), __jsx("li", {
+      className: "discount-status",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 337
+      },
+      __self: this
+    }, this.getTotalPrice()[1] >= 30000000 ? __jsx("span", {
+      className: "text-success",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 339
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fas fa-grin-hearts ml-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 340
+      },
+      __self: this
+    }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
+      className: "text-muted",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 344
+      },
+      __self: this
+    }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))))));
   }
 
 }
@@ -1765,6 +2467,17 @@ class SkyBanner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/entries.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/entries.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/entries */ "core-js/library/fn/object/entries");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
@@ -1812,7 +2525,7 @@ class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 1
+      tab: 2
     };
     this.changeTab = this.changeTab.bind(this);
   }
@@ -2339,6 +3052,17 @@ module.exports = __webpack_require__(/*! /Users/imac/Desktop/APADANA/pages/index
 
 /***/ }),
 
+/***/ "core-js/library/fn/object/entries":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/object/entries" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/entries");
+
+/***/ }),
+
 /***/ "core-js/library/fn/parse-int":
 /*!***********************************************!*\
   !*** external "core-js/library/fn/parse-int" ***!
@@ -2369,6 +3093,17 @@ module.exports = require("lodash");
 /***/ (function(module, exports) {
 
 module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "persianjs":
+/*!****************************!*\
+  !*** external "persianjs" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("persianjs");
 
 /***/ }),
 

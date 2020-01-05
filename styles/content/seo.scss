@@ -1,6 +1,48 @@
 .seo {
-    height: 700px;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.198);
-    width: 900px;
+  height: 750px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.198);
+  width: 900px;
+  .row-price{
+    font-size: 1.2rem;
+  }
+  ul.keywoards {
+    list-style: none;
+    height: 300px;
+    padding: 0;
+    overflow-y: scroll;
+    li {
+      span {
+        cursor: pointer;
+        margin: 10px 0;
+        background: #f1f1f1;
+        border-radius: 10px;
+        width: auto;
+      }
+    }
+  }
+  .list-selector {
+    list-style: none;
+    li {
+      transition-duration: 0.3s;
+      cursor: pointer;
+    }
+  }
+  .discounts {
+    ul {
+      list-style-type: none;
+      &.items {
+        li {
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .discount-title {
+      font-size: 0.8rem;
+    }
+    .discount-status {
+      font-size: 0.7rem;
+    }
+  }
 }
