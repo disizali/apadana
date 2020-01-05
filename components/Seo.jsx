@@ -16,6 +16,7 @@ export class Seo extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.getTotalPrice = this.getTotalPrice.bind(this);
     this.selectFeatures = this.selectFeatures.bind(this);
+    this.removeKeyword = this.removeKeyword.bind(this);
   }
   addNewKeyword(e) {
     const { keywords } = this.state;
@@ -32,9 +33,16 @@ export class Seo extends Component {
     }
   }
 
+  removeKeyword(target) {
+    console.log(target);
+    const { keywords } = this.state;
+    this.setState({ keywords: keywords.filter(item => item != target) });
+  }
+
   getTotalPrice() {
     const { keywords, currentPosition, targetPosition, features } = this.state;
     let words = {};
+    let totalPrice = 0;
     keywords.forEach(item => {
       const length = item.split(" ").length;
       const oldKeywords = words[length] ? words[length] : [];
@@ -43,7 +51,7 @@ export class Seo extends Component {
     if (Object.entries(words).length == 0) {
       return 0;
     }
-    let totalPrice = Object.entries(words).reduce((total, current) => {
+    totalPrice = Object.entries(words).reduce((total, current) => {
       const [spate, words] = current;
       return total + (30000000 / spate) * words.length;
     }, 0);
@@ -116,7 +124,13 @@ export class Seo extends Component {
                 {keywords.map((item, index) => {
                   return (
                     <li key={index} className="my-3">
-                      <span className="p-1">{item}</span>
+                      <span className="p-1">
+                        <i
+                          className="far fa-times-circle ml-1"
+                          onClick={() => this.removeKeyword(item)}
+                        ></i>
+                        {item}
+                      </span>
                     </li>
                   );
                 })}

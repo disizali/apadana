@@ -3,7 +3,7 @@
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.198);
   width: 900px;
-  .row-price{
+  .row-price {
     font-size: 1.2rem;
   }
   ul.keywoards {
@@ -13,6 +13,18 @@
     overflow-y: scroll;
     li {
       span {
+        &:hover {
+          i {
+            font-size: 1rem;
+          }
+        }
+        i {
+          font-size: 0;
+          transition-duration: 0.3s;
+          &:hover {
+            color: red;
+          }
+        }
         cursor: pointer;
         margin: 10px 0;
         background: #f1f1f1;

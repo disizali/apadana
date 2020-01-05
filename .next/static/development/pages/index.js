@@ -279,12 +279,389 @@ function (_Component) {
 /*!********************************!*\
   !*** ./components/Apadana.jsx ***!
   \********************************/
-/*! exports provided: Apadana, default */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Apadana", function() { return Apadana; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Apadana; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+
+
+
+
+
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Apadana.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+
+
+var Apadana =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Apadana, _Component);
+
+  function Apadana() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Apadana);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Apadana).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Apadana, [{
+    key: "render",
+    value: function render() {
+      return __jsx("div", {
+        className: "apadana",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 7
+        },
+        __self: this
+      }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        },
+        __self: this
+      }), __jsx("div", {
+        className: "d-flex rtl mt-5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "w-50 text-right",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      }, __jsx("h5", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        },
+        __self: this
+      }, "\u0622\u0646\u0686\u0647 \u0627\u0632 \u0645\u0627 \u0628\u0627\u06CC\u062F \u0628\u062F\u0627\u0646\u06CC\u062F"), __jsx("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        },
+        __self: this
+      }, __jsx("li", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "fal fa-map-marker-alt ml-1 text-orange",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }), __jsx("span", {
+        className: "text-orange mx-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, "\u0622\u062F\u0631\u0633 : "), __jsx("span", {
+        className: "text-muted mr-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, "\u0645\u0631\u0632\u062F\u0627\u0631\u0627\u0646 \u062E\u06CC\u0627\u0628\u0627\u0646 \u0627\u0628\u0631\u0627\u0647\u06CC\u0645\u06CC \u0628\u0631\u062C \u0627\u0644\u0648\u0646\u062F \u0637\u0628\u0642\u0647 \u06F7 \u062C\u0646\u0648\u0628\u06CC \u0648\u0627\u062D\u062F \u06F7\u06F0\u06F7")), __jsx("li", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "fal fa-building ml-1 text-orange",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }), __jsx("span", {
+        className: "text-orange mx-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }, "\u0634\u0645\u0627\u0631\u0647 \u062B\u0628\u062A : "), __jsx("span", {
+        className: "text-muted mr-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }, "531911"))), __jsx("h5", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, "\u0631\u0627\u0647 \u0647\u0627\u06CC \u0627\u0631\u062A\u0628\u0627\u0637\u06CC"), __jsx("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, __jsx("li", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "fal fa-user-astronaut ml-1 text-orange",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }), __jsx("span", {
+        className: "text-orange mx-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, "\u062A\u0644\u0641\u0646 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC : "), __jsx("span", {
+        className: "text-muted mr-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }, "\u06F4\u06F4\u06F2\u06F5\u06F9\u06F6\u06F8\u06F8-\u06F0\u06F2\u06F1")), __jsx("li", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "fal fa-phone ml-1 text-orange",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        },
+        __self: this
+      }), __jsx("span", {
+        className: "text-orange mx-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        },
+        __self: this
+      }, "\u062A\u0644\u0641\u0646 \u0645\u0634\u0627\u0648\u0631\u0647 : "), __jsx("span", {
+        className: "text-muted mr-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      }, "\u06F4\u06F4\u06F2\u06F5\u06F9\u06F6\u06F1\u06F1-\u06F0\u06F2\u06F1")), __jsx("li", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "fab fa-instagram ml-1 text-orange",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }), __jsx("span", {
+        className: "text-orange mx-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, "\u0627\u06CC\u0646\u0633\u062A\u0627\u06AF\u0631\u0627\u0645 \u0645\u0627 : "), __jsx("span", {
+        className: "text-muted mr-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, __jsx("a", {
+        href: "http://instagram.com/virawebapadana",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, "@virawebapadana")))), __jsx("h5", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }, "\u0627\u0645\u0648\u0631 \u0645\u0627\u0644\u06CC"), __jsx("ul", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, __jsx("li", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "fal fa-credit-card ml-1 text-orange",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }), __jsx("span", {
+        className: "text-orange mx-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, "\u067E\u0631\u062F\u0627\u062E\u062A \u0645\u0633\u062A\u0642\u06CC\u0645 \u0628\u0627 \u0632\u0631\u06CC\u0646 \u067E\u0627\u0644 :", " "), __jsx("span", {
+        className: "text-muted mr-1 bg-warning px-3 py-2 rounded",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, __jsx("a", {
+        href: "http://zarinp.al/apweb.ir",
+        className: "text-white",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }, "\u067E\u0631\u062F\u0627\u062E\u062A")))), __jsx("h5", {
+        className: "my-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, "\u0646\u0645\u0627\u062F \u0647\u0627"), __jsx("ul", {
+        className: "d-flex",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }, __jsx("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, "1"), __jsx("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }, "2"), __jsx("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }, "3"))), __jsx("div", {
+        className: "w-50",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, __jsx("div", {
+        "class": "mapouter rounded",
+        className: "jsx-62095387",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }, __jsx("div", {
+        "class": "gmap_canvas rounded",
+        className: "jsx-62095387",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }, __jsx("iframe", {
+        width: "100%",
+        height: "500",
+        id: "gmap_canvas",
+        src: "https://maps.google.com/maps?q=%D8%A8%D8%B1%D8%AC%20%D8%A7%D9%84%D9%88%D9%86%D8%AF&t=&z=13&ie=UTF8&iwloc=&output=embed",
+        frameBorder: "0",
+        scrolling: "no",
+        className: "jsx-62095387" + " " + "rounded",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_5___default.a, {
+        id: "62095387",
+        __self: this
+      }, ".mapouter.jsx-62095387{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas.jsx-62095387{overflow:hidden;background:none !important;height:500px;width:600px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9pbWFjL0Rlc2t0b3AvQVBBREFOQS9jb21wb25lbnRzL0FwYWRhbmEuanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWlGMEIsQUFHcUMsQUFNRixnQkFDVyxFQU5WLGlCQUNKLFFBTUEsS0FMRCxRQU1BLElBTGQsUUFNQSIsImZpbGUiOiIvVXNlcnMvaW1hYy9EZXNrdG9wL0FQQURBTkEvY29tcG9uZW50cy9BcGFkYW5hLmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBTa3kgZnJvbSBcIi4vU2t5XCI7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEFwYWRhbmEgZXh0ZW5kcyBDb21wb25lbnQge1xuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXBhZGFuYVwiPlxuICAgICAgICA8U2t5IHRpdGxlPVwi2YjbjNix2Kcg2YjYqCDYotm+2KfYr9in2YbYp1wiIC8+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZC1mbGV4IHJ0bCBtdC01XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUwIHRleHQtcmlnaHRcIj5cbiAgICAgICAgICAgIDxoNSBjbGFzc05hbWU9XCJteS0zXCI+2KLZhtqG2Ycg2KfYsiDZhdinINio2KfbjNivINio2K/Yp9mG24zYrzwvaDU+XG4gICAgICAgICAgICA8dWw+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLW1hcC1tYXJrZXItYWx0IG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7Yotiv2LHYsyA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj5cbiAgICAgICAgICAgICAgICAgINmF2LHYstiv2KfYsdin2YYg2K7bjNin2KjYp9mGINin2KjYsdin2YfbjNmF24wg2KjYsdisINin2YTZiNmG2K8g2LfYqNmC2Ycg27cg2KzZhtmI2KjbjCDZiNin2K3YryDbt9uw27dcbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLWJ1aWxkaW5nIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7YtNmF2KfYsdmHINir2KjYqiA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj41MzE5MTE8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7Ysdin2Ycg2YfYp9uMINin2LHYqtio2KfYt9uMPC9oNT5cbiAgICAgICAgICAgIDx1bD5cbiAgICAgICAgICAgICAgPGxpIGNsYXNzTmFtZT1cIm15LTNcIj5cbiAgICAgICAgICAgICAgICA8aSBjbGFzc05hbWU9XCJmYWwgZmEtdXNlci1hc3Ryb25hdXQgbWwtMSB0ZXh0LW9yYW5nZVwiIC8+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1vcmFuZ2UgbXgtMVwiPtiq2YTZgdmGINm+2LTYqtuM2KjYp9mG24wgOiA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xXCI+27TbtNuy27Xbudu227jbuC3bsNuy27E8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLXBob25lIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7YqtmE2YHZhiDZhdi02KfZiNix2YcgOiA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xXCI+27TbtNuy27Xbudu227HbsS3bsNuy27E8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFiIGZhLWluc3RhZ3JhbSBtbC0xIHRleHQtb3JhbmdlXCIgLz5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW9yYW5nZSBteC0xXCI+2KfbjNmG2LPYqtin2q/Ysdin2YUg2YXYpyA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj5cbiAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwOi8vaW5zdGFncmFtLmNvbS92aXJhd2ViYXBhZGFuYVwiPlxuICAgICAgICAgICAgICAgICAgICBAdmlyYXdlYmFwYWRhbmFcbiAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7Yp9mF2YjYsSDZhdin2YTbjDwvaDU+XG4gICAgICAgICAgICA8dWw+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLWNyZWRpdC1jYXJkIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj5cbiAgICAgICAgICAgICAgICAgINm+2LHYr9in2K7YqiDZhdiz2KrZgtuM2YUg2KjYpyDYstix24zZhiDZvtin2YQgOntcIiBcIn1cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xIGJnLXdhcm5pbmcgcHgtMyBweS0yIHJvdW5kZWRcIj5cbiAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwOi8vemFyaW5wLmFsL2Fwd2ViLmlyXCIgY2xhc3NOYW1lPVwidGV4dC13aGl0ZVwiPlxuICAgICAgICAgICAgICAgICAgICDZvtix2K/Yp9iu2KpcbiAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7ZhtmF2KfYryDZh9inPC9oNT5cbiAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJkLWZsZXhcIj5cbiAgICAgICAgICAgICAgPGxpPjE8L2xpPlxuICAgICAgICAgICAgICA8bGk+MjwvbGk+XG4gICAgICAgICAgICAgIDxsaT4zPC9saT5cbiAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUwXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwibWFwb3V0ZXIgcm91bmRlZFwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZ21hcF9jYW52YXMgcm91bmRlZFwiPlxuICAgICAgICAgICAgICAgIDxpZnJhbWVcbiAgICAgICAgICAgICAgICAgIHdpZHRoPVwiMTAwJVwiXG4gICAgICAgICAgICAgICAgICBoZWlnaHQ9XCI1MDBcIlxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicm91bmRlZFwiXG4gICAgICAgICAgICAgICAgICBpZD1cImdtYXBfY2FudmFzXCJcbiAgICAgICAgICAgICAgICAgIHNyYz1cImh0dHBzOi8vbWFwcy5nb29nbGUuY29tL21hcHM/cT0lRDglQTglRDglQjElRDglQUMlMjAlRDglQTclRDklODQlRDklODglRDklODYlRDglQUYmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWRcIlxuICAgICAgICAgICAgICAgICAgZnJhbWVCb3JkZXI9XCIwXCJcbiAgICAgICAgICAgICAgICAgIHNjcm9sbGluZz1cIm5vXCJcbiAgICAgICAgICAgICAgICA+PC9pZnJhbWU+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgICAgICAgLm1hcG91dGVyIHtcbiAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IHJpZ2h0O1xuICAgICAgICAgICAgICAgICAgaGVpZ2h0OiA1MDBweDtcbiAgICAgICAgICAgICAgICAgIHdpZHRoOiA2MDBweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLmdtYXBfY2FudmFzIHtcbiAgICAgICAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICAgICAgICBoZWlnaHQ6IDUwMHB4O1xuICAgICAgICAgICAgICAgICAgd2lkdGg6IDYwMHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgYH08L3N0eWxlPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxufVxuIl19 */\n/*@ sourceURL=/Users/imac/Desktop/APADANA/components/Apadana.jsx */")))));
+    }
+  }]);
+
+  return Apadana;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./components/Develop.jsx":
+/*!********************************!*\
+  !*** ./components/Develop.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Develop; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
@@ -307,7 +684,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Apadana.jsx";
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Develop.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
 
 
@@ -441,17 +818,18 @@ var customizeArray = [{
   text: "و هر چیزی که شما نیاز داشته باشید ...",
   active: true
 }];
-var Apadana =
+
+var Develop =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(Apadana, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(Develop, _Component);
 
-  function Apadana(props) {
+  function Develop(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Apadana);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Develop);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Apadana).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(Develop).call(this, props));
     _this.state = {
       personal: [],
       personalPrice: 2000000,
@@ -463,7 +841,7 @@ function (_Component) {
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Apadana, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Develop, [{
     key: "selectFeature",
     value: function selectFeature(plan, data, price) {
       if (lodash__WEBPACK_IMPORTED_MODULE_9___default.a.findIndex(this.state[plan], {
@@ -493,7 +871,7 @@ function (_Component) {
       var _this2 = this;
 
       return __jsx("div", {
-        className: "apadana",
+        className: "develop",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 97
@@ -1160,73 +1538,8 @@ function (_Component) {
     }
   }]);
 
-  return Apadana;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
-/* harmony default export */ __webpack_exports__["default"] = (Apadana);
-
-/***/ }),
-
-/***/ "./components/Develop.jsx":
-/*!********************************!*\
-  !*** ./components/Develop.jsx ***!
-  \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Develop; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
-
-
-
-
-
-var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Develop.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
-
-
-
-var Develop =
-/*#__PURE__*/
-function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Develop, _Component);
-
-  function Develop() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Develop);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Develop).apply(this, arguments));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Develop, [{
-    key: "render",
-    value: function render() {
-      return __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 7
-        },
-        __self: this
-      }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        title: "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0648 \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 8
-        },
-        __self: this
-      }));
-    }
-  }]);
-
   return Develop;
-}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 
 
@@ -1931,6 +2244,7 @@ function (_Component) {
     _this.handleChange = _this.handleChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
     _this.getTotalPrice = _this.getTotalPrice.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
     _this.selectFeatures = _this.selectFeatures.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
+    _this.removeKeyword = _this.removeKeyword.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_8__["default"])(_this));
     return _this;
   }
 
@@ -1953,6 +2267,17 @@ function (_Component) {
       }
     }
   }, {
+    key: "removeKeyword",
+    value: function removeKeyword(target) {
+      console.log(target);
+      var keywords = this.state.keywords;
+      this.setState({
+        keywords: keywords.filter(function (item) {
+          return item != target;
+        })
+      });
+    }
+  }, {
     key: "getTotalPrice",
     value: function getTotalPrice() {
       var _this$state = this.state,
@@ -1961,6 +2286,7 @@ function (_Component) {
           targetPosition = _this$state.targetPosition,
           features = _this$state.features;
       var words = {};
+      var totalPrice = 0;
       keywords.forEach(function (item) {
         var length = item.split(" ").length;
         var oldKeywords = words[length] ? words[length] : [];
@@ -1971,14 +2297,13 @@ function (_Component) {
         return 0;
       }
 
-      var totalPrice = _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_2___default()(words).reduce(function (total, current) {
+      totalPrice = _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_2___default()(words).reduce(function (total, current) {
         var _current = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(current, 2),
             spate = _current[0],
             words = _current[1];
 
         return total + 30000000 / spate * words.length;
       }, 0);
-
       var newPercents = {
         1: [0.5, 0],
         2: [0.8, 0.6],
@@ -2030,42 +2355,42 @@ function (_Component) {
         className: "seo",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 105
         },
         __self: this
       }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_11__["default"], {
         title: "\u0633\u0626\u0648 \u0648 \u062A\u0648\u0644\u06CC\u062F \u0645\u062D\u062A\u0648\u0627",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 106
         },
         __self: this
       }), __jsx("div", {
         className: "seo-container d-flex flex-column w-100 mt-5 rtl text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 107
         },
         __self: this
       }, __jsx("div", {
         className: "d-flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 108
         },
         __self: this
       }, __jsx("div", {
         className: "w-50 mx-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 109
         },
         __self: this
       }, __jsx("label", {
         htmlFor: "keyword",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 110
         },
         __self: this
       }, "\u06A9\u0644\u0645\u0647 \u06A9\u0644\u06CC\u062F\u06CC \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F \u0648 enter \u0628\u0632\u0646\u06CC\u062F"), __jsx("input", {
@@ -2079,14 +2404,14 @@ function (_Component) {
         autoComplete: "false",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 113
         },
         __self: this
       }), __jsx("ul", {
         className: "keywoards",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 123
         },
         __self: this
       }, keywords.map(function (item, index) {
@@ -2095,35 +2420,45 @@ function (_Component) {
           className: "my-3",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118
+            lineNumber: 126
           },
           __self: this
         }, __jsx("span", {
           className: "p-1",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 119
+            lineNumber: 127
           },
           __self: this
-        }, item));
+        }, __jsx("i", {
+          className: "far fa-times-circle ml-1",
+          onClick: function onClick() {
+            return _this2.removeKeyword(item);
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 128
+          },
+          __self: this
+        }), item));
       }))), __jsx("div", {
         className: "bg-white w-50 mx-2 d-flex flex-column justify-content-between",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 139
         },
         __self: this
       }, __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 140
         },
         __self: this
       }, __jsx("label", {
         htmlFor: "current-position",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 141
         },
         __self: this
       }, "\u0633\u0627\u06CC\u062A\u062A \u0627\u0644\u0627\u0646 \u0635\u0641\u062D\u0647 \u0686\u0646\u062F\u0645\u0647 \u061F"), __jsx("ul", {
@@ -2131,7 +2466,7 @@ function (_Component) {
         id: "current-position",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 144
         },
         __self: this
       }, __jsx("li", {
@@ -2143,7 +2478,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 145
         },
         __self: this
       }, "\u0627\u0648\u0644"), __jsx("li", {
@@ -2155,7 +2490,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 155
         },
         __self: this
       }, "\u062F\u0648\u0645"), __jsx("li", {
@@ -2167,7 +2502,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 165
         },
         __self: this
       }, "\u0633\u0648\u0645"), __jsx("li", {
@@ -2179,7 +2514,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 175
         },
         __self: this
       }, "\u0686\u0647\u0627\u0631\u0645"), __jsx("li", {
@@ -2191,14 +2526,14 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171
+          lineNumber: 185
         },
         __self: this
       }, "\u067E\u0646\u062C\u0645 \u06CC\u0627 \u0628\u06CC\u0634\u062A\u0631")), __jsx("label", {
         htmlFor: "target-position",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 197
         },
         __self: this
       }, "\u0645\u06CC\u062E\u0648\u0627\u06CC \u06A9\u062C\u0627\u06CC \u0635\u0641\u062D\u0647 \u0627\u0648\u0644 \u0628\u0627\u0634\u06CC \u061F"), __jsx("ul", {
@@ -2206,7 +2541,7 @@ function (_Component) {
         id: "target-position",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186
+          lineNumber: 200
         },
         __self: this
       }, __jsx("li", {
@@ -2218,7 +2553,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 204
         },
         __self: this
       }, "\u0633\u0647 \u062A\u0627\u06CC \u0627\u0648\u0644"), __jsx("li", {
@@ -2230,14 +2565,14 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200
+          lineNumber: 214
         },
         __self: this
       }, "\u0645\u0647\u0645 \u0646\u06CC\u0633\u062A")), __jsx("label", {
         htmlFor: "target-position",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 226
         },
         __self: this
       }, "\u0686\u0647 \u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u062F\u06CC\u06AF\u0647 \u0627\u06CC \u0644\u0627\u0632\u0645 \u062F\u0627\u0631\u06CC\u062F \u061F"), __jsx("ul", {
@@ -2245,7 +2580,7 @@ function (_Component) {
         id: "target-position",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 215
+          lineNumber: 229
         },
         __self: this
       }, __jsx("li", {
@@ -2255,7 +2590,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219
+          lineNumber: 233
         },
         __self: this
       }, "\u06AF\u0648\u06AF\u0644 \u0645\u067E"), __jsx("li", {
@@ -2265,344 +2600,344 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 229
+          lineNumber: 243
         },
         __self: this
       }, "\u062D\u0627\u0644 \u062E\u0648\u0628 \u06A9\u0646 \u0633\u0627\u06CC\u062A"))), __jsx("div", {
         className: "d-flex justify-content-between",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 241
+          lineNumber: 255
         },
         __self: this
       }, __jsx("span", {
         className: "text-muted",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 242
+          lineNumber: 256
         },
         __self: this
       }, "\u0642\u06CC\u0645\u062A \u062A\u062E\u0645\u06CC\u0646\u06CC"), __jsx("span", {
         className: "text-primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 243
+          lineNumber: 257
         },
         __self: this
       }, totalPrice[1] == 0 ? __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 245
+          lineNumber: 259
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-laugh-squint",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 246
+          lineNumber: 260
         },
         __self: this
       }), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 247
+          lineNumber: 261
         },
         __self: this
       }, "\u062A\u0627 \u0627\u06CC\u0646\u062C\u0627\u0634 \u06A9\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646\u0647")) : __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 250
+          lineNumber: 264
         },
         __self: this
       }, __jsx("span", {
         className: "row-price ml-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 251
+          lineNumber: 265
         },
         __self: this
       }, totalPrice[0]), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 266
         },
         __self: this
       }, "\u062A\u0648\u0645\u0627\u0646")))))), __jsx("div", {
         className: "d-flex flex-column discounts",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 259
+          lineNumber: 273
         },
         __self: this
       }, __jsx("span", {
         className: "text-success mr-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 260
+          lineNumber: 274
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-gift",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 261
+          lineNumber: 275
         },
         __self: this
       }), "\u0647\u062F\u06CC\u0647 \u0647\u0627"), __jsx("ul", {
         className: "d-flex justify-content-between unstyled p-0  mx-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 264
+          lineNumber: 278
         },
         __self: this
       }, __jsx("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 265
+          lineNumber: 279
         },
         __self: this
       }, __jsx("span", {
         className: "discount-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 266
+          lineNumber: 280
         },
         __self: this
       }, "\u0628\u0627 \u06F1\u06F0 \u0645\u06CC\u0644\u06CC\u0648\u0646 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F"), __jsx("b", {
         className: "bg-light p-1 rounded discount-title border mx-1 text-primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 281
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-check mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 268
+          lineNumber: 282
         },
         __self: this
       }), "\u06F4\u06F0\u06F0 \u0644\u06CC\u0631 \u062A\u0628\u0644\u06CC\u063A \u062F\u0631 \u06AF\u0648\u06AF\u0644"), " ", __jsx("span", {
         className: "discount-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 271
+          lineNumber: 285
         },
         __self: this
       }, "\u0627\u0632 \u0645\u0627 \u0647\u062F\u06CC\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F")), __jsx("li", {
         className: "discount-status",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 273
+          lineNumber: 287
         },
         __self: this
       }, this.getTotalPrice()[1] >= 10000000 ? __jsx("span", {
         className: "text-success",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 275
+          lineNumber: 289
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-grin-hearts ml-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 276
+          lineNumber: 290
         },
         __self: this
       }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
         className: "text-muted",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 280
+          lineNumber: 294
         },
         __self: this
       }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))), __jsx("ul", {
         className: "d-flex justify-content-between unstyled p-0  mx-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 286
+          lineNumber: 300
         },
         __self: this
       }, __jsx("li", {
         className: "d-flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 287
+          lineNumber: 301
         },
         __self: this
       }, __jsx("span", {
         className: "discount-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 302
         },
         __self: this
       }, "\u0628\u0627 \u06F1\u06F5 \u062A\u0648\u0645\u0646 \u062E\u0631\u06CC\u062F \u0627\u0632 \u0645\u0627 \u0645\u0648\u0627\u0631\u062F \u0631\u0648 \u0628\u0647 \u0631\u0648 \u0631\u0627 \u0628\u0647 \u0635\u0648\u0631\u062A \u0633\u0627\u0644\u0627\u0646\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
         className: "d-flex p-0 items mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 292
+          lineNumber: 306
         },
         __self: this
       }, __jsx("li", {
         className: "bg-light p-1 rounded border mx-1 text-primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 307
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-check mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 308
         },
         __self: this
       }), "SSL"), __jsx("li", {
         className: "bg-light p-1 rounded border mx-1 text-primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 297
+          lineNumber: 311
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-check mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 298
+          lineNumber: 312
         },
         __self: this
       }), "\u0633\u0631\u0648\u0631"), __jsx("li", {
         className: "bg-light p-1 rounded border mx-1 text-primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 301
+          lineNumber: 315
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-check mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 302
+          lineNumber: 316
         },
         __self: this
       }), "\u062F\u0627\u0645\u0646\u0647"))), __jsx("li", {
         className: "discount-status",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 321
         },
         __self: this
       }, this.getTotalPrice()[1] >= 15000000 ? __jsx("span", {
         className: "text-success",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 323
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-grin-hearts ml-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 310
+          lineNumber: 324
         },
         __self: this
       }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
         className: "text-muted",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 314
+          lineNumber: 328
         },
         __self: this
       }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))), __jsx("ul", {
         className: "d-flex justify-content-between unstyled p-0 mx-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 320
+          lineNumber: 334
         },
         __self: this
       }, __jsx("li", {
         className: "d-flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 321
+          lineNumber: 335
         },
         __self: this
       }, __jsx("span", {
         className: "discount-title",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 322
+          lineNumber: 336
         },
         __self: this
       }, "\u0628\u0627 \u06F3\u06F0 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F \u066C \u06CC\u06A9 \u0645\u0648\u0631\u062F \u0631\u0627 \u0628\u0647 \u0627\u0646\u062A\u062E\u0627\u0628 \u062E\u0648\u062F \u0647\u062F\u06CC\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
         className: "d-flex p-0 items mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 325
+          lineNumber: 339
         },
         __self: this
       }, __jsx("li", {
         className: "bg-light p-1 rounded border mx-1 text-primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 326
+          lineNumber: 340
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-check mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 327
+          lineNumber: 341
         },
         __self: this
       }), "\u0637\u0631\u0627\u062D\u06CC \u0648\u0628 \u0633\u0627\u06CC\u062A"), __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 330
+          lineNumber: 344
         },
         __self: this
       }, " \u06CC\u0627 "), __jsx("li", {
         className: "bg-light p-1 rounded border mx-1 text-primary",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 331
+          lineNumber: 345
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-check mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 332
+          lineNumber: 346
         },
         __self: this
       }), "\u0637\u0631\u0627\u062D\u06CC \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646"))), __jsx("li", {
         className: "discount-status",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 337
+          lineNumber: 351
         },
         __self: this
       }, this.getTotalPrice()[1] >= 30000000 ? __jsx("span", {
         className: "text-success",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 339
+          lineNumber: 353
         },
         __self: this
       }, __jsx("i", {
         className: "fas fa-grin-hearts ml-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 340
+          lineNumber: 354
         },
         __self: this
       }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
         className: "text-muted",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 344
+          lineNumber: 358
         },
         __self: this
       }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))))));
@@ -24394,6 +24729,201 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;﻿/**
 
 /***/ }),
 
+/***/ "./node_modules/process/browser.js":
+/*!*****************************************!*\
+  !*** ./node_modules/process/browser.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
   !*** delegated ./node_modules/react/index.js from dll-reference dll_ef0ff7c60362f24a921f ***!
@@ -24402,6 +24932,699 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;﻿/**
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(/*! dll-reference dll_ef0ff7c60362f24a921f */ "dll-reference dll_ef0ff7c60362f24a921f"))("./node_modules/react/index.js");
+
+/***/ }),
+
+/***/ "./node_modules/string-hash/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/string-hash/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function hash(str) {
+  var hash = 5381,
+      i    = str.length;
+
+  while(i) {
+    hash = (hash * 33) ^ str.charCodeAt(--i);
+  }
+
+  /* JavaScript does bitwise operations (like XOR, above) on 32-bit signed
+   * integers. Since we want the results to be always positive, convert the
+   * signed int to an unsigned by doing an unsigned bitshift. */
+  return hash >>> 0;
+}
+
+module.exports = hash;
+
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/lib/stylesheet.js":
+/*!********************************************************!*\
+  !*** ./node_modules/styled-jsx/dist/lib/stylesheet.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+exports.__esModule = true;
+exports["default"] = void 0;
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/*
+Based on Glamor's sheet
+https://github.com/threepointone/glamor/blob/667b480d31b3721a905021b26e1290ce92ca2879/src/sheet.js
+*/
+var isProd = typeof process !== 'undefined' && process.env && "development" === 'production';
+
+var isString = function isString(o) {
+  return Object.prototype.toString.call(o) === '[object String]';
+};
+
+var StyleSheet =
+/*#__PURE__*/
+function () {
+  function StyleSheet(_temp) {
+    var _ref = _temp === void 0 ? {} : _temp,
+        _ref$name = _ref.name,
+        name = _ref$name === void 0 ? 'stylesheet' : _ref$name,
+        _ref$optimizeForSpeed = _ref.optimizeForSpeed,
+        optimizeForSpeed = _ref$optimizeForSpeed === void 0 ? isProd : _ref$optimizeForSpeed,
+        _ref$isBrowser = _ref.isBrowser,
+        isBrowser = _ref$isBrowser === void 0 ? typeof window !== 'undefined' : _ref$isBrowser;
+
+    invariant(isString(name), '`name` must be a string');
+    this._name = name;
+    this._deletedRulePlaceholder = "#" + name + "-deleted-rule____{}";
+    invariant(typeof optimizeForSpeed === 'boolean', '`optimizeForSpeed` must be a boolean');
+    this._optimizeForSpeed = optimizeForSpeed;
+    this._isBrowser = isBrowser;
+    this._serverSheet = undefined;
+    this._tags = [];
+    this._injected = false;
+    this._rulesCount = 0;
+    var node = this._isBrowser && document.querySelector('meta[property="csp-nonce"]');
+    this._nonce = node ? node.getAttribute('content') : null;
+  }
+
+  var _proto = StyleSheet.prototype;
+
+  _proto.setOptimizeForSpeed = function setOptimizeForSpeed(bool) {
+    invariant(typeof bool === 'boolean', '`setOptimizeForSpeed` accepts a boolean');
+    invariant(this._rulesCount === 0, 'optimizeForSpeed cannot be when rules have already been inserted');
+    this.flush();
+    this._optimizeForSpeed = bool;
+    this.inject();
+  };
+
+  _proto.isOptimizeForSpeed = function isOptimizeForSpeed() {
+    return this._optimizeForSpeed;
+  };
+
+  _proto.inject = function inject() {
+    var _this = this;
+
+    invariant(!this._injected, 'sheet already injected');
+    this._injected = true;
+
+    if (this._isBrowser && this._optimizeForSpeed) {
+      this._tags[0] = this.makeStyleTag(this._name);
+      this._optimizeForSpeed = 'insertRule' in this.getSheet();
+
+      if (!this._optimizeForSpeed) {
+        if (!isProd) {
+          console.warn('StyleSheet: optimizeForSpeed mode not supported falling back to standard mode.');
+        }
+
+        this.flush();
+        this._injected = true;
+      }
+
+      return;
+    }
+
+    this._serverSheet = {
+      cssRules: [],
+      insertRule: function insertRule(rule, index) {
+        if (typeof index === 'number') {
+          _this._serverSheet.cssRules[index] = {
+            cssText: rule
+          };
+        } else {
+          _this._serverSheet.cssRules.push({
+            cssText: rule
+          });
+        }
+
+        return index;
+      },
+      deleteRule: function deleteRule(index) {
+        _this._serverSheet.cssRules[index] = null;
+      }
+    };
+  };
+
+  _proto.getSheetForTag = function getSheetForTag(tag) {
+    if (tag.sheet) {
+      return tag.sheet;
+    } // this weirdness brought to you by firefox
+
+
+    for (var i = 0; i < document.styleSheets.length; i++) {
+      if (document.styleSheets[i].ownerNode === tag) {
+        return document.styleSheets[i];
+      }
+    }
+  };
+
+  _proto.getSheet = function getSheet() {
+    return this.getSheetForTag(this._tags[this._tags.length - 1]);
+  };
+
+  _proto.insertRule = function insertRule(rule, index) {
+    invariant(isString(rule), '`insertRule` accepts only strings');
+
+    if (!this._isBrowser) {
+      if (typeof index !== 'number') {
+        index = this._serverSheet.cssRules.length;
+      }
+
+      this._serverSheet.insertRule(rule, index);
+
+      return this._rulesCount++;
+    }
+
+    if (this._optimizeForSpeed) {
+      var sheet = this.getSheet();
+
+      if (typeof index !== 'number') {
+        index = sheet.cssRules.length;
+      } // this weirdness for perf, and chrome's weird bug
+      // https://stackoverflow.com/questions/20007992/chrome-suddenly-stopped-accepting-insertrule
+
+
+      try {
+        sheet.insertRule(rule, index);
+      } catch (error) {
+        if (!isProd) {
+          console.warn("StyleSheet: illegal rule: \n\n" + rule + "\n\nSee https://stackoverflow.com/q/20007992 for more info");
+        }
+
+        return -1;
+      }
+    } else {
+      var insertionPoint = this._tags[index];
+
+      this._tags.push(this.makeStyleTag(this._name, rule, insertionPoint));
+    }
+
+    return this._rulesCount++;
+  };
+
+  _proto.replaceRule = function replaceRule(index, rule) {
+    if (this._optimizeForSpeed || !this._isBrowser) {
+      var sheet = this._isBrowser ? this.getSheet() : this._serverSheet;
+
+      if (!rule.trim()) {
+        rule = this._deletedRulePlaceholder;
+      }
+
+      if (!sheet.cssRules[index]) {
+        // @TBD Should we throw an error?
+        return index;
+      }
+
+      sheet.deleteRule(index);
+
+      try {
+        sheet.insertRule(rule, index);
+      } catch (error) {
+        if (!isProd) {
+          console.warn("StyleSheet: illegal rule: \n\n" + rule + "\n\nSee https://stackoverflow.com/q/20007992 for more info");
+        } // In order to preserve the indices we insert a deleteRulePlaceholder
+
+
+        sheet.insertRule(this._deletedRulePlaceholder, index);
+      }
+    } else {
+      var tag = this._tags[index];
+      invariant(tag, "old rule at index `" + index + "` not found");
+      tag.textContent = rule;
+    }
+
+    return index;
+  };
+
+  _proto.deleteRule = function deleteRule(index) {
+    if (!this._isBrowser) {
+      this._serverSheet.deleteRule(index);
+
+      return;
+    }
+
+    if (this._optimizeForSpeed) {
+      this.replaceRule(index, '');
+    } else {
+      var tag = this._tags[index];
+      invariant(tag, "rule at index `" + index + "` not found");
+      tag.parentNode.removeChild(tag);
+      this._tags[index] = null;
+    }
+  };
+
+  _proto.flush = function flush() {
+    this._injected = false;
+    this._rulesCount = 0;
+
+    if (this._isBrowser) {
+      this._tags.forEach(function (tag) {
+        return tag && tag.parentNode.removeChild(tag);
+      });
+
+      this._tags = [];
+    } else {
+      // simpler on server
+      this._serverSheet.cssRules = [];
+    }
+  };
+
+  _proto.cssRules = function cssRules() {
+    var _this2 = this;
+
+    if (!this._isBrowser) {
+      return this._serverSheet.cssRules;
+    }
+
+    return this._tags.reduce(function (rules, tag) {
+      if (tag) {
+        rules = rules.concat(Array.prototype.map.call(_this2.getSheetForTag(tag).cssRules, function (rule) {
+          return rule.cssText === _this2._deletedRulePlaceholder ? null : rule;
+        }));
+      } else {
+        rules.push(null);
+      }
+
+      return rules;
+    }, []);
+  };
+
+  _proto.makeStyleTag = function makeStyleTag(name, cssString, relativeToTag) {
+    if (cssString) {
+      invariant(isString(cssString), 'makeStyleTag acceps only strings as second parameter');
+    }
+
+    var tag = document.createElement('style');
+    if (this._nonce) tag.setAttribute('nonce', this._nonce);
+    tag.type = 'text/css';
+    tag.setAttribute("data-" + name, '');
+
+    if (cssString) {
+      tag.appendChild(document.createTextNode(cssString));
+    }
+
+    var head = document.head || document.getElementsByTagName('head')[0];
+
+    if (relativeToTag) {
+      head.insertBefore(tag, relativeToTag);
+    } else {
+      head.appendChild(tag);
+    }
+
+    return tag;
+  };
+
+  _createClass(StyleSheet, [{
+    key: "length",
+    get: function get() {
+      return this._rulesCount;
+    }
+  }]);
+
+  return StyleSheet;
+}();
+
+exports["default"] = StyleSheet;
+
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error("StyleSheet: " + message + ".");
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../process/browser.js */ "./node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/style.js":
+/*!***********************************************!*\
+  !*** ./node_modules/styled-jsx/dist/style.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.flush = flush;
+exports["default"] = void 0;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _stylesheetRegistry = _interopRequireDefault(__webpack_require__(/*! ./stylesheet-registry */ "./node_modules/styled-jsx/dist/stylesheet-registry.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
+
+var styleSheetRegistry = new _stylesheetRegistry["default"]();
+
+var JSXStyle =
+/*#__PURE__*/
+function (_Component) {
+  _inheritsLoose(JSXStyle, _Component);
+
+  function JSXStyle(props) {
+    var _this;
+
+    _this = _Component.call(this, props) || this;
+    _this.prevProps = {};
+    return _this;
+  }
+
+  JSXStyle.dynamic = function dynamic(info) {
+    return info.map(function (tagInfo) {
+      var baseId = tagInfo[0];
+      var props = tagInfo[1];
+      return styleSheetRegistry.computeId(baseId, props);
+    }).join(' ');
+  } // probably faster than PureComponent (shallowEqual)
+  ;
+
+  var _proto = JSXStyle.prototype;
+
+  _proto.shouldComponentUpdate = function shouldComponentUpdate(otherProps) {
+    return this.props.id !== otherProps.id || // We do this check because `dynamic` is an array of strings or undefined.
+    // These are the computed values for dynamic styles.
+    String(this.props.dynamic) !== String(otherProps.dynamic);
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    styleSheetRegistry.remove(this.props);
+  };
+
+  _proto.render = function render() {
+    // This is a workaround to make the side effect async safe in the "render" phase.
+    // See https://github.com/zeit/styled-jsx/pull/484
+    if (this.shouldComponentUpdate(this.prevProps)) {
+      // Updates
+      if (this.prevProps.id) {
+        styleSheetRegistry.remove(this.prevProps);
+      }
+
+      styleSheetRegistry.add(this.props);
+      this.prevProps = this.props;
+    }
+
+    return null;
+  };
+
+  return JSXStyle;
+}(_react.Component);
+
+exports["default"] = JSXStyle;
+
+function flush() {
+  var cssRules = styleSheetRegistry.cssRules();
+  styleSheetRegistry.flush();
+  return cssRules;
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/stylesheet-registry.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/styled-jsx/dist/stylesheet-registry.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports["default"] = void 0;
+
+var _stringHash = _interopRequireDefault(__webpack_require__(/*! string-hash */ "./node_modules/string-hash/index.js"));
+
+var _stylesheet = _interopRequireDefault(__webpack_require__(/*! ./lib/stylesheet */ "./node_modules/styled-jsx/dist/lib/stylesheet.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var sanitize = function sanitize(rule) {
+  return rule.replace(/\/style/gi, '\\/style');
+};
+
+var StyleSheetRegistry =
+/*#__PURE__*/
+function () {
+  function StyleSheetRegistry(_temp) {
+    var _ref = _temp === void 0 ? {} : _temp,
+        _ref$styleSheet = _ref.styleSheet,
+        styleSheet = _ref$styleSheet === void 0 ? null : _ref$styleSheet,
+        _ref$optimizeForSpeed = _ref.optimizeForSpeed,
+        optimizeForSpeed = _ref$optimizeForSpeed === void 0 ? false : _ref$optimizeForSpeed,
+        _ref$isBrowser = _ref.isBrowser,
+        isBrowser = _ref$isBrowser === void 0 ? typeof window !== 'undefined' : _ref$isBrowser;
+
+    this._sheet = styleSheet || new _stylesheet["default"]({
+      name: 'styled-jsx',
+      optimizeForSpeed: optimizeForSpeed
+    });
+
+    this._sheet.inject();
+
+    if (styleSheet && typeof optimizeForSpeed === 'boolean') {
+      this._sheet.setOptimizeForSpeed(optimizeForSpeed);
+
+      this._optimizeForSpeed = this._sheet.isOptimizeForSpeed();
+    }
+
+    this._isBrowser = isBrowser;
+    this._fromServer = undefined;
+    this._indices = {};
+    this._instancesCounts = {};
+    this.computeId = this.createComputeId();
+    this.computeSelector = this.createComputeSelector();
+  }
+
+  var _proto = StyleSheetRegistry.prototype;
+
+  _proto.add = function add(props) {
+    var _this = this;
+
+    if (undefined === this._optimizeForSpeed) {
+      this._optimizeForSpeed = Array.isArray(props.children);
+
+      this._sheet.setOptimizeForSpeed(this._optimizeForSpeed);
+
+      this._optimizeForSpeed = this._sheet.isOptimizeForSpeed();
+    }
+
+    if (this._isBrowser && !this._fromServer) {
+      this._fromServer = this.selectFromServer();
+      this._instancesCounts = Object.keys(this._fromServer).reduce(function (acc, tagName) {
+        acc[tagName] = 0;
+        return acc;
+      }, {});
+    }
+
+    var _this$getIdAndRules = this.getIdAndRules(props),
+        styleId = _this$getIdAndRules.styleId,
+        rules = _this$getIdAndRules.rules; // Deduping: just increase the instances count.
+
+
+    if (styleId in this._instancesCounts) {
+      this._instancesCounts[styleId] += 1;
+      return;
+    }
+
+    var indices = rules.map(function (rule) {
+      return _this._sheet.insertRule(rule);
+    }) // Filter out invalid rules
+    .filter(function (index) {
+      return index !== -1;
+    });
+    this._indices[styleId] = indices;
+    this._instancesCounts[styleId] = 1;
+  };
+
+  _proto.remove = function remove(props) {
+    var _this2 = this;
+
+    var _this$getIdAndRules2 = this.getIdAndRules(props),
+        styleId = _this$getIdAndRules2.styleId;
+
+    invariant(styleId in this._instancesCounts, "styleId: `" + styleId + "` not found");
+    this._instancesCounts[styleId] -= 1;
+
+    if (this._instancesCounts[styleId] < 1) {
+      var tagFromServer = this._fromServer && this._fromServer[styleId];
+
+      if (tagFromServer) {
+        tagFromServer.parentNode.removeChild(tagFromServer);
+        delete this._fromServer[styleId];
+      } else {
+        this._indices[styleId].forEach(function (index) {
+          return _this2._sheet.deleteRule(index);
+        });
+
+        delete this._indices[styleId];
+      }
+
+      delete this._instancesCounts[styleId];
+    }
+  };
+
+  _proto.update = function update(props, nextProps) {
+    this.add(nextProps);
+    this.remove(props);
+  };
+
+  _proto.flush = function flush() {
+    this._sheet.flush();
+
+    this._sheet.inject();
+
+    this._fromServer = undefined;
+    this._indices = {};
+    this._instancesCounts = {};
+    this.computeId = this.createComputeId();
+    this.computeSelector = this.createComputeSelector();
+  };
+
+  _proto.cssRules = function cssRules() {
+    var _this3 = this;
+
+    var fromServer = this._fromServer ? Object.keys(this._fromServer).map(function (styleId) {
+      return [styleId, _this3._fromServer[styleId]];
+    }) : [];
+
+    var cssRules = this._sheet.cssRules();
+
+    return fromServer.concat(Object.keys(this._indices).map(function (styleId) {
+      return [styleId, _this3._indices[styleId].map(function (index) {
+        return cssRules[index].cssText;
+      }).join(_this3._optimizeForSpeed ? '' : '\n')];
+    }) // filter out empty rules
+    .filter(function (rule) {
+      return Boolean(rule[1]);
+    }));
+  }
+  /**
+   * createComputeId
+   *
+   * Creates a function to compute and memoize a jsx id from a basedId and optionally props.
+   */
+  ;
+
+  _proto.createComputeId = function createComputeId() {
+    var cache = {};
+    return function (baseId, props) {
+      if (!props) {
+        return "jsx-" + baseId;
+      }
+
+      var propsToString = String(props);
+      var key = baseId + propsToString; // return `jsx-${hashString(`${baseId}-${propsToString}`)}`
+
+      if (!cache[key]) {
+        cache[key] = "jsx-" + (0, _stringHash["default"])(baseId + "-" + propsToString);
+      }
+
+      return cache[key];
+    };
+  }
+  /**
+   * createComputeSelector
+   *
+   * Creates a function to compute and memoize dynamic selectors.
+   */
+  ;
+
+  _proto.createComputeSelector = function createComputeSelector(selectoPlaceholderRegexp) {
+    if (selectoPlaceholderRegexp === void 0) {
+      selectoPlaceholderRegexp = /__jsx-style-dynamic-selector/g;
+    }
+
+    var cache = {};
+    return function (id, css) {
+      // Sanitize SSR-ed CSS.
+      // Client side code doesn't need to be sanitized since we use
+      // document.createTextNode (dev) and the CSSOM api sheet.insertRule (prod).
+      if (!this._isBrowser) {
+        css = sanitize(css);
+      }
+
+      var idcss = id + css;
+
+      if (!cache[idcss]) {
+        cache[idcss] = css.replace(selectoPlaceholderRegexp, id);
+      }
+
+      return cache[idcss];
+    };
+  };
+
+  _proto.getIdAndRules = function getIdAndRules(props) {
+    var _this4 = this;
+
+    var css = props.children,
+        dynamic = props.dynamic,
+        id = props.id;
+
+    if (dynamic) {
+      var styleId = this.computeId(id, dynamic);
+      return {
+        styleId: styleId,
+        rules: Array.isArray(css) ? css.map(function (rule) {
+          return _this4.computeSelector(styleId, rule);
+        }) : [this.computeSelector(styleId, css)]
+      };
+    }
+
+    return {
+      styleId: this.computeId(id),
+      rules: Array.isArray(css) ? css : [css]
+    };
+  }
+  /**
+   * selectFromServer
+   *
+   * Collects style tags from the document with id __jsx-XXX
+   */
+  ;
+
+  _proto.selectFromServer = function selectFromServer() {
+    var elements = Array.prototype.slice.call(document.querySelectorAll('[id^="__jsx-"]'));
+    return elements.reduce(function (acc, element) {
+      var id = element.id.slice(2);
+      acc[id] = element;
+      return acc;
+    }, {});
+  };
+
+  return StyleSheetRegistry;
+}();
+
+exports["default"] = StyleSheetRegistry;
+
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error("StyleSheetRegistry: " + message + ".");
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/style.js":
+/*!******************************************!*\
+  !*** ./node_modules/styled-jsx/style.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/style */ "./node_modules/styled-jsx/dist/style.js")
+
 
 /***/ }),
 
@@ -24526,7 +25749,7 @@ function (_Component) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(index).call(this, props));
     _this.state = {
-      tab: 2
+      tab: 1
     };
     _this.changeTab = _this.changeTab.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     return _this;

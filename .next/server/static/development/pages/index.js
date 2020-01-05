@@ -342,19 +342,369 @@ class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 /*!********************************!*\
   !*** ./components/Apadana.jsx ***!
   \********************************/
-/*! exports provided: Apadana, default */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Apadana", function() { return Apadana; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Apadana; });
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Apadana.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+class Apadana extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+  render() {
+    return __jsx("div", {
+      className: "apadana",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      title: "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "d-flex rtl mt-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "w-50 text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, __jsx("h5", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, "\u0622\u0646\u0686\u0647 \u0627\u0632 \u0645\u0627 \u0628\u0627\u06CC\u062F \u0628\u062F\u0627\u0646\u06CC\u062F"), __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, __jsx("li", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fal fa-map-marker-alt ml-1 text-orange",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }), __jsx("span", {
+      className: "text-orange mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, "\u0622\u062F\u0631\u0633 : "), __jsx("span", {
+      className: "text-muted mr-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, "\u0645\u0631\u0632\u062F\u0627\u0631\u0627\u0646 \u062E\u06CC\u0627\u0628\u0627\u0646 \u0627\u0628\u0631\u0627\u0647\u06CC\u0645\u06CC \u0628\u0631\u062C \u0627\u0644\u0648\u0646\u062F \u0637\u0628\u0642\u0647 \u06F7 \u062C\u0646\u0648\u0628\u06CC \u0648\u0627\u062D\u062F \u06F7\u06F0\u06F7")), __jsx("li", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fal fa-building ml-1 text-orange",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }), __jsx("span", {
+      className: "text-orange mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }, "\u0634\u0645\u0627\u0631\u0647 \u062B\u0628\u062A : "), __jsx("span", {
+      className: "text-muted mr-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, "531911"))), __jsx("h5", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, "\u0631\u0627\u0647 \u0647\u0627\u06CC \u0627\u0631\u062A\u0628\u0627\u0637\u06CC"), __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, __jsx("li", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fal fa-user-astronaut ml-1 text-orange",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }), __jsx("span", {
+      className: "text-orange mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, "\u062A\u0644\u0641\u0646 \u067E\u0634\u062A\u06CC\u0628\u0627\u0646\u06CC : "), __jsx("span", {
+      className: "text-muted mr-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, "\u06F4\u06F4\u06F2\u06F5\u06F9\u06F6\u06F8\u06F8-\u06F0\u06F2\u06F1")), __jsx("li", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fal fa-phone ml-1 text-orange",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }), __jsx("span", {
+      className: "text-orange mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, "\u062A\u0644\u0641\u0646 \u0645\u0634\u0627\u0648\u0631\u0647 : "), __jsx("span", {
+      className: "text-muted mr-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, "\u06F4\u06F4\u06F2\u06F5\u06F9\u06F6\u06F1\u06F1-\u06F0\u06F2\u06F1")), __jsx("li", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fab fa-instagram ml-1 text-orange",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }), __jsx("span", {
+      className: "text-orange mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, "\u0627\u06CC\u0646\u0633\u062A\u0627\u06AF\u0631\u0627\u0645 \u0645\u0627 : "), __jsx("span", {
+      className: "text-muted mr-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx("a", {
+      href: "http://instagram.com/virawebapadana",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, "@virawebapadana")))), __jsx("h5", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, "\u0627\u0645\u0648\u0631 \u0645\u0627\u0644\u06CC"), __jsx("ul", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    }, __jsx("li", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, __jsx("i", {
+      className: "fal fa-credit-card ml-1 text-orange",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }), __jsx("span", {
+      className: "text-orange mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, "\u067E\u0631\u062F\u0627\u062E\u062A \u0645\u0633\u062A\u0642\u06CC\u0645 \u0628\u0627 \u0632\u0631\u06CC\u0646 \u067E\u0627\u0644 :", " "), __jsx("span", {
+      className: "text-muted mr-1 bg-warning px-3 py-2 rounded",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }, __jsx("a", {
+      href: "http://zarinp.al/apweb.ir",
+      className: "text-white",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }, "\u067E\u0631\u062F\u0627\u062E\u062A")))), __jsx("h5", {
+      className: "my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: this
+    }, "\u0646\u0645\u0627\u062F \u0647\u0627"), __jsx("ul", {
+      className: "d-flex",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: this
+    }, __jsx("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }, "1"), __jsx("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }, "2"), __jsx("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }, "3"))), __jsx("div", {
+      className: "w-50",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: this
+    }, __jsx("div", {
+      class: "mapouter rounded",
+      className: "jsx-62095387",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: this
+    }, __jsx("div", {
+      class: "gmap_canvas rounded",
+      className: "jsx-62095387",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }, __jsx("iframe", {
+      width: "100%",
+      height: "500",
+      id: "gmap_canvas",
+      src: "https://maps.google.com/maps?q=%D8%A8%D8%B1%D8%AC%20%D8%A7%D9%84%D9%88%D9%86%D8%AF&t=&z=13&ie=UTF8&iwloc=&output=embed",
+      frameBorder: "0",
+      scrolling: "no",
+      className: "jsx-62095387" + " " + "rounded",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      id: "62095387",
+      __self: this
+    }, ".mapouter.jsx-62095387{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas.jsx-62095387{overflow:hidden;background:none !important;height:500px;width:600px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9pbWFjL0Rlc2t0b3AvQVBBREFOQS9jb21wb25lbnRzL0FwYWRhbmEuanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWlGMEIsQUFHcUMsQUFNRixnQkFDVyxFQU5WLGlCQUNKLFFBTUEsS0FMRCxRQU1BLElBTGQsUUFNQSIsImZpbGUiOiIvVXNlcnMvaW1hYy9EZXNrdG9wL0FQQURBTkEvY29tcG9uZW50cy9BcGFkYW5hLmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBTa3kgZnJvbSBcIi4vU2t5XCI7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEFwYWRhbmEgZXh0ZW5kcyBDb21wb25lbnQge1xuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXBhZGFuYVwiPlxuICAgICAgICA8U2t5IHRpdGxlPVwi2YjbjNix2Kcg2YjYqCDYotm+2KfYr9in2YbYp1wiIC8+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZC1mbGV4IHJ0bCBtdC01XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUwIHRleHQtcmlnaHRcIj5cbiAgICAgICAgICAgIDxoNSBjbGFzc05hbWU9XCJteS0zXCI+2KLZhtqG2Ycg2KfYsiDZhdinINio2KfbjNivINio2K/Yp9mG24zYrzwvaDU+XG4gICAgICAgICAgICA8dWw+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLW1hcC1tYXJrZXItYWx0IG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7Yotiv2LHYsyA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj5cbiAgICAgICAgICAgICAgICAgINmF2LHYstiv2KfYsdin2YYg2K7bjNin2KjYp9mGINin2KjYsdin2YfbjNmF24wg2KjYsdisINin2YTZiNmG2K8g2LfYqNmC2Ycg27cg2KzZhtmI2KjbjCDZiNin2K3YryDbt9uw27dcbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLWJ1aWxkaW5nIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7YtNmF2KfYsdmHINir2KjYqiA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj41MzE5MTE8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7Ysdin2Ycg2YfYp9uMINin2LHYqtio2KfYt9uMPC9oNT5cbiAgICAgICAgICAgIDx1bD5cbiAgICAgICAgICAgICAgPGxpIGNsYXNzTmFtZT1cIm15LTNcIj5cbiAgICAgICAgICAgICAgICA8aSBjbGFzc05hbWU9XCJmYWwgZmEtdXNlci1hc3Ryb25hdXQgbWwtMSB0ZXh0LW9yYW5nZVwiIC8+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1vcmFuZ2UgbXgtMVwiPtiq2YTZgdmGINm+2LTYqtuM2KjYp9mG24wgOiA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xXCI+27TbtNuy27Xbudu227jbuC3bsNuy27E8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLXBob25lIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7YqtmE2YHZhiDZhdi02KfZiNix2YcgOiA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xXCI+27TbtNuy27Xbudu227HbsS3bsNuy27E8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFiIGZhLWluc3RhZ3JhbSBtbC0xIHRleHQtb3JhbmdlXCIgLz5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW9yYW5nZSBteC0xXCI+2KfbjNmG2LPYqtin2q/Ysdin2YUg2YXYpyA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj5cbiAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwOi8vaW5zdGFncmFtLmNvbS92aXJhd2ViYXBhZGFuYVwiPlxuICAgICAgICAgICAgICAgICAgICBAdmlyYXdlYmFwYWRhbmFcbiAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7Yp9mF2YjYsSDZhdin2YTbjDwvaDU+XG4gICAgICAgICAgICA8dWw+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLWNyZWRpdC1jYXJkIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj5cbiAgICAgICAgICAgICAgICAgINm+2LHYr9in2K7YqiDZhdiz2KrZgtuM2YUg2KjYpyDYstix24zZhiDZvtin2YQgOntcIiBcIn1cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xIGJnLXdhcm5pbmcgcHgtMyBweS0yIHJvdW5kZWRcIj5cbiAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwOi8vemFyaW5wLmFsL2Fwd2ViLmlyXCIgY2xhc3NOYW1lPVwidGV4dC13aGl0ZVwiPlxuICAgICAgICAgICAgICAgICAgICDZvtix2K/Yp9iu2KpcbiAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7ZhtmF2KfYryDZh9inPC9oNT5cbiAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJkLWZsZXhcIj5cbiAgICAgICAgICAgICAgPGxpPjE8L2xpPlxuICAgICAgICAgICAgICA8bGk+MjwvbGk+XG4gICAgICAgICAgICAgIDxsaT4zPC9saT5cbiAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUwXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwibWFwb3V0ZXIgcm91bmRlZFwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZ21hcF9jYW52YXMgcm91bmRlZFwiPlxuICAgICAgICAgICAgICAgIDxpZnJhbWVcbiAgICAgICAgICAgICAgICAgIHdpZHRoPVwiMTAwJVwiXG4gICAgICAgICAgICAgICAgICBoZWlnaHQ9XCI1MDBcIlxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicm91bmRlZFwiXG4gICAgICAgICAgICAgICAgICBpZD1cImdtYXBfY2FudmFzXCJcbiAgICAgICAgICAgICAgICAgIHNyYz1cImh0dHBzOi8vbWFwcy5nb29nbGUuY29tL21hcHM/cT0lRDglQTglRDglQjElRDglQUMlMjAlRDglQTclRDklODQlRDklODglRDklODYlRDglQUYmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWRcIlxuICAgICAgICAgICAgICAgICAgZnJhbWVCb3JkZXI9XCIwXCJcbiAgICAgICAgICAgICAgICAgIHNjcm9sbGluZz1cIm5vXCJcbiAgICAgICAgICAgICAgICA+PC9pZnJhbWU+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgICAgICAgLm1hcG91dGVyIHtcbiAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IHJpZ2h0O1xuICAgICAgICAgICAgICAgICAgaGVpZ2h0OiA1MDBweDtcbiAgICAgICAgICAgICAgICAgIHdpZHRoOiA2MDBweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLmdtYXBfY2FudmFzIHtcbiAgICAgICAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICAgICAgICBoZWlnaHQ6IDUwMHB4O1xuICAgICAgICAgICAgICAgICAgd2lkdGg6IDYwMHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgYH08L3N0eWxlPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxufVxuIl19 */\n/*@ sourceURL=/Users/imac/Desktop/APADANA/components/Apadana.jsx */")))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./components/Develop.jsx":
+/*!********************************!*\
+  !*** ./components/Develop.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Develop; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! persianjs */ "persianjs");
 /* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(persianjs__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Apadana.jsx";
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Develop.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -488,7 +838,7 @@ const customizeArray = [{
   text: "و هر چیزی که شما نیاز داشته باشید ...",
   active: true
 }];
-class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
@@ -527,7 +877,7 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
   render() {
     return __jsx("div", {
-      className: "apadana",
+      className: "develop",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 97
@@ -1177,46 +1527,6 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
 }
-/* harmony default export */ __webpack_exports__["default"] = (Apadana);
-
-/***/ }),
-
-/***/ "./components/Develop.jsx":
-/*!********************************!*\
-  !*** ./components/Develop.jsx ***!
-  \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Develop; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
-var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Develop.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  render() {
-    return __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 7
-      },
-      __self: this
-    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      title: "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0648 \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 8
-      },
-      __self: this
-    }));
-  }
-
-}
 
 /***/ }),
 
@@ -1751,6 +2061,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     this.handleChange = this.handleChange.bind(this);
     this.getTotalPrice = this.getTotalPrice.bind(this);
     this.selectFeatures = this.selectFeatures.bind(this);
+    this.removeKeyword = this.removeKeyword.bind(this);
   }
 
   addNewKeyword(e) {
@@ -1772,6 +2083,16 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     }
   }
 
+  removeKeyword(target) {
+    console.log(target);
+    const {
+      keywords
+    } = this.state;
+    this.setState({
+      keywords: keywords.filter(item => item != target)
+    });
+  }
+
   getTotalPrice() {
     const {
       keywords,
@@ -1780,6 +2101,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       features
     } = this.state;
     let words = {};
+    let totalPrice = 0;
     keywords.forEach(item => {
       const length = item.split(" ").length;
       const oldKeywords = words[length] ? words[length] : [];
@@ -1790,11 +2112,10 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       return 0;
     }
 
-    let totalPrice = _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default()(words).reduce((total, current) => {
+    totalPrice = _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default()(words).reduce((total, current) => {
       const [spate, words] = current;
       return total + 30000000 / spate * words.length;
     }, 0);
-
     const newPercents = {
       1: [0.5, 0],
       2: [0.8, 0.6],
@@ -1846,42 +2167,42 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       className: "seo",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 105
       },
       __self: this
     }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_2__["default"], {
       title: "\u0633\u0626\u0648 \u0648 \u062A\u0648\u0644\u06CC\u062F \u0645\u062D\u062A\u0648\u0627",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 106
       },
       __self: this
     }), __jsx("div", {
       className: "seo-container d-flex flex-column w-100 mt-5 rtl text-right",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 107
       },
       __self: this
     }, __jsx("div", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 108
       },
       __self: this
     }, __jsx("div", {
       className: "w-50 mx-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101
+        lineNumber: 109
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "keyword",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 110
       },
       __self: this
     }, "\u06A9\u0644\u0645\u0647 \u06A9\u0644\u06CC\u062F\u06CC \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F \u0648 enter \u0628\u0632\u0646\u06CC\u062F"), __jsx("input", {
@@ -1895,14 +2216,14 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       autoComplete: "false",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 113
       },
       __self: this
     }), __jsx("ul", {
       className: "keywoards",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 123
       },
       __self: this
     }, keywords.map((item, index) => {
@@ -1911,35 +2232,43 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         className: "my-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 126
         },
         __self: this
       }, __jsx("span", {
         className: "p-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 127
         },
         __self: this
-      }, item));
+      }, __jsx("i", {
+        className: "far fa-times-circle ml-1",
+        onClick: () => this.removeKeyword(item),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 128
+        },
+        __self: this
+      }), item));
     }))), __jsx("div", {
       className: "bg-white w-50 mx-2 d-flex flex-column justify-content-between",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 139
       },
       __self: this
     }, __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 140
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "current-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 141
       },
       __self: this
     }, "\u0633\u0627\u06CC\u062A\u062A \u0627\u0644\u0627\u0646 \u0635\u0641\u062D\u0647 \u0686\u0646\u062F\u0645\u0647 \u061F"), __jsx("ul", {
@@ -1947,7 +2276,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       id: "current-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 144
       },
       __self: this
     }, __jsx("li", {
@@ -1957,7 +2286,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 145
       },
       __self: this
     }, "\u0627\u0648\u0644"), __jsx("li", {
@@ -1967,7 +2296,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141
+        lineNumber: 155
       },
       __self: this
     }, "\u062F\u0648\u0645"), __jsx("li", {
@@ -1977,7 +2306,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 165
       },
       __self: this
     }, "\u0633\u0648\u0645"), __jsx("li", {
@@ -1987,7 +2316,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161
+        lineNumber: 175
       },
       __self: this
     }, "\u0686\u0647\u0627\u0631\u0645"), __jsx("li", {
@@ -1997,14 +2326,14 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 171
+        lineNumber: 185
       },
       __self: this
     }, "\u067E\u0646\u062C\u0645 \u06CC\u0627 \u0628\u06CC\u0634\u062A\u0631")), __jsx("label", {
       htmlFor: "target-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183
+        lineNumber: 197
       },
       __self: this
     }, "\u0645\u06CC\u062E\u0648\u0627\u06CC \u06A9\u062C\u0627\u06CC \u0635\u0641\u062D\u0647 \u0627\u0648\u0644 \u0628\u0627\u0634\u06CC \u061F"), __jsx("ul", {
@@ -2012,7 +2341,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       id: "target-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186
+        lineNumber: 200
       },
       __self: this
     }, __jsx("li", {
@@ -2022,7 +2351,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 190
+        lineNumber: 204
       },
       __self: this
     }, "\u0633\u0647 \u062A\u0627\u06CC \u0627\u0648\u0644"), __jsx("li", {
@@ -2032,14 +2361,14 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 200
+        lineNumber: 214
       },
       __self: this
     }, "\u0645\u0647\u0645 \u0646\u06CC\u0633\u062A")), __jsx("label", {
       htmlFor: "target-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212
+        lineNumber: 226
       },
       __self: this
     }, "\u0686\u0647 \u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u062F\u06CC\u06AF\u0647 \u0627\u06CC \u0644\u0627\u0632\u0645 \u062F\u0627\u0631\u06CC\u062F \u061F"), __jsx("ul", {
@@ -2047,7 +2376,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       id: "target-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 215
+        lineNumber: 229
       },
       __self: this
     }, __jsx("li", {
@@ -2055,7 +2384,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onClick: () => this.selectFeatures(1),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 219
+        lineNumber: 233
       },
       __self: this
     }, "\u06AF\u0648\u06AF\u0644 \u0645\u067E"), __jsx("li", {
@@ -2063,344 +2392,344 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       onClick: () => this.selectFeatures(2),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 229
+        lineNumber: 243
       },
       __self: this
     }, "\u062D\u0627\u0644 \u062E\u0648\u0628 \u06A9\u0646 \u0633\u0627\u06CC\u062A"))), __jsx("div", {
       className: "d-flex justify-content-between",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 241
+        lineNumber: 255
       },
       __self: this
     }, __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 242
+        lineNumber: 256
       },
       __self: this
     }, "\u0642\u06CC\u0645\u062A \u062A\u062E\u0645\u06CC\u0646\u06CC"), __jsx("span", {
       className: "text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 243
+        lineNumber: 257
       },
       __self: this
     }, totalPrice[1] == 0 ? __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 245
+        lineNumber: 259
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-laugh-squint",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 246
+        lineNumber: 260
       },
       __self: this
     }), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 247
+        lineNumber: 261
       },
       __self: this
     }, "\u062A\u0627 \u0627\u06CC\u0646\u062C\u0627\u0634 \u06A9\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646\u0647")) : __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 250
+        lineNumber: 264
       },
       __self: this
     }, __jsx("span", {
       className: "row-price ml-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 251
+        lineNumber: 265
       },
       __self: this
     }, totalPrice[0]), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 252
+        lineNumber: 266
       },
       __self: this
     }, "\u062A\u0648\u0645\u0627\u0646")))))), __jsx("div", {
       className: "d-flex flex-column discounts",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 259
+        lineNumber: 273
       },
       __self: this
     }, __jsx("span", {
       className: "text-success mr-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260
+        lineNumber: 274
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-gift",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 261
+        lineNumber: 275
       },
       __self: this
     }), "\u0647\u062F\u06CC\u0647 \u0647\u0627"), __jsx("ul", {
       className: "d-flex justify-content-between unstyled p-0  mx-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 264
+        lineNumber: 278
       },
       __self: this
     }, __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 265
+        lineNumber: 279
       },
       __self: this
     }, __jsx("span", {
       className: "discount-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 266
+        lineNumber: 280
       },
       __self: this
     }, "\u0628\u0627 \u06F1\u06F0 \u0645\u06CC\u0644\u06CC\u0648\u0646 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F"), __jsx("b", {
       className: "bg-light p-1 rounded discount-title border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 267
+        lineNumber: 281
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 268
+        lineNumber: 282
       },
       __self: this
     }), "\u06F4\u06F0\u06F0 \u0644\u06CC\u0631 \u062A\u0628\u0644\u06CC\u063A \u062F\u0631 \u06AF\u0648\u06AF\u0644"), " ", __jsx("span", {
       className: "discount-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 271
+        lineNumber: 285
       },
       __self: this
     }, "\u0627\u0632 \u0645\u0627 \u0647\u062F\u06CC\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F")), __jsx("li", {
       className: "discount-status",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 273
+        lineNumber: 287
       },
       __self: this
     }, this.getTotalPrice()[1] >= 10000000 ? __jsx("span", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 275
+        lineNumber: 289
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-grin-hearts ml-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 276
+        lineNumber: 290
       },
       __self: this
     }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 280
+        lineNumber: 294
       },
       __self: this
     }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))), __jsx("ul", {
       className: "d-flex justify-content-between unstyled p-0  mx-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 286
+        lineNumber: 300
       },
       __self: this
     }, __jsx("li", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 287
+        lineNumber: 301
       },
       __self: this
     }, __jsx("span", {
       className: "discount-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 288
+        lineNumber: 302
       },
       __self: this
     }, "\u0628\u0627 \u06F1\u06F5 \u062A\u0648\u0645\u0646 \u062E\u0631\u06CC\u062F \u0627\u0632 \u0645\u0627 \u0645\u0648\u0627\u0631\u062F \u0631\u0648 \u0628\u0647 \u0631\u0648 \u0631\u0627 \u0628\u0647 \u0635\u0648\u0631\u062A \u0633\u0627\u0644\u0627\u0646\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
       className: "d-flex p-0 items mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 292
+        lineNumber: 306
       },
       __self: this
     }, __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 293
+        lineNumber: 307
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 294
+        lineNumber: 308
       },
       __self: this
     }), "SSL"), __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 297
+        lineNumber: 311
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 298
+        lineNumber: 312
       },
       __self: this
     }), "\u0633\u0631\u0648\u0631"), __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 301
+        lineNumber: 315
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 302
+        lineNumber: 316
       },
       __self: this
     }), "\u062F\u0627\u0645\u0646\u0647"))), __jsx("li", {
       className: "discount-status",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 307
+        lineNumber: 321
       },
       __self: this
     }, this.getTotalPrice()[1] >= 15000000 ? __jsx("span", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 309
+        lineNumber: 323
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-grin-hearts ml-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 310
+        lineNumber: 324
       },
       __self: this
     }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 314
+        lineNumber: 328
       },
       __self: this
     }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))), __jsx("ul", {
       className: "d-flex justify-content-between unstyled p-0 mx-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 320
+        lineNumber: 334
       },
       __self: this
     }, __jsx("li", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 321
+        lineNumber: 335
       },
       __self: this
     }, __jsx("span", {
       className: "discount-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 322
+        lineNumber: 336
       },
       __self: this
     }, "\u0628\u0627 \u06F3\u06F0 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F \u066C \u06CC\u06A9 \u0645\u0648\u0631\u062F \u0631\u0627 \u0628\u0647 \u0627\u0646\u062A\u062E\u0627\u0628 \u062E\u0648\u062F \u0647\u062F\u06CC\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
       className: "d-flex p-0 items mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 325
+        lineNumber: 339
       },
       __self: this
     }, __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 326
+        lineNumber: 340
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 327
+        lineNumber: 341
       },
       __self: this
     }), "\u0637\u0631\u0627\u062D\u06CC \u0648\u0628 \u0633\u0627\u06CC\u062A"), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 330
+        lineNumber: 344
       },
       __self: this
     }, " \u06CC\u0627 "), __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 331
+        lineNumber: 345
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 332
+        lineNumber: 346
       },
       __self: this
     }), "\u0637\u0631\u0627\u062D\u06CC \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646"))), __jsx("li", {
       className: "discount-status",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 337
+        lineNumber: 351
       },
       __self: this
     }, this.getTotalPrice()[1] >= 30000000 ? __jsx("span", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 339
+        lineNumber: 353
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-grin-hearts ml-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 340
+        lineNumber: 354
       },
       __self: this
     }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 344
+        lineNumber: 358
       },
       __self: this
     }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))))));
@@ -2525,7 +2854,7 @@ class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 2
+      tab: 1
     };
     this.changeTab = this.changeTab.bind(this);
   }
@@ -3115,6 +3444,17 @@ module.exports = require("persianjs");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-jsx/style":
+/*!***********************************!*\
+  !*** external "styled-jsx/style" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-jsx/style");
 
 /***/ })
 
