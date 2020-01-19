@@ -3,37 +3,45 @@ $countOfStars: 200;
   height: 150px;
   width: 900px;
   border-radius: 5px 5px 0 0;
-  //   background-image: linear-gradient(60.6deg, #070b34 11.2%, #141852 91.1%);
   background-color: $skyColor;
-
   position: relative;
-  .star {
-    width: 2px;
-    height: 2px;
-    background: white;
-    opacity: 0.2;
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    opacity: 1;
+  }
+  .particles-second {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    opacity: 0.3;
+  }
+  h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  @for $i from 0 through $countOfStars {
-    .star-#{$i} {
-      left: (random(900)) + px;
-      top: (random(150)) + px;
-      position: absolute;
-      animation-duration: 50s;
-      animation-name: starAnimation-#{$i};
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-    }
-  }
+  // .star {
+  //   width: 2px;
+  //   height: 2px;
+  //   background: white;
+  //   opacity: 0.2;
+  //   position: absolute;
+  //   animation-duration: 50s;
+  //   animation-iteration-count: infinite;
+  //   animation-direction: alternate;
+  // }
 }
 
-@for $i from 0 through $countOfStars {
-  @keyframes starAnimation-#{$i} {
-    from {
-      transform: translate(0, 0);
-    }
-    to {
-      transform: translate(((random(50)) + px), ((random(50)) + px));
-    }
-  }
-}
+// @for $i from 0 through $countOfStars {
+//   @keyframes starAnimation-#{$i} {
+//     from {
+//       transform: translate(0, 0);
+//     }
+//     to {
+//       transform: translate(((random(50)) + px), ((random(50)) + px));
+//     }
+//   }
+// }

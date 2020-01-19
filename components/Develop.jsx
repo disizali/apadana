@@ -66,6 +66,7 @@ const customizeArray = [
     active: true
   }
 ];
+
 export default class Develop extends Component {
   constructor(props) {
     super(props);
@@ -157,7 +158,7 @@ export default class Develop extends Component {
                   })}
               </ul>
             </div>
-            <button className="order btn d-flex">
+            <button className="order btn d-flex" onClick={()=>this.props.toggleModal({develop : "personal"})}>
               <div className="d-flex">
                 <i className="fal fa-rocket mx-1"></i>
                 <div className="wind" />
@@ -240,7 +241,7 @@ export default class Develop extends Component {
                   })}
               </ul>
             </div>
-            <button className="order btn d-flex">
+            <button className="order btn d-flex" onClick={()=>this.props.toggleModal({develop : "company"})}>
               <div className="d-flex">
                 <i className="far fa-rocket mx-1"></i>
                 <div className="wind" />
@@ -312,7 +313,7 @@ export default class Develop extends Component {
                   })}
               </ul>
             </div>
-            <button className="order btn d-flex">
+            <button className="order btn d-flex" onClick={()=>this.props.toggleModal({develop : "customize" })}>
               <div className="d-flex">
                 <i className="far fa-space-shuttle mx-1"></i>
                 <div className="wind" />

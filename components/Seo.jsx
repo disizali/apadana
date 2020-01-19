@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Sky from "./Sky";
 import _ from "lodash";
 import persianJs from "persianjs";
+import axios from "axios";
+import { Button } from "reactstrap";
 export class Seo extends Component {
   constructor(props) {
     super(props);
@@ -10,50 +12,42 @@ export class Seo extends Component {
       keyword: "",
       currentPosition: 5,
       targetPosition: 1,
-      features: []
+      features: [],
+      loading: false
     };
     this.addNewKeyword = this.addNewKeyword.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getTotalPrice = this.getTotalPrice.bind(this);
     this.selectFeatures = this.selectFeatures.bind(this);
     this.removeKeyword = this.removeKeyword.bind(this);
+    this.nativeToggleModal = this.nativeToggleModal.bind(this);
   }
-  addNewKeyword(e) {
+
+  async addNewKeyword(e) {
     const { keywords } = this.state;
-    if (
-      e.key == "Enter" &&
-      e.target.value &&
-      !_.includes(keywords, e.target.value)
-    ) {
-      let newKeywords = [e.target.value];
-      if (e.target.value == "salam" || e.target.value == "سلام") {
-        newKeywords.unshift("سلام به روی ماهت");
-      }
-      this.setState({ keywords: [...newKeywords, ...keywords], keyword: "" });
+    const query = e.target.value;
+    if (e.key == "Enter" && query && !_.includes(keywords, query)) {
+      this.setState({ loading: true });
+      const { data } = await axios.get(
+        `http://localhost:3000/api/google/${encodeURI(query)}`
+      );
+      this.setState({
+        keywords: [{ query: query, count: data.totalResults * 2 }, ...keywords],
+        keyword: "",
+        loading: false
+      });
     }
   }
 
   removeKeyword(target) {
-    console.log(target);
     const { keywords } = this.state;
     this.setState({ keywords: keywords.filter(item => item != target) });
   }
-
   getTotalPrice() {
     const { keywords, currentPosition, targetPosition, features } = this.state;
-    let words = {};
     let totalPrice = 0;
-    keywords.forEach(item => {
-      const length = item.split(" ").length;
-      const oldKeywords = words[length] ? words[length] : [];
-      words[length] = [item, ...oldKeywords];
-    });
-    if (Object.entries(words).length == 0) {
-      return 0;
-    }
-    totalPrice = Object.entries(words).reduce((total, current) => {
-      const [spate, words] = current;
-      return total + (30000000 / spate) * words.length;
+    totalPrice = keywords.reduce((total, current) => {
+      return total + current.count / (current.count > 10000000 ? 10 : 1);
     }, 0);
     const newPercents = {
       1: [0.5, 0],
@@ -63,7 +57,6 @@ export class Seo extends Component {
       5: [1.5, 1]
     };
     totalPrice = totalPrice * newPercents[currentPosition][targetPosition];
-
     if (_.includes(features, 1)) totalPrice += 400000;
     if (_.includes(features, 2)) totalPrice += 2000000;
     totalPrice = totalPrice ? totalPrice : 0;
@@ -78,7 +71,6 @@ export class Seo extends Component {
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-
   selectFeatures(feature) {
     const { features } = this.state;
     if (_.includes(features, feature)) {
@@ -91,15 +83,20 @@ export class Seo extends Component {
     return this.setState({ features: [...features, feature] });
   }
 
+  nativeToggleModal() {
+    const { toggleModal: parentToggleModal } = this.props;
+    parentToggleModal({ seo: { ...this.state, price: this.getTotalPrice()[1] } });
+  }
+
   render() {
     const {
       keywords,
       keyword,
       currentPosition,
       targetPosition,
-      features
+      features,
+      loading
     } = this.state;
-
     const totalPrice = this.getTotalPrice();
     return (
       <div className="seo">
@@ -110,26 +107,46 @@ export class Seo extends Component {
               <label htmlFor="keyword">
                 کلمه کلیدی مورد نظر خود را وارد کنید و enter بزنید
               </label>
-              <input
-                type="text"
-                className="form-control"
-                id="keyword"
-                name="keyword"
-                onKeyPress={this.addNewKeyword}
-                onChange={this.handleChange}
-                value={keyword}
-                autoComplete="false"
-              />
+              <div className="d-flex flex-column align-items-center">
+                <input
+                  type="text"
+                  className="form-control"
+                  id="keyword"
+                  name="keyword"
+                  onKeyPress={this.addNewKeyword}
+                  onChange={this.handleChange}
+                  value={keyword}
+                  autoComplete="false"
+                />
+                <span
+                  className={`spinner-border spinner-border-sm my-1 ${
+                    loading ? `active` : `deactive`
+                  }`}
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+              </div>
               <ul className="keywoards">
                 {keywords.map((item, index) => {
                   return (
                     <li key={index} className="my-3">
                       <span className="p-1">
                         <i
-                          className="far fa-times-circle ml-1"
+                          className="far fa-times-circle ml-1 remove"
                           onClick={() => this.removeKeyword(item)}
                         ></i>
-                        {item}
+                        {item.query}
+                        <span className="text-muted">
+                          {" "}
+                          <i className="fas fa-sort-down point" />{" "}
+                          {persianJs(
+                            (
+                              item.count / (item.count > 10000000 ? 10 : 1)
+                            ).toLocaleString()
+                          )
+                            .englishNumber()
+                            .toString()}
+                        </span>
                       </span>
                     </li>
                   );
@@ -300,7 +317,7 @@ export class Seo extends Component {
             <ul className="d-flex justify-content-between unstyled p-0  mx-3">
               <li className="d-flex">
                 <span className="discount-title">
-                  با ۱۵ تومن خرید از ما موارد رو به رو را به صورت سالانه بگیرید
+                  با ۱۵ تومان خرید از ما موارد رو به رو را به صورت سالانه بگیرید
                   :
                 </span>
                 <ul className="d-flex p-0 items mx-1">
@@ -362,6 +379,9 @@ export class Seo extends Component {
               </li>
             </ul>
           </div>
+          <Button color="success" onClick={this.nativeToggleModal}>
+            درخواست مشاوره رایگان
+          </Button>
         </div>
       </div>
     );

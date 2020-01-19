@@ -1,4 +1,44 @@
 .ads {
+  .slideContainer {
+    width: 100%; /* Width of the outside container */
+  }
+  .slider {
+    height: 1px;
+    background: #4285f4;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: white; /* Green background */
+    border-radius: 50%;
+    border: 3px solid #0f9d58;
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4caf50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  .keywords-list {
+    list-style: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    li {
+      .remove {
+        transition-duration: 0.3s;
+      }
+      .remove:hover {
+        color: red;
+      }
+    }
+  }
   .google-results {
     direction: rtl;
     .result {

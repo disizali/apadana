@@ -106,20 +106,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! persianjs */ "persianjs");
+/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(persianjs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Ads.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+
+
+
+const newPositions = {
+  1: 0,
+  2: 1,
+  3: 2,
+  4: 3,
+  5: 6,
+  6: 7,
+  7: 8,
+  8: 9
+};
 class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
       position: 0,
+      targetPosition: 0,
       title: "ویرا وب آپادانا",
-      description: "متن توضیحات منتخب شما",
-      link: "https://apweb.ir"
+      description: "توضیحات وب سایت",
+      link: "https://apweb.ir",
+      sliding: true,
+      price: 100000,
+      keywords: []
     };
     this.changeHandler = this.changeHandler.bind(this);
+    this.changePositionHandler = this.changePositionHandler.bind(this);
+    this.addKeyword = this.addKeyword.bind(this);
+    this.nativeToggleModal = this.nativeToggleModal.bind(this);
   }
 
   changeHandler(e) {
@@ -129,70 +155,126 @@ class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     });
   }
 
+  changePositionHandler(e) {
+    const currentPosition = e.target.value;
+    this.setState({
+      targetPosition: newPositions[currentPosition],
+      position: currentPosition,
+      price: currentPosition < 5 ? currentPosition * 100000 : currentPosition * 10000
+    });
+  }
+
+  addKeyword(e) {
+    const {
+      keywords
+    } = this.state;
+
+    if (e.key == "Enter" & !lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(keywords, e.target.value)) {
+      let newKeywords = keywords;
+      newKeywords.push(e.target.value);
+      e.target.value = "";
+      this.setState({
+        keywords: newKeywords
+      });
+    }
+  }
+
+  removeKeyword(target) {
+    let {
+      keywords
+    } = this.state;
+    let newKeywords = keywords;
+
+    lodash__WEBPACK_IMPORTED_MODULE_3___default.a.pull(newKeywords, target);
+
+    this.setState({
+      keywords: newKeywords
+    });
+  }
+
+  nativeToggleModal() {
+    const {
+      toggleModal: parentToggleModal
+    } = this.props;
+    parentToggleModal({
+      ads: this.state
+    });
+  }
+
   render() {
     const {
       title,
       link,
       description,
-      position
+      position,
+      targetPosition,
+      price,
+      keywords
     } = this.state;
     return __jsx("div", {
       className: "ads",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 74
       },
       __self: this
     }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_1__["default"], {
       title: "\u062A\u0628\u0644\u06CC\u063A\u0627\u062A \u062F\u0631 \u06AF\u0648\u06AF\u0644",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 75
       },
       __self: this
     }), __jsx("div", {
       className: "d-flex mt-5 rtl",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 76
       },
       __self: this
     }, __jsx("div", {
       className: "google-results w-50 ml-5",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24
+        lineNumber: 77
       },
       __self: this
     }, [...Array(10).keys()].map((item, index) => {
-      if (index == position) {
+      if (index == targetPosition) {
         return __jsx("div", {
           className: "result target",
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 81
           },
           __self: this
         }, __jsx("h3", {
-          className: "text-primary bg-white text-right mb-3",
+          className: "text-primary bg-white text-right mb-4",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 82
           },
           __self: this
         }, title), __jsx("p", {
-          className: "link bg-transparent text-success text-right my-3",
+          className: "link bg-transparent text-success text-right my-4",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 85
           },
           __self: this
-        }, link), __jsx("p", {
-          className: "description text-muted bg-transparent text-right mt-3",
+        }, link, __jsx("span", {
+          className: "rounded ml-1 px-1 border border-success text-success",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 87
+          },
+          __self: this
+        }, "Ad")), __jsx("p", {
+          className: "description text-muted bg-transparent text-right mt-4",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 91
           },
           __self: this
         }, description));
@@ -203,41 +285,41 @@ class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 98
         },
         __self: this
       }, __jsx("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 99
         },
         __self: this
       }), __jsx("p", {
         className: "link",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 100
         },
         __self: this
       }), __jsx("p", {
         className: "description",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 101
         },
         __self: this
       }));
     })), __jsx("div", {
-      className: "google-target d-flex flex-column justify-content-between w-50 mr-5 rtl",
+      className: "google-target d-flex flex-column justify-content-around w-50 mr-5 rtl",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 106
       },
       __self: this
     }, __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 107
       },
       __self: this
     }, __jsx("label", {
@@ -245,17 +327,18 @@ class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "w-100 text-right",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 108
       },
       __self: this
     }, "\u0633\u0631\u0628\u0631\u06AF \u0648\u0628 \u0633\u0627\u06CC\u062A"), __jsx("input", {
       type: "text",
       className: "form-control",
       id: "ad-title",
+      value: title,
       onChange: this.changeHandler,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 111
       },
       __self: this
     }), __jsx("label", {
@@ -263,17 +346,18 @@ class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "w-100 text-right",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 118
       },
       __self: this
     }, "\u0644\u06CC\u0646\u06A9 \u0633\u0627\u06CC\u062A"), __jsx("input", {
       type: "text",
       className: "form-control",
       id: "ad-link",
+      value: link,
       onChange: this.changeHandler,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 121
       },
       __self: this
     }), __jsx("label", {
@@ -281,16 +365,59 @@ class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "w-100 text-right",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 128
       },
       __self: this
     }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), __jsx("textarea", {
       className: "form-control",
       id: "ad-description",
+      value: description,
       onChange: this.changeHandler,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 131
+      },
+      __self: this
+    }), __jsx("label", {
+      htmlFor: "ad-description",
+      className: "w-100 text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 137
+      },
+      __self: this
+    }, "\u06A9\u0644\u0645\u0627\u062A \u06A9\u0644\u06CC\u062F\u06CC"), __jsx("ul", {
+      className: "d-flex p-0 keywords-list py-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 140
+      },
+      __self: this
+    }, keywords.map((item, index) => {
+      return __jsx("li", {
+        className: "bg-success text-light rounded mx-1 border p-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 143
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "far fa-times-circle ml-1 remove",
+        onClick: () => this.removeKeyword(item),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 144
+        },
+        __self: this
+      }), item);
+    })), __jsx("input", {
+      type: "text",
+      className: "form-control",
+      placeholder: "\u06A9\u0644\u0645\u0647 \u06A9\u0644\u06CC\u062F\u06CC \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0631\u062F\u0647 \u0648 Enter \u0628\u0632\u0646\u06CC\u062F",
+      onKeyDown: this.addKeyword,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 153
       },
       __self: this
     }), __jsx("label", {
@@ -298,40 +425,87 @@ class Ads extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "w-100 text-right",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 159
       },
       __self: this
     }, "\u0645\u0648\u0642\u0639\u06CC\u062A"), __jsx("input", {
-      className: "form-control",
+      className: "form-control slider",
+      type: "range",
       id: "ad-position",
-      onChange: this.changeHandler,
+      min: 1,
+      max: 8,
+      value: position,
+      onChange: this.changePositionHandler,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 162
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "d-flex w-100",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 171
+      },
+      __self: this
+    }, __jsx("hr", {
+      className: "w-50 bg-muted mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 172
+      },
+      __self: this
+    }), __jsx("hr", {
+      className: "w-50 bg-muted mx-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 173
       },
       __self: this
     })), __jsx("div", {
+      className: "d-flex w-100 text-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 175
+      },
+      __self: this
+    }, __jsx("span", {
+      className: "text-muted w-50",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 176
+      },
+      __self: this
+    }, "\u0686\u0647\u0627\u0631 \u062A\u0627\u06CC \u0628\u0627\u0644\u0627"), __jsx("span", {
+      className: "text-muted w-50",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 177
+      },
+      __self: this
+    }, "\u0686\u0647\u0627\u0631 \u062A\u0627\u06CC \u067E\u0627\u06CC\u06CC\u0646"))), __jsx("div", {
       className: "d-flex justify-content-between align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 180
       },
       __self: this
     }, __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 181
       },
       __self: this
-    }, "\u0642\u06CC\u0645\u062A \u062A\u062E\u0645\u06CC\u0646\u06CC"), __jsx("strong", {
-      className: "text-success display-4",
+    }, "\u062F\u0631\u062E\u0648\u0627\u0633\u062A \u0645\u0634\u0627\u0648\u0631\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+      color: "success",
+      onClick: this.nativeToggleModal,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 182
       },
       __self: this
-    }, "\u06F1\u06F0\u06F0\u066C\u06F0\u06F0\u06F0")))));
+    }, "\u062F\u0631\u062E\u0648\u0627\u0633\u062A")))));
   }
 
 }
@@ -625,63 +799,341 @@ class Apadana extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       },
       __self: this
     }, __jsx("li", {
+      className: "rounded bg-white shadow mx-1 d-flex flex-column border",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 64
       },
       __self: this
-    }, "1"), __jsx("li", {
+    }, __jsx("img", {
+      src: "/images/enamad.png",
+      alt: "enamad",
+      width: "50",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 65
       },
       __self: this
-    }, "2"), __jsx("li", {
+    })), __jsx("li", {
+      className: "rounded bg-white shadow mx-1 d-flex flex-column border",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 67
       },
       __self: this
-    }, "3"))), __jsx("div", {
-      className: "w-50",
+    }, __jsx("img", {
+      src: "/images/samandehi.png",
+      alt: "samandehi",
+      width: "50",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 68
       },
       __self: this
-    }, __jsx("div", {
-      class: "mapouter rounded",
-      className: "jsx-62095387",
+    })), __jsx("li", {
+      className: "rounded bg-white shadow mx-1 d-flex flex-column border",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 70
       },
       __self: this
-    }, __jsx("div", {
-      class: "gmap_canvas rounded",
-      className: "jsx-62095387",
+    }, __jsx("img", {
+      src: "/images/zarinpal.png",
+      alt: "zarinpal",
+      width: "50",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 71
       },
       __self: this
-    }, __jsx("iframe", {
-      width: "100%",
-      height: "500",
-      id: "gmap_canvas",
-      src: "https://maps.google.com/maps?q=%D8%A8%D8%B1%D8%AC%20%D8%A7%D9%84%D9%88%D9%86%D8%AF&t=&z=13&ie=UTF8&iwloc=&output=embed",
-      frameBorder: "0",
-      scrolling: "no",
+    })), __jsx("li", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 73
+      },
+      __self: this
+    }, __jsx("div", {
+      id: "iwmf-certificate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74
+      },
+      __self: this
+    })))), __jsx("div", {
+      className: "w-50",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "jsx-62095387" + " " + "mapouter rounded",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "jsx-62095387" + " " + "gmap_canvas rounded",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 80
+      },
+      __self: this
+    }, __jsx("img", {
+      src: "/images/map.png",
+      width: "480",
+      height: "460",
       className: "jsx-62095387" + " " + "rounded",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 81
       },
       __self: this
     })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
       id: "62095387",
       __self: this
-    }, ".mapouter.jsx-62095387{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas.jsx-62095387{overflow:hidden;background:none !important;height:500px;width:600px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9pbWFjL0Rlc2t0b3AvQVBBREFOQS9jb21wb25lbnRzL0FwYWRhbmEuanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWlGMEIsQUFHcUMsQUFNRixnQkFDVyxFQU5WLGlCQUNKLFFBTUEsS0FMRCxRQU1BLElBTGQsUUFNQSIsImZpbGUiOiIvVXNlcnMvaW1hYy9EZXNrdG9wL0FQQURBTkEvY29tcG9uZW50cy9BcGFkYW5hLmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBTa3kgZnJvbSBcIi4vU2t5XCI7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEFwYWRhbmEgZXh0ZW5kcyBDb21wb25lbnQge1xuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXBhZGFuYVwiPlxuICAgICAgICA8U2t5IHRpdGxlPVwi2YjbjNix2Kcg2YjYqCDYotm+2KfYr9in2YbYp1wiIC8+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZC1mbGV4IHJ0bCBtdC01XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUwIHRleHQtcmlnaHRcIj5cbiAgICAgICAgICAgIDxoNSBjbGFzc05hbWU9XCJteS0zXCI+2KLZhtqG2Ycg2KfYsiDZhdinINio2KfbjNivINio2K/Yp9mG24zYrzwvaDU+XG4gICAgICAgICAgICA8dWw+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLW1hcC1tYXJrZXItYWx0IG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7Yotiv2LHYsyA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj5cbiAgICAgICAgICAgICAgICAgINmF2LHYstiv2KfYsdin2YYg2K7bjNin2KjYp9mGINin2KjYsdin2YfbjNmF24wg2KjYsdisINin2YTZiNmG2K8g2LfYqNmC2Ycg27cg2KzZhtmI2KjbjCDZiNin2K3YryDbt9uw27dcbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLWJ1aWxkaW5nIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7YtNmF2KfYsdmHINir2KjYqiA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj41MzE5MTE8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7Ysdin2Ycg2YfYp9uMINin2LHYqtio2KfYt9uMPC9oNT5cbiAgICAgICAgICAgIDx1bD5cbiAgICAgICAgICAgICAgPGxpIGNsYXNzTmFtZT1cIm15LTNcIj5cbiAgICAgICAgICAgICAgICA8aSBjbGFzc05hbWU9XCJmYWwgZmEtdXNlci1hc3Ryb25hdXQgbWwtMSB0ZXh0LW9yYW5nZVwiIC8+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1vcmFuZ2UgbXgtMVwiPtiq2YTZgdmGINm+2LTYqtuM2KjYp9mG24wgOiA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xXCI+27TbtNuy27Xbudu227jbuC3bsNuy27E8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLXBob25lIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7YqtmE2YHZhiDZhdi02KfZiNix2YcgOiA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xXCI+27TbtNuy27Xbudu227HbsS3bsNuy27E8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFiIGZhLWluc3RhZ3JhbSBtbC0xIHRleHQtb3JhbmdlXCIgLz5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW9yYW5nZSBteC0xXCI+2KfbjNmG2LPYqtin2q/Ysdin2YUg2YXYpyA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj5cbiAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwOi8vaW5zdGFncmFtLmNvbS92aXJhd2ViYXBhZGFuYVwiPlxuICAgICAgICAgICAgICAgICAgICBAdmlyYXdlYmFwYWRhbmFcbiAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7Yp9mF2YjYsSDZhdin2YTbjDwvaDU+XG4gICAgICAgICAgICA8dWw+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLWNyZWRpdC1jYXJkIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj5cbiAgICAgICAgICAgICAgICAgINm+2LHYr9in2K7YqiDZhdiz2KrZgtuM2YUg2KjYpyDYstix24zZhiDZvtin2YQgOntcIiBcIn1cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xIGJnLXdhcm5pbmcgcHgtMyBweS0yIHJvdW5kZWRcIj5cbiAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwOi8vemFyaW5wLmFsL2Fwd2ViLmlyXCIgY2xhc3NOYW1lPVwidGV4dC13aGl0ZVwiPlxuICAgICAgICAgICAgICAgICAgICDZvtix2K/Yp9iu2KpcbiAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7ZhtmF2KfYryDZh9inPC9oNT5cbiAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJkLWZsZXhcIj5cbiAgICAgICAgICAgICAgPGxpPjE8L2xpPlxuICAgICAgICAgICAgICA8bGk+MjwvbGk+XG4gICAgICAgICAgICAgIDxsaT4zPC9saT5cbiAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUwXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzPVwibWFwb3V0ZXIgcm91bmRlZFwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzPVwiZ21hcF9jYW52YXMgcm91bmRlZFwiPlxuICAgICAgICAgICAgICAgIDxpZnJhbWVcbiAgICAgICAgICAgICAgICAgIHdpZHRoPVwiMTAwJVwiXG4gICAgICAgICAgICAgICAgICBoZWlnaHQ9XCI1MDBcIlxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicm91bmRlZFwiXG4gICAgICAgICAgICAgICAgICBpZD1cImdtYXBfY2FudmFzXCJcbiAgICAgICAgICAgICAgICAgIHNyYz1cImh0dHBzOi8vbWFwcy5nb29nbGUuY29tL21hcHM/cT0lRDglQTglRDglQjElRDglQUMlMjAlRDglQTclRDklODQlRDklODglRDklODYlRDglQUYmdD0mej0xMyZpZT1VVEY4Jml3bG9jPSZvdXRwdXQ9ZW1iZWRcIlxuICAgICAgICAgICAgICAgICAgZnJhbWVCb3JkZXI9XCIwXCJcbiAgICAgICAgICAgICAgICAgIHNjcm9sbGluZz1cIm5vXCJcbiAgICAgICAgICAgICAgICA+PC9pZnJhbWU+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgICAgICAgLm1hcG91dGVyIHtcbiAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IHJpZ2h0O1xuICAgICAgICAgICAgICAgICAgaGVpZ2h0OiA1MDBweDtcbiAgICAgICAgICAgICAgICAgIHdpZHRoOiA2MDBweDtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgLmdtYXBfY2FudmFzIHtcbiAgICAgICAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICAgICAgICBoZWlnaHQ6IDUwMHB4O1xuICAgICAgICAgICAgICAgICAgd2lkdGg6IDYwMHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgYH08L3N0eWxlPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxufVxuIl19 */\n/*@ sourceURL=/Users/imac/Desktop/APADANA/components/Apadana.jsx */")))));
+    }, ".mapouter.jsx-62095387{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas.jsx-62095387{overflow:hidden;background:none !important;height:500px;width:600px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9pbWFjL0Rlc2t0b3AvQVBBREFOQS9jb21wb25lbnRzL0FwYWRhbmEuanN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWdHMEIsQUFHcUMsQUFNRixnQkFDVyxFQU5WLGlCQUNKLFFBTUEsS0FMRCxRQU1BLElBTGQsUUFNQSIsImZpbGUiOiIvVXNlcnMvaW1hYy9EZXNrdG9wL0FQQURBTkEvY29tcG9uZW50cy9BcGFkYW5hLmpzeCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCBTa3kgZnJvbSBcIi4vU2t5XCI7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIEFwYWRhbmEgZXh0ZW5kcyBDb21wb25lbnQge1xuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYXBhZGFuYVwiPlxuICAgICAgICA8U2t5IHRpdGxlPVwi2YjbjNix2Kcg2YjYqCDYotm+2KfYr9in2YbYp1wiIC8+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZC1mbGV4IHJ0bCBtdC01XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUwIHRleHQtcmlnaHRcIj5cbiAgICAgICAgICAgIDxoNSBjbGFzc05hbWU9XCJteS0zXCI+2KLZhtqG2Ycg2KfYsiDZhdinINio2KfbjNivINio2K/Yp9mG24zYrzwvaDU+XG4gICAgICAgICAgICA8dWw+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLW1hcC1tYXJrZXItYWx0IG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7Yotiv2LHYsyA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj5cbiAgICAgICAgICAgICAgICAgINmF2LHYstiv2KfYsdin2YYg2K7bjNin2KjYp9mGINin2KjYsdin2YfbjNmF24wg2KjYsdisINin2YTZiNmG2K8g2LfYqNmC2Ycg27cg2KzZhtmI2KjbjCDZiNin2K3YryDbt9uw27dcbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLWJ1aWxkaW5nIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7YtNmF2KfYsdmHINir2KjYqiA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj41MzE5MTE8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7Ysdin2Ycg2YfYp9uMINin2LHYqtio2KfYt9uMPC9oNT5cbiAgICAgICAgICAgIDx1bD5cbiAgICAgICAgICAgICAgPGxpIGNsYXNzTmFtZT1cIm15LTNcIj5cbiAgICAgICAgICAgICAgICA8aSBjbGFzc05hbWU9XCJmYWwgZmEtdXNlci1hc3Ryb25hdXQgbWwtMSB0ZXh0LW9yYW5nZVwiIC8+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1vcmFuZ2UgbXgtMVwiPtiq2YTZgdmGINm+2LTYqtuM2KjYp9mG24wgOiA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xXCI+27TbtNuy27Xbudu227jbuC3bsNuy27E8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLXBob25lIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj7YqtmE2YHZhiDZhdi02KfZiNix2YcgOiA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xXCI+27TbtNuy27Xbudu227HbsS3bsNuy27E8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFiIGZhLWluc3RhZ3JhbSBtbC0xIHRleHQtb3JhbmdlXCIgLz5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW9yYW5nZSBteC0xXCI+2KfbjNmG2LPYqtin2q/Ysdin2YUg2YXYpyA6IDwvc3Bhbj5cbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIG1yLTFcIj5cbiAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwOi8vaW5zdGFncmFtLmNvbS92aXJhd2ViYXBhZGFuYVwiPlxuICAgICAgICAgICAgICAgICAgICBAdmlyYXdlYmFwYWRhbmFcbiAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7Yp9mF2YjYsSDZhdin2YTbjDwvaDU+XG4gICAgICAgICAgICA8dWw+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJteS0zXCI+XG4gICAgICAgICAgICAgICAgPGkgY2xhc3NOYW1lPVwiZmFsIGZhLWNyZWRpdC1jYXJkIG1sLTEgdGV4dC1vcmFuZ2VcIiAvPlxuICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtb3JhbmdlIG14LTFcIj5cbiAgICAgICAgICAgICAgICAgINm+2LHYr9in2K7YqiDZhdiz2KrZgtuM2YUg2KjYpyDYstix24zZhiDZvtin2YQgOntcIiBcIn1cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZCBtci0xIGJnLXdhcm5pbmcgcHgtMyBweS0yIHJvdW5kZWRcIj5cbiAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCJodHRwOi8vemFyaW5wLmFsL2Fwd2ViLmlyXCIgY2xhc3NOYW1lPVwidGV4dC13aGl0ZVwiPlxuICAgICAgICAgICAgICAgICAgICDZvtix2K/Yp9iu2KpcbiAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cIm15LTNcIj7ZhtmF2KfYryDZh9inPC9oNT5cbiAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJkLWZsZXhcIj5cbiAgICAgICAgICAgICAgPGxpIGNsYXNzTmFtZT1cInJvdW5kZWQgYmctd2hpdGUgc2hhZG93IG14LTEgZC1mbGV4IGZsZXgtY29sdW1uIGJvcmRlclwiPlxuICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiL2ltYWdlcy9lbmFtYWQucG5nXCIgYWx0PVwiZW5hbWFkXCIgd2lkdGg9XCI1MFwiIC8+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaSBjbGFzc05hbWU9XCJyb3VuZGVkIGJnLXdoaXRlIHNoYWRvdyBteC0xIGQtZmxleCBmbGV4LWNvbHVtbiBib3JkZXJcIj5cbiAgICAgICAgICAgICAgICA8aW1nIHNyYz1cIi9pbWFnZXMvc2FtYW5kZWhpLnBuZ1wiIGFsdD1cInNhbWFuZGVoaVwiIHdpZHRoPVwiNTBcIiAvPlxuICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICA8bGkgY2xhc3NOYW1lPVwicm91bmRlZCBiZy13aGl0ZSBzaGFkb3cgbXgtMSBkLWZsZXggZmxleC1jb2x1bW4gYm9yZGVyXCI+XG4gICAgICAgICAgICAgICAgPGltZyBzcmM9XCIvaW1hZ2VzL3phcmlucGFsLnBuZ1wiIGFsdD1cInphcmlucGFsXCIgd2lkdGg9XCI1MFwiIC8+XG4gICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgIDxsaT5cbiAgICAgICAgICAgICAgPGRpdiBpZD1cIml3bWYtY2VydGlmaWNhdGVcIj48L2Rpdj5cbiAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTUwXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1hcG91dGVyIHJvdW5kZWRcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJnbWFwX2NhbnZhcyByb3VuZGVkXCI+XG4gICAgICAgICAgICAgICAgPGltZ1xuICAgICAgICAgICAgICAgICAgc3JjPVwiL2ltYWdlcy9tYXAucG5nXCJcbiAgICAgICAgICAgICAgICAgIHdpZHRoPVwiNDgwXCJcbiAgICAgICAgICAgICAgICAgIGhlaWdodD1cIjQ2MFwiXG4gICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJyb3VuZGVkXCJcbiAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgIHsvKiA8aWZyYW1lXG4gICAgICAgICAgICAgICAgICB3aWR0aD1cIjEwMCVcIlxuICAgICAgICAgICAgICAgICAgaGVpZ2h0PVwiNTAwXCJcbiAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInJvdW5kZWRcIlxuICAgICAgICAgICAgICAgICAgaWQ9XCJnbWFwX2NhbnZhc1wiXG4gICAgICAgICAgICAgICAgICBzcmM9XCJodHRwczovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9JUQ4JUE4JUQ4JUIxJUQ4JUFDJTIwJUQ4JUE3JUQ5JTg0JUQ5JTg4JUQ5JTg2JUQ4JUFGJnQ9Jno9MTMmaWU9VVRGOCZpd2xvYz0mb3V0cHV0PWVtYmVkXCJcbiAgICAgICAgICAgICAgICAgIGZyYW1lQm9yZGVyPVwiMFwiXG4gICAgICAgICAgICAgICAgICBzY3JvbGxpbmc9XCJub1wiXG4gICAgICAgICAgICAgICAgPjwvaWZyYW1lPiAqL31cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgICAgICAgICAubWFwb3V0ZXIge1xuICAgICAgICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgICAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICAgICAgICAgICAgICBoZWlnaHQ6IDUwMHB4O1xuICAgICAgICAgICAgICAgICAgd2lkdGg6IDYwMHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAuZ21hcF9jYW52YXMge1xuICAgICAgICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6IG5vbmUgIWltcG9ydGFudDtcbiAgICAgICAgICAgICAgICAgIGhlaWdodDogNTAwcHg7XG4gICAgICAgICAgICAgICAgICB3aWR0aDogNjAwcHg7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICBgfTwvc3R5bGU+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG59XG4iXX0= */\n/*@ sourceURL=/Users/imac/Desktop/APADANA/components/Apadana.jsx */")))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./components/Contact.jsx":
+/*!********************************!*\
+  !*** ./components/Contact.jsx ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ModalExample; });
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+
+var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Contact.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
+
+class ModalExample extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.changeHandler = this.changeHandler.bind(this);
+    this.saveContact = this.saveContact.bind(this);
+  }
+
+  changeHandler(e) {
+    this.setState({
+      [e.target.id]: e.target.value
+    });
+  }
+
+  saveContact() {
+    const {
+      firstName,
+      lastName,
+      website,
+      phoneNumber
+    } = this.state;
+    let {
+      information
+    } = this.props;
+    information = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()(information);
+    axios__WEBPACK_IMPORTED_MODULE_3___default.a.post("http://localhost:3000/api/contact", {
+      firstName,
+      lastName,
+      website,
+      phoneNumber,
+      information
+    });
+    alert("درخواست شما ثبت و همکاران ما به زودی با شما تماس خواهند گرفت .");
+    this.setState({
+      modal: false
+    });
+  }
+
+  render() {
+    const {
+      modal
+    } = this.props;
+    return __jsx("div", {
+      className: "rtl",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Modal"], {
+      isOpen: modal,
+      toggle: this.props.toggleModal,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["ModalHeader"], {
+      toggle: this.toggleModal,
+      className: "ml-auto",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, "\u0641\u0631\u0645 \u062F\u0631\u062E\u0648\u0627\u0633\u062A \u0645\u0634\u0627\u0648\u0631\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["ModalBody"], {
+      className: "rtl",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "d-flex justify-content-around",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "d-flex flex-column justify-content-start text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, __jsx("label", {
+      htmlFor: "firstName",
+      className: "text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, "\u0646\u0627\u0645"), __jsx("input", {
+      type: "text",
+      id: "firstName",
+      className: "form-control",
+      onChange: this.changeHandler,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    })), __jsx("div", {
+      className: "d-flex flex-column justify-content-start text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    }, __jsx("label", {
+      htmlFor: "lastName",
+      className: "text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }, "\u0646\u0627\u0645 \u062E\u0627\u0646\u0648\u0627\u062F\u06AF\u06CC"), __jsx("input", {
+      type: "text",
+      id: "lastName",
+      className: "form-control",
+      onChange: this.changeHandler,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }))), __jsx("div", {
+      className: "d-flex justify-content-around",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "d-flex flex-column justify-content-start text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
+      },
+      __self: this
+    }, __jsx("label", {
+      htmlFor: "website",
+      className: "text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }, "\u0633\u0627\u06CC\u062A \u0634\u0645\u0627 ( \u0627\u062E\u062A\u06CC\u0627\u0631\u06CC )"), __jsx("input", {
+      type: "text",
+      id: "website",
+      className: "form-control",
+      onChange: this.changeHandler,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: this
+    })), __jsx("div", {
+      className: "d-flex flex-column justify-content-start text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 76
+      },
+      __self: this
+    }, __jsx("label", {
+      htmlFor: "phoneNumber",
+      className: "text-right",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77
+      },
+      __self: this
+    }, "\u0634\u0645\u0627\u0631\u0647 \u062A\u0645\u0627\u0633"), __jsx("input", {
+      type: "text",
+      id: "phoneNumber",
+      className: "form-control",
+      onChange: this.changeHandler,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 80
+      },
+      __self: this
+    })))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["ModalFooter"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 89
+      },
+      __self: this
+    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      color: "primary",
+      onClick: this.props.toggleModal,
+      onClick: this.saveContact,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 90
+      },
+      __self: this
+    }, "\u0628\u0627 \u0645\u0646 \u062A\u0645\u0627\u0633 \u0628\u06AF\u06CC\u0631\u06CC\u062F"), " ", __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Button"], {
+      color: "secondary",
+      onClick: this.props.toggleModal,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 97
+      },
+      __self: this
+    }, "\u0644\u063A\u0648"))));
   }
 
 }
@@ -880,21 +1332,21 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "develop",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 98
       },
       __self: this
     }, __jsx("div", {
       className: "plans d-flex flex-column",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 99
       },
       __self: this
     }, __jsx("div", {
       className: "plan d-flex justify-content-start align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 100
       },
       __self: this
     }, __jsx("img", {
@@ -902,68 +1354,68 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 101
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 101
+        lineNumber: 102
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 103
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 104
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 104
+        lineNumber: 105
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0634\u062E\u0635\u06CC"), __jsx("strong", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 106
       },
       __self: this
     }, persianjs__WEBPACK_IMPORTED_MODULE_2___default()(this.getTotalPrice("personal")).englishNumber().toString(), " ", "\u062A\u0648\u0645\u0627\u0646")), __jsx("div", {
       className: "d-flex flex-column body",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 113
       },
       __self: this
     }, __jsx("p", {
       className: "text-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 114
       },
       __self: this
     }, __jsx("b", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 115
       },
       __self: this
     }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0628\u0631\u0627\u06CC \u0627\u0641\u0631\u0627\u062F \u0628\u0627 \u0647\u0632\u06CC\u0646\u0647 \u06A9\u0645 \u0648 \u0627\u0642\u062A\u0635\u0627\u062F\u06CC")), __jsx("ul", {
       className: "features d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 117
       },
       __self: this
     }, personalArray.filter(item => item.active).map((item, index) => {
@@ -972,21 +1424,21 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         className: `feature rounded d-flex align-items-center ml-2 active`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 122
         },
         __self: this
       }, __jsx("i", {
         className: `fal fa-${item.icon} mx-1`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 126
         },
         __self: this
       }), __jsx("span", {
         className: "mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 127
         },
         __self: this
       }, item.text));
@@ -994,28 +1446,28 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "text-dark mt-3 description",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 132
       },
       __self: this
     }, __jsx("span", {
       className: "text-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 133
       },
       __self: this
     }, "\u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u0633\u0641\u0627\u0631\u0634\u06CC"), __jsx("span", {
       className: "text-muted mr-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
+        lineNumber: 134
       },
       __self: this
     }, "( \u062F\u0631 \u0635\u0648\u0631\u062A \u0646\u06CC\u0627\u0632 \u06A9\u0644\u06CC\u06A9 \u06A9\u0646\u06CC\u062F )")), __jsx("ul", {
       className: "features d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 138
       },
       __self: this
     }, personalArray.filter(item => !item.active).map((item, index) => {
@@ -1028,84 +1480,87 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 143
         },
         __self: this
       }, __jsx("i", {
         className: `fal fa-${item.icon} mx-1`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 154
         },
         __self: this
       }), __jsx("span", {
         className: "mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 155
         },
         __self: this
       }, item.text));
     }))), __jsx("button", {
       className: "order btn d-flex",
+      onClick: () => this.props.toggleModal({
+        develop: "personal"
+      }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 161
       },
       __self: this
     }, __jsx("div", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161
+        lineNumber: 162
       },
       __self: this
     }, __jsx("i", {
       className: "fal fa-rocket mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162
+        lineNumber: 163
       },
       __self: this
     }), __jsx("div", {
       className: "wind",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 163
+        lineNumber: 164
       },
       __self: this
     })), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165
+        lineNumber: 166
       },
       __self: this
     }, "\u0634\u0631\u0648\u0639 \u06A9\u0634\u0648\u0631\u06CC \u0634\u062F\u0646")), __jsx("button", {
       className: "description btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167
+        lineNumber: 168
       },
       __self: this
     }, __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 168
+        lineNumber: 169
       },
       __self: this
     }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), __jsx("i", {
       className: "fas fa-sort-down",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 169
+        lineNumber: 170
       },
       __self: this
     }))), __jsx("div", {
       className: "plan d-flex justify-content-start align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 172
+        lineNumber: 173
       },
       __self: this
     }, __jsx("img", {
@@ -1113,68 +1568,68 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 173
+        lineNumber: 174
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 174
+        lineNumber: 175
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 175
+        lineNumber: 176
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 176
+        lineNumber: 177
       },
       __self: this
     }, __jsx("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 177
+        lineNumber: 178
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0634\u0631\u06A9\u062A\u06CC"), __jsx("strong", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 178
+        lineNumber: 179
       },
       __self: this
     }, persianjs__WEBPACK_IMPORTED_MODULE_2___default()(this.getTotalPrice("organization")).englishNumber().toString(), " ", "\u062A\u0648\u0645\u0627\u0646")), __jsx("div", {
       className: "d-flex flex-column body",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
+        lineNumber: 186
       },
       __self: this
     }, __jsx("p", {
       className: "text-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186
+        lineNumber: 187
       },
       __self: this
     }, __jsx("b", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187
+        lineNumber: 188
       },
       __self: this
     }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0628\u0631\u0627\u06CC \u0634\u0631\u06A9\u062A \u0647\u0627 \u0648 \u0633\u0627\u0632\u0645\u0627\u0646 \u0647\u0627\u06CC \u06A9\u0648\u0686\u06A9")), __jsx("ul", {
       className: "features d-flex flex-column",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 189
+        lineNumber: 190
       },
       __self: this
     }, lodash__WEBPACK_IMPORTED_MODULE_1___default.a.chunk(organisationArray.filter(item => item.active), 3).map((item, index) => {
@@ -1183,7 +1638,7 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 196
         },
         __self: this
       }, item.map((feature, index) => {
@@ -1192,21 +1647,21 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           className: `feature rounded d-flex align-items-center ml-2 active`,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 198
+            lineNumber: 199
           },
           __self: this
         }, __jsx("i", {
           className: `fal fa-${feature.icon} mx-1`,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 202
+            lineNumber: 203
           },
           __self: this
         }), __jsx("span", {
           className: "mx-1",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203
+            lineNumber: 204
           },
           __self: this
         }, feature.text));
@@ -1215,28 +1670,28 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "text-dark mt-3 description",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 211
+        lineNumber: 212
       },
       __self: this
     }, __jsx("span", {
       className: "text-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 212
+        lineNumber: 213
       },
       __self: this
     }, "\u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u0633\u0641\u0627\u0631\u0634\u06CC"), __jsx("span", {
       className: "text-muted mr-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 213
+        lineNumber: 214
       },
       __self: this
     }, "( \u062F\u0631 \u0635\u0648\u0631\u062A \u0646\u06CC\u0627\u0632 \u06A9\u0644\u06CC\u06A9 \u06A9\u0646\u06CC\u062F )")), __jsx("ul", {
       className: "features d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 217
+        lineNumber: 218
       },
       __self: this
     }, organisationArray.filter(item => !item.active).map((item, index) => {
@@ -1248,85 +1703,88 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         onClick: () => this.selectFeature("organization", item.text, item.price),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222
+          lineNumber: 223
         },
         __self: this
       }, __jsx("i", {
         className: `fal fa-${item.icon} mx-1`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 236
+          lineNumber: 237
         },
         __self: this
       }), __jsx("span", {
         className: "mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 237
+          lineNumber: 238
         },
         __self: this
       }, item.text));
     }))), __jsx("button", {
       className: "order btn d-flex",
+      onClick: () => this.props.toggleModal({
+        develop: "company"
+      }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 243
+        lineNumber: 244
       },
       __self: this
     }, __jsx("div", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 244
+        lineNumber: 245
       },
       __self: this
     }, __jsx("i", {
       className: "far fa-rocket mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 245
+        lineNumber: 246
       },
       __self: this
     }), __jsx("div", {
       className: "wind",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 246
+        lineNumber: 247
       },
       __self: this
     })), __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 248
+        lineNumber: 249
       },
       __self: this
     }, "\u0634\u0631\u0648\u0639 \u062C\u0647\u0627\u0646\u06CC \u0634\u062F\u0646")), __jsx("button", {
       className: "description btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 250
+        lineNumber: 251
       },
       __self: this
     }, __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 251
+        lineNumber: 252
       },
       __self: this
     }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), __jsx("i", {
       className: "fas fa-sort-down",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 252
+        lineNumber: 253
       },
       __self: this
     }))), __jsx("div", {
       className: "plan d-flex justify-content-start align-items-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 255
+        lineNumber: 256
       },
       __self: this
     }, __jsx("img", {
@@ -1334,69 +1792,69 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 256
+        lineNumber: 257
       },
       __self: this
     }), __jsx("div", {
       className: "circle",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 257
+        lineNumber: 258
       },
       __self: this
     }), __jsx("div", {
       className: "square",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 258
+        lineNumber: 259
       },
       __self: this
     }), __jsx("div", {
       className: "title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 259
+        lineNumber: 260
       },
       __self: this
     }, __jsx("h2", {
       className: "gold",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260
+        lineNumber: 261
       },
       __self: this
     }, "\u067E\u0644\u0646 \u0627\u062E\u062A\u0635\u0627\u0635\u06CC"), __jsx("strong", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 261
+        lineNumber: 262
       },
       __self: this
     }, "\u062A\u0645\u0627\u0633 \u0628\u06AF\u06CC\u0631\u06CC\u062F ")), __jsx("div", {
       className: "d-flex flex-column body",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 263
+        lineNumber: 264
       },
       __self: this
     }, __jsx("p", {
       className: "text-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 264
+        lineNumber: 265
       },
       __self: this
     }, __jsx("b", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 265
+        lineNumber: 266
       },
       __self: this
     }, "\u0637\u0631\u0627\u062D\u06CC \u0633\u0627\u06CC\u062A \u0628\u0631\u0627\u06CC \u0634\u0631\u06A9\u062A \u0647\u0627 \u0627\u0634\u062E\u0627\u0635 \u0628\u0627 \u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u06A9\u0627\u0645\u0644\u0627 \u0633\u0641\u0627\u0631\u0634\u06CC")), __jsx("ul", {
       className: "features d-flex flex-column",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 267
+        lineNumber: 268
       },
       __self: this
     }, lodash__WEBPACK_IMPORTED_MODULE_1___default.a.chunk(customizeArray.filter(item => item.active), 3).map((item, index) => {
@@ -1405,7 +1863,7 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         key: index,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 273
+          lineNumber: 274
         },
         __self: this
       }, item.map((feature, index) => {
@@ -1414,21 +1872,21 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           key: index,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 276
+            lineNumber: 277
           },
           __self: this
         }, __jsx("i", {
           className: `fal fa-${feature.icon} mx-1`,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 280
+            lineNumber: 281
           },
           __self: this
         }), __jsx("span", {
           className: "mx-1",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 281
+            lineNumber: 282
           },
           __self: this
         }, feature.text));
@@ -1437,7 +1895,7 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "features d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 289
+        lineNumber: 290
       },
       __self: this
     }, customizeArray.filter(item => !item.active).map((item, index) => {
@@ -1449,78 +1907,81 @@ class Develop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         onClick: () => this.selectFeature("organization", item.text, item.price),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 295
         },
         __self: this
       }, __jsx("i", {
         className: `fal fa-${item.icon} mx-1`,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 309
         },
         __self: this
       }), __jsx("span", {
         className: "mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 310
         },
         __self: this
       }, item.text));
     }))), __jsx("button", {
       className: "order btn d-flex",
+      onClick: () => this.props.toggleModal({
+        develop: "customize"
+      }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 315
+        lineNumber: 316
       },
       __self: this
     }, __jsx("div", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 316
+        lineNumber: 317
       },
       __self: this
     }, __jsx("i", {
       className: "far fa-space-shuttle mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 317
+        lineNumber: 318
       },
       __self: this
     }), __jsx("div", {
       className: "wind",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 318
+        lineNumber: 319
       },
       __self: this
     })), __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 320
+        lineNumber: 321
       },
       __self: this
     }, "\u0634\u0631\u0648\u0639 \u06A9\u0647\u06A9\u0634\u0627\u0646\u06CC \u0634\u062F\u0646")), __jsx("button", {
       className: "description btn d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 322
+        lineNumber: 323
       },
       __self: this
     }, __jsx("span", {
       className: "mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 323
+        lineNumber: 324
       },
       __self: this
     }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), __jsx("i", {
       className: "fas fa-sort-down",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 324
+        lineNumber: 325
       },
       __self: this
     })))));
@@ -1783,7 +2244,7 @@ class Footer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       },
       __self: this
     }, __jsx("img", {
-      src: "/images/footer.jpeg",
+      src: "/images/footer2.jpeg",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 7
@@ -1994,27 +2455,343 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Samples.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+const countOfStars = 400;
+
+const samples = [{
+  title: "چلیپا کابل پویا",
+  link: "chalipacable.ir",
+  image: "chalipa",
+  technologies: [{
+    name: "Node.js",
+    image: "nodejs"
+  }, {
+    name: "React.js",
+    image: "react"
+  }, {
+    name: "Next.js",
+    image: "nextjs"
+  }]
+}, {
+  title: "سپاهان لوله",
+  link: "sepahangroup.com",
+  image: "sepahangroup",
+  technologies: [{
+    name: "Node.js",
+    image: "nodejs"
+  }, {
+    name: "React.js",
+    image: "react"
+  }, {
+    name: "Next.js",
+    image: "nextjs"
+  }]
+}, {
+  title: "چاپ رز",
+  link: "chaperose.com",
+  image: "chaperose",
+  technologies: [{
+    name: "Wordpress",
+    image: "wordpress"
+  }, {
+    name: "Elementor",
+    image: "elementor"
+  }, {
+    name: "Next.js",
+    image: "nextjs"
+  }]
+}];
 class Samples extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
     return __jsx("div", {
       className: "samples",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 7
+        lineNumber: 38
       },
       __self: this
     }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_1__["default"], {
       title: "\u0646\u0645\u0648\u0646\u0647 \u06A9\u0627\u0631\u0647\u0627",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 39
       },
       __self: this
-    }));
+    }), [...Array(countOfStars).keys()].map(item => {
+      return __jsx("div", {
+        className: `star sample-star-${item}`,
+        key: item,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      });
+    }), __jsx("ul", {
+      className: "rtl mx-2 samples-list",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    }, samples.map(item => {
+      return __jsx("li", {
+        className: "mb-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+        className: "d-flex justify-content-between",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+        className: "d-flex align-items-center justify-content-center flex-column text-right",
+        sm: 3,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "sample-title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "title-line-top",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "parent",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      })), __jsx("div", {
+        className: "first-top-border",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }), __jsx("div", {
+        className: "second-top-border",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }), __jsx("div", {
+        className: "top-border-circle",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }), __jsx("h5", {
+        className: "text-white",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, item.title), __jsx("div", {
+        className: "first-bottom-border",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }), __jsx("div", {
+        className: "second-bottom-border",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }), __jsx("div", {
+        className: "bottom-border-circle",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }), __jsx("div", {
+        className: "title-line-bottom",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, __jsx("i", {
+        className: "parent",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        },
+        __self: this
+      }), __jsx("i", {
+        className: "child-5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74
+        },
+        __self: this
+      })))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+        sm: 6,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "sample-screen",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "frame d-flex flex-column justify-content-center align-items-center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80
+        },
+        __self: this
+      }, __jsx("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }, item.link)), __jsx("img", {
+        src: `/images/samples/${item.image}.png`,
+        alt: item.title,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83
+        },
+        __self: this
+      }))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+        sm: 3,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "d-flex flex-column",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }, item.technologies.map(technology => {
+        return __jsx("div", {
+          className: "d-flex align-items-center justify-content-around",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 93
+          },
+          __self: this
+        }, __jsx("img", {
+          src: `/images/technologies/${technology.image}.png`,
+          alt: technology.name,
+          className: "technology-icon my-2",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
+          },
+          __self: this
+        }), __jsx("span", {
+          className: "text-light",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 99
+          },
+          __self: this
+        }, technology.name));
+      })))));
+    })));
   }
 
 }
@@ -2031,23 +2808,51 @@ class Samples extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Seo", function() { return Seo; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/entries */ "./node_modules/@babel/runtime-corejs2/core-js/object/entries.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "lodash");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! persianjs */ "persianjs");
-/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(persianjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-properties */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptors */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptor */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Sky__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Sky */ "./components/Sky.jsx");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! persianjs */ "persianjs");
+/* harmony import */ var persianjs__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(persianjs__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_12__);
+
+
+
+
+
+
 
 var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Seo.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement;
+
+function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(Object(source)).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
 
 
 
 
-class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+
+
+
+class Seo extends react__WEBPACK_IMPORTED_MODULE_7__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
@@ -2055,36 +2860,42 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       keyword: "",
       currentPosition: 5,
       targetPosition: 1,
-      features: []
+      features: [],
+      loading: false
     };
     this.addNewKeyword = this.addNewKeyword.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getTotalPrice = this.getTotalPrice.bind(this);
     this.selectFeatures = this.selectFeatures.bind(this);
     this.removeKeyword = this.removeKeyword.bind(this);
+    this.nativeToggleModal = this.nativeToggleModal.bind(this);
   }
 
-  addNewKeyword(e) {
+  async addNewKeyword(e) {
     const {
       keywords
     } = this.state;
+    const query = e.target.value;
 
-    if (e.key == "Enter" && e.target.value && !lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(keywords, e.target.value)) {
-      let newKeywords = [e.target.value];
-
-      if (e.target.value == "salam" || e.target.value == "سلام") {
-        newKeywords.unshift("سلام به روی ماهت");
-      }
-
+    if (e.key == "Enter" && query && !lodash__WEBPACK_IMPORTED_MODULE_9___default.a.includes(keywords, query)) {
       this.setState({
-        keywords: [...newKeywords, ...keywords],
-        keyword: ""
+        loading: true
+      });
+      const {
+        data
+      } = await axios__WEBPACK_IMPORTED_MODULE_11___default.a.get(`http://localhost:3000/api/google/${encodeURI(query)}`);
+      this.setState({
+        keywords: [{
+          query: query,
+          count: data.totalResults * 2
+        }, ...keywords],
+        keyword: "",
+        loading: false
       });
     }
   }
 
   removeKeyword(target) {
-    console.log(target);
     const {
       keywords
     } = this.state;
@@ -2100,21 +2911,9 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       targetPosition,
       features
     } = this.state;
-    let words = {};
     let totalPrice = 0;
-    keywords.forEach(item => {
-      const length = item.split(" ").length;
-      const oldKeywords = words[length] ? words[length] : [];
-      words[length] = [item, ...oldKeywords];
-    });
-
-    if (_babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default()(words).length == 0) {
-      return 0;
-    }
-
-    totalPrice = _babel_runtime_corejs2_core_js_object_entries__WEBPACK_IMPORTED_MODULE_0___default()(words).reduce((total, current) => {
-      const [spate, words] = current;
-      return total + 30000000 / spate * words.length;
+    totalPrice = keywords.reduce((total, current) => {
+      return total + current.count / (current.count > 10000000 ? 10 : 1);
     }, 0);
     const newPercents = {
       1: [0.5, 0],
@@ -2124,10 +2923,10 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       5: [1.5, 1]
     };
     totalPrice = totalPrice * newPercents[currentPosition][targetPosition];
-    if (lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, 1)) totalPrice += 400000;
-    if (lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, 2)) totalPrice += 2000000;
+    if (lodash__WEBPACK_IMPORTED_MODULE_9___default.a.includes(features, 1)) totalPrice += 400000;
+    if (lodash__WEBPACK_IMPORTED_MODULE_9___default.a.includes(features, 2)) totalPrice += 2000000;
     totalPrice = totalPrice ? totalPrice : 0;
-    return [persianjs__WEBPACK_IMPORTED_MODULE_4___default()(Math.floor(totalPrice).toLocaleString()).englishNumber().toString(), totalPrice];
+    return [persianjs__WEBPACK_IMPORTED_MODULE_10___default()(Math.floor(totalPrice).toLocaleString()).englishNumber().toString(), totalPrice];
   }
 
   handleChange(e) {
@@ -2141,7 +2940,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       features
     } = this.state;
 
-    if (lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, feature)) {
+    if (lodash__WEBPACK_IMPORTED_MODULE_9___default.a.includes(features, feature)) {
       return this.setState({
         features: features.filter(item => {
           return item !== feature;
@@ -2154,58 +2953,77 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     });
   }
 
+  nativeToggleModal() {
+    const {
+      toggleModal: parentToggleModal
+    } = this.props;
+    parentToggleModal({
+      seo: _objectSpread({}, this.state, {
+        price: this.getTotalPrice()[1]
+      })
+    });
+  }
+
   render() {
     const {
       keywords,
       keyword,
       currentPosition,
       targetPosition,
-      features
+      features,
+      loading
     } = this.state;
     const totalPrice = this.getTotalPrice();
     return __jsx("div", {
       className: "seo",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 105
+        lineNumber: 102
       },
       __self: this
-    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(_Sky__WEBPACK_IMPORTED_MODULE_8__["default"], {
       title: "\u0633\u0626\u0648 \u0648 \u062A\u0648\u0644\u06CC\u062F \u0645\u062D\u062A\u0648\u0627",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 106
+        lineNumber: 103
       },
       __self: this
     }), __jsx("div", {
       className: "seo-container d-flex flex-column w-100 mt-5 rtl text-right",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 104
       },
       __self: this
     }, __jsx("div", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 105
       },
       __self: this
     }, __jsx("div", {
       className: "w-50 mx-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 106
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "keyword",
       __source: {
         fileName: _jsxFileName,
+        lineNumber: 107
+      },
+      __self: this
+    }, "\u06A9\u0644\u0645\u0647 \u06A9\u0644\u06CC\u062F\u06CC \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F \u0648 enter \u0628\u0632\u0646\u06CC\u062F"), __jsx("div", {
+      className: "d-flex flex-column align-items-center",
+      __source: {
+        fileName: _jsxFileName,
         lineNumber: 110
       },
       __self: this
-    }, "\u06A9\u0644\u0645\u0647 \u06A9\u0644\u06CC\u062F\u06CC \u0645\u0648\u0631\u062F \u0646\u0638\u0631 \u062E\u0648\u062F \u0631\u0627 \u0648\u0627\u0631\u062F \u06A9\u0646\u06CC\u062F \u0648 enter \u0628\u0632\u0646\u06CC\u062F"), __jsx("input", {
+    }, __jsx("input", {
       type: "text",
       className: "form-control",
       id: "keyword",
@@ -2216,14 +3034,23 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       autoComplete: "false",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 111
       },
       __self: this
-    }), __jsx("ul", {
+    }), __jsx("span", {
+      className: `spinner-border spinner-border-sm my-1 ${loading ? `active` : `deactive`}`,
+      role: "status",
+      "aria-hidden": "true",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 121
+      },
+      __self: this
+    })), __jsx("ul", {
       className: "keywoards",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123
+        lineNumber: 129
       },
       __self: this
     }, keywords.map((item, index) => {
@@ -2232,43 +3059,57 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         className: "my-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 132
         },
         __self: this
       }, __jsx("span", {
         className: "p-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 133
         },
         __self: this
       }, __jsx("i", {
-        className: "far fa-times-circle ml-1",
+        className: "far fa-times-circle ml-1 remove",
         onClick: () => this.removeKeyword(item),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 134
         },
         __self: this
-      }), item));
+      }), item.query, __jsx("span", {
+        className: "text-muted",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        },
+        __self: this
+      }, " ", __jsx("i", {
+        className: "fas fa-sort-down point",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 141
+        },
+        __self: this
+      }), " ", persianjs__WEBPACK_IMPORTED_MODULE_10___default()((item.count / (item.count > 10000000 ? 10 : 1)).toLocaleString()).englishNumber().toString())));
     }))), __jsx("div", {
       className: "bg-white w-50 mx-2 d-flex flex-column justify-content-between",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139
+        lineNumber: 156
       },
       __self: this
     }, __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140
+        lineNumber: 157
       },
       __self: this
     }, __jsx("label", {
       htmlFor: "current-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141
+        lineNumber: 158
       },
       __self: this
     }, "\u0633\u0627\u06CC\u062A\u062A \u0627\u0644\u0627\u0646 \u0635\u0641\u062D\u0647 \u0686\u0646\u062F\u0645\u0647 \u061F"), __jsx("ul", {
@@ -2276,7 +3117,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       id: "current-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144
+        lineNumber: 161
       },
       __self: this
     }, __jsx("li", {
@@ -2286,7 +3127,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145
+        lineNumber: 162
       },
       __self: this
     }, "\u0627\u0648\u0644"), __jsx("li", {
@@ -2296,7 +3137,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155
+        lineNumber: 172
       },
       __self: this
     }, "\u062F\u0648\u0645"), __jsx("li", {
@@ -2306,7 +3147,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165
+        lineNumber: 182
       },
       __self: this
     }, "\u0633\u0648\u0645"), __jsx("li", {
@@ -2316,7 +3157,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 175
+        lineNumber: 192
       },
       __self: this
     }, "\u0686\u0647\u0627\u0631\u0645"), __jsx("li", {
@@ -2326,14 +3167,14 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
+        lineNumber: 202
       },
       __self: this
     }, "\u067E\u0646\u062C\u0645 \u06CC\u0627 \u0628\u06CC\u0634\u062A\u0631")), __jsx("label", {
       htmlFor: "target-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197
+        lineNumber: 214
       },
       __self: this
     }, "\u0645\u06CC\u062E\u0648\u0627\u06CC \u06A9\u062C\u0627\u06CC \u0635\u0641\u062D\u0647 \u0627\u0648\u0644 \u0628\u0627\u0634\u06CC \u061F"), __jsx("ul", {
@@ -2341,7 +3182,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       id: "target-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 200
+        lineNumber: 217
       },
       __self: this
     }, __jsx("li", {
@@ -2351,7 +3192,7 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 204
+        lineNumber: 221
       },
       __self: this
     }, "\u0633\u0647 \u062A\u0627\u06CC \u0627\u0648\u0644"), __jsx("li", {
@@ -2361,14 +3202,14 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       }),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 214
+        lineNumber: 231
       },
       __self: this
     }, "\u0645\u0647\u0645 \u0646\u06CC\u0633\u062A")), __jsx("label", {
       htmlFor: "target-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 226
+        lineNumber: 243
       },
       __self: this
     }, "\u0686\u0647 \u0627\u0645\u06A9\u0627\u0646\u0627\u062A \u062F\u06CC\u06AF\u0647 \u0627\u06CC \u0644\u0627\u0632\u0645 \u062F\u0627\u0631\u06CC\u062F \u061F"), __jsx("ul", {
@@ -2376,363 +3217,371 @@ class Seo extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       id: "target-position",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 229
+        lineNumber: 246
       },
       __self: this
     }, __jsx("li", {
-      className: `mx-1 p-2 border rounded w-50 ${lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, 1) ? "bg-primary text-white" : "bg-light"}`,
+      className: `mx-1 p-2 border rounded w-50 ${lodash__WEBPACK_IMPORTED_MODULE_9___default.a.includes(features, 1) ? "bg-primary text-white" : "bg-light"}`,
       onClick: () => this.selectFeatures(1),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 233
+        lineNumber: 250
       },
       __self: this
     }, "\u06AF\u0648\u06AF\u0644 \u0645\u067E"), __jsx("li", {
-      className: `mx-1 p-2 border rounded w-50 ${lodash__WEBPACK_IMPORTED_MODULE_3___default.a.includes(features, 2) ? "bg-primary text-white" : "bg-light"}`,
+      className: `mx-1 p-2 border rounded w-50 ${lodash__WEBPACK_IMPORTED_MODULE_9___default.a.includes(features, 2) ? "bg-primary text-white" : "bg-light"}`,
       onClick: () => this.selectFeatures(2),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 243
+        lineNumber: 260
       },
       __self: this
     }, "\u062D\u0627\u0644 \u062E\u0648\u0628 \u06A9\u0646 \u0633\u0627\u06CC\u062A"))), __jsx("div", {
       className: "d-flex justify-content-between",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 255
+        lineNumber: 272
       },
       __self: this
     }, __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 256
+        lineNumber: 273
       },
       __self: this
     }, "\u0642\u06CC\u0645\u062A \u062A\u062E\u0645\u06CC\u0646\u06CC"), __jsx("span", {
       className: "text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 257
+        lineNumber: 274
       },
       __self: this
     }, totalPrice[1] == 0 ? __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 259
+        lineNumber: 276
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-laugh-squint",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 260
+        lineNumber: 277
       },
       __self: this
     }), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 261
+        lineNumber: 278
       },
       __self: this
     }, "\u062A\u0627 \u0627\u06CC\u0646\u062C\u0627\u0634 \u06A9\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646\u0647")) : __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 264
+        lineNumber: 281
       },
       __self: this
     }, __jsx("span", {
       className: "row-price ml-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 265
+        lineNumber: 282
       },
       __self: this
     }, totalPrice[0]), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 266
+        lineNumber: 283
       },
       __self: this
     }, "\u062A\u0648\u0645\u0627\u0646")))))), __jsx("div", {
       className: "d-flex flex-column discounts",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 273
+        lineNumber: 290
       },
       __self: this
     }, __jsx("span", {
       className: "text-success mr-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 274
+        lineNumber: 291
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-gift",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 275
+        lineNumber: 292
       },
       __self: this
     }), "\u0647\u062F\u06CC\u0647 \u0647\u0627"), __jsx("ul", {
       className: "d-flex justify-content-between unstyled p-0  mx-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 278
+        lineNumber: 295
       },
       __self: this
     }, __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 279
+        lineNumber: 296
       },
       __self: this
     }, __jsx("span", {
       className: "discount-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 280
+        lineNumber: 297
       },
       __self: this
     }, "\u0628\u0627 \u06F1\u06F0 \u0645\u06CC\u0644\u06CC\u0648\u0646 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F"), __jsx("b", {
       className: "bg-light p-1 rounded discount-title border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 281
+        lineNumber: 298
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 282
+        lineNumber: 299
       },
       __self: this
     }), "\u06F4\u06F0\u06F0 \u0644\u06CC\u0631 \u062A\u0628\u0644\u06CC\u063A \u062F\u0631 \u06AF\u0648\u06AF\u0644"), " ", __jsx("span", {
       className: "discount-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 285
+        lineNumber: 302
       },
       __self: this
     }, "\u0627\u0632 \u0645\u0627 \u0647\u062F\u06CC\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F")), __jsx("li", {
       className: "discount-status",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 287
+        lineNumber: 304
       },
       __self: this
     }, this.getTotalPrice()[1] >= 10000000 ? __jsx("span", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 289
+        lineNumber: 306
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-grin-hearts ml-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 290
+        lineNumber: 307
       },
       __self: this
     }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 294
+        lineNumber: 311
       },
       __self: this
     }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))), __jsx("ul", {
       className: "d-flex justify-content-between unstyled p-0  mx-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 300
+        lineNumber: 317
       },
       __self: this
     }, __jsx("li", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 301
+        lineNumber: 318
       },
       __self: this
     }, __jsx("span", {
       className: "discount-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 302
+        lineNumber: 319
       },
       __self: this
-    }, "\u0628\u0627 \u06F1\u06F5 \u062A\u0648\u0645\u0646 \u062E\u0631\u06CC\u062F \u0627\u0632 \u0645\u0627 \u0645\u0648\u0627\u0631\u062F \u0631\u0648 \u0628\u0647 \u0631\u0648 \u0631\u0627 \u0628\u0647 \u0635\u0648\u0631\u062A \u0633\u0627\u0644\u0627\u0646\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
+    }, "\u0628\u0627 \u06F1\u06F5 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F \u0627\u0632 \u0645\u0627 \u0645\u0648\u0627\u0631\u062F \u0631\u0648 \u0628\u0647 \u0631\u0648 \u0631\u0627 \u0628\u0647 \u0635\u0648\u0631\u062A \u0633\u0627\u0644\u0627\u0646\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
       className: "d-flex p-0 items mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 306
+        lineNumber: 323
       },
       __self: this
     }, __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 307
+        lineNumber: 324
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 308
+        lineNumber: 325
       },
       __self: this
     }), "SSL"), __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 311
+        lineNumber: 328
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 312
+        lineNumber: 329
       },
       __self: this
     }), "\u0633\u0631\u0648\u0631"), __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 315
+        lineNumber: 332
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 316
+        lineNumber: 333
       },
       __self: this
     }), "\u062F\u0627\u0645\u0646\u0647"))), __jsx("li", {
       className: "discount-status",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 321
+        lineNumber: 338
       },
       __self: this
     }, this.getTotalPrice()[1] >= 15000000 ? __jsx("span", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 323
+        lineNumber: 340
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-grin-hearts ml-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 324
+        lineNumber: 341
       },
       __self: this
     }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 328
+        lineNumber: 345
       },
       __self: this
     }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))), __jsx("ul", {
       className: "d-flex justify-content-between unstyled p-0 mx-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 334
+        lineNumber: 351
       },
       __self: this
     }, __jsx("li", {
       className: "d-flex",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 335
+        lineNumber: 352
       },
       __self: this
     }, __jsx("span", {
       className: "discount-title",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 336
+        lineNumber: 353
       },
       __self: this
     }, "\u0628\u0627 \u06F3\u06F0 \u062A\u0648\u0645\u0627\u0646 \u062E\u0631\u06CC\u062F \u066C \u06CC\u06A9 \u0645\u0648\u0631\u062F \u0631\u0627 \u0628\u0647 \u0627\u0646\u062A\u062E\u0627\u0628 \u062E\u0648\u062F \u0647\u062F\u06CC\u0647 \u0628\u06AF\u06CC\u0631\u06CC\u062F :"), __jsx("ul", {
       className: "d-flex p-0 items mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 339
+        lineNumber: 356
       },
       __self: this
     }, __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 340
+        lineNumber: 357
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 341
+        lineNumber: 358
       },
       __self: this
     }), "\u0637\u0631\u0627\u062D\u06CC \u0648\u0628 \u0633\u0627\u06CC\u062A"), __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 344
+        lineNumber: 361
       },
       __self: this
     }, " \u06CC\u0627 "), __jsx("li", {
       className: "bg-light p-1 rounded border mx-1 text-primary",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 345
+        lineNumber: 362
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-check mx-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 346
+        lineNumber: 363
       },
       __self: this
     }), "\u0637\u0631\u0627\u062D\u06CC \u0627\u067E\u0644\u06CC\u06A9\u06CC\u0634\u0646"))), __jsx("li", {
       className: "discount-status",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 351
+        lineNumber: 368
       },
       __self: this
     }, this.getTotalPrice()[1] >= 30000000 ? __jsx("span", {
       className: "text-success",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 353
+        lineNumber: 370
       },
       __self: this
     }, __jsx("i", {
       className: "fas fa-grin-hearts ml-1",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 354
+        lineNumber: 371
       },
       __self: this
     }), "\u0634\u0645\u0627 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u0647\u062F\u06CC\u0647 \u0647\u0627 \u0647\u0633\u062A\u06CC\u062F") : __jsx("span", {
       className: "text-muted",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 358
+        lineNumber: 375
       },
       __self: this
-    }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F"))))));
+    }, "\u0634\u0645\u0627 \u0647\u0646\u0648\u0632 \u0634\u0627\u0645\u0644 \u0627\u06CC\u0646 \u062A\u062E\u0641\u06CC\u0641 \u0646\u0634\u062F\u06CC\u062F")))), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_12__["Button"], {
+      color: "success",
+      onClick: this.nativeToggleModal,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 382
+      },
+      __self: this
+    }, "\u062F\u0631\u062E\u0648\u0627\u0633\u062A \u0645\u0634\u0627\u0648\u0631\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646")));
   }
 
 }
@@ -2752,41 +3601,95 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SkyBanner; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_particles_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-particles-js */ "react-particles-js");
+/* harmony import */ var react_particles_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_particles_js__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/imac/Desktop/APADANA/components/Sky.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+ // const countOfStars = 200;
 
-const countOfStars = 200;
-const countOfMeteors = 10;
+
 class SkyBanner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   render() {
     return __jsx("div", {
-      className: "sky",
+      className: "sky d-flex jsutifu-content-center align-items-center",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 8
       },
       __self: this
-    }, [...Array(countOfStars).keys()].map(item => {
-      return __jsx("div", {
-        className: `star star-${item}`,
-        key: item,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
+    }, __jsx(react_particles_js__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      className: "particles",
+      params: {
+        particles: {
+          number: {
+            value: 25
+          },
+          size: {
+            value: 3
+          },
+          line_linked: {
+            color: "#ddd"
+          },
+          color: {
+            value: "#ddd"
+          }
         },
-        __self: this
-      });
+        interactivity: {
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse"
+            }
+          }
+        }
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }), __jsx(react_particles_js__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      className: "particles-second",
+      params: {
+        particles: {
+          number: {
+            value: 15
+          },
+          size: {
+            value: 3
+          },
+          line_linked: {
+            color: "#f1f1f1"
+          },
+          color: {
+            value: "#FF6E1B"
+          }
+        },
+        interactivity: {
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse"
+            }
+          }
+        }
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
     }), __jsx("h1", {
       className: "text-white h-100 align-items-center d-flex justify-content-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 59
       },
       __self: this
     }, __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 60
       },
       __self: this
     }, this.props.title)));
@@ -2796,14 +3699,80 @@ class SkyBanner extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/entries.js":
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
 /*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/entries.js ***!
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
   \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! core-js/library/fn/object/entries */ "core-js/library/fn/object/entries");
+module.exports = __webpack_require__(/*! core-js/library/fn/json/stringify */ "core-js/library/fn/json/stringify");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/define-properties */ "core-js/library/fn/object/define-properties");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/define-property */ "core-js/library/fn/object/define-property");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "core-js/library/fn/object/get-own-property-descriptor");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptors.js ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptors */ "core-js/library/fn/object/get-own-property-descriptors");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "core-js/library/fn/object/get-own-property-symbols");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/keys.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
 
 /***/ }),
 
@@ -2815,6 +3784,36 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/entries */ "c
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/parse-int */ "core-js/library/fn/parse-int");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 /***/ }),
 
@@ -2839,8 +3838,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_Ads__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Ads */ "./components/Ads.jsx");
 /* harmony import */ var _components_Samples__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Samples */ "./components/Samples.jsx");
+/* harmony import */ var _components_Contact__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Contact */ "./components/Contact.jsx");
 var _jsxFileName = "/Users/imac/Desktop/APADANA/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -2854,9 +3855,19 @@ class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 1
+      tab: 1,
+      modal: false,
+      information: {}
     };
     this.changeTab = this.changeTab.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+
+  toggleModal(information) {
+    this.setState({
+      modal: !this.state.modal,
+      information
+    });
   }
 
   changeTab(tab) {
@@ -2875,34 +3886,37 @@ class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         return __jsx(_components_Apadana__WEBPACK_IMPORTED_MODULE_3__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 29
           },
           __self: this
         });
 
       case 2:
         return __jsx(_components_Seo__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          toggleModal: this.toggleModal,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 31
           },
           __self: this
         });
 
       case 3:
         return __jsx(_components_Develop__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          toggleModal: this.toggleModal,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 33
           },
           __self: this
         });
 
       case 4:
         return __jsx(_components_Ads__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          toggleModal: this.toggleModal,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30
+            lineNumber: 35
           },
           __self: this
         });
@@ -2911,7 +3925,7 @@ class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         return __jsx(_components_Samples__WEBPACK_IMPORTED_MODULE_8__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 37
           },
           __self: this
         });
@@ -2919,37 +3933,50 @@ class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
+    const {
+      modal,
+      information
+    } = this.state;
     return __jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 43
       },
       __self: this
     }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 44
       },
       __self: this
     }, __jsx("title", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 45
       },
       __self: this
-    }, "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627")), __jsx(_components_Earth__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }, "\u0648\u06CC\u0631\u0627 \u0648\u0628 \u0622\u067E\u0627\u062F\u0627\u0646\u0627")), __jsx(_components_Contact__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      modal: modal,
+      toggleModal: this.toggleModal,
+      information: information,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }), __jsx(_components_Earth__WEBPACK_IMPORTED_MODULE_1__["default"], {
       changeTab: this.changeTab,
       tab: this.state.tab,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 52
       },
       __self: this
     }), __jsx("div", {
       className: "content",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 53
       },
       __self: this
     }, this.getContent()));
@@ -3381,14 +4408,91 @@ module.exports = __webpack_require__(/*! /Users/imac/Desktop/APADANA/pages/index
 
 /***/ }),
 
-/***/ "core-js/library/fn/object/entries":
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+
+/***/ "core-js/library/fn/json/stringify":
 /*!****************************************************!*\
-  !*** external "core-js/library/fn/object/entries" ***!
+  !*** external "core-js/library/fn/json/stringify" ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("core-js/library/fn/object/entries");
+module.exports = require("core-js/library/fn/json/stringify");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/define-properties":
+/*!**************************************************************!*\
+  !*** external "core-js/library/fn/object/define-properties" ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/define-properties");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/define-property":
+/*!************************************************************!*\
+  !*** external "core-js/library/fn/object/define-property" ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/define-property");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/get-own-property-descriptor":
+/*!************************************************************************!*\
+  !*** external "core-js/library/fn/object/get-own-property-descriptor" ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/get-own-property-descriptor");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/get-own-property-descriptors":
+/*!*************************************************************************!*\
+  !*** external "core-js/library/fn/object/get-own-property-descriptors" ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/get-own-property-descriptors");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/get-own-property-symbols":
+/*!*********************************************************************!*\
+  !*** external "core-js/library/fn/object/get-own-property-symbols" ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/get-own-property-symbols");
+
+/***/ }),
+
+/***/ "core-js/library/fn/object/keys":
+/*!*************************************************!*\
+  !*** external "core-js/library/fn/object/keys" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/keys");
 
 /***/ }),
 
@@ -3444,6 +4548,28 @@ module.exports = require("persianjs");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-particles-js":
+/*!*************************************!*\
+  !*** external "react-particles-js" ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-particles-js");
+
+/***/ }),
+
+/***/ "reactstrap":
+/*!*****************************!*\
+  !*** external "reactstrap" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("reactstrap");
 
 /***/ }),
 

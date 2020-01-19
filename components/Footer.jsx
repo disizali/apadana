@@ -4,7 +4,7 @@ export class Footer extends Component {
   render() {
     return (
       <footer>
-        <img src="/images/footer.jpeg" />
+        <img src="/images/footer2.jpeg" />
         <div className="text-dark text-right rtl mr-3">
           <p>
             کلیه حقوق مادی و معنوی متعلق به شرکت ویرا وب آپادانا می باشد

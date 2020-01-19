@@ -61,15 +61,30 @@ export default class Apadana extends Component {
             </ul>
             <h5 className="my-3">نماد ها</h5>
             <ul className="d-flex">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
+              <li className="rounded bg-white shadow mx-1 d-flex flex-column border">
+                <img src="/images/enamad.png" alt="enamad" width="50" />
+              </li>
+              <li className="rounded bg-white shadow mx-1 d-flex flex-column border">
+                <img src="/images/samandehi.png" alt="samandehi" width="50" />
+              </li>
+              <li className="rounded bg-white shadow mx-1 d-flex flex-column border">
+                <img src="/images/zarinpal.png" alt="zarinpal" width="50" />
+              </li>
+              <li>
+              <div id="iwmf-certificate"></div>
+              </li>
             </ul>
           </div>
           <div className="w-50">
-            <div class="mapouter rounded">
-              <div class="gmap_canvas rounded">
-                <iframe
+            <div className="mapouter rounded">
+              <div className="gmap_canvas rounded">
+                <img
+                  src="/images/map.png"
+                  width="480"
+                  height="460"
+                  className="rounded"
+                />
+                {/* <iframe
                   width="100%"
                   height="500"
                   className="rounded"
@@ -77,7 +92,7 @@ export default class Apadana extends Component {
                   src="https://maps.google.com/maps?q=%D8%A8%D8%B1%D8%AC%20%D8%A7%D9%84%D9%88%D9%86%D8%AF&t=&z=13&ie=UTF8&iwloc=&output=embed"
                   frameBorder="0"
                   scrolling="no"
-                ></iframe>
+                ></iframe> */}
               </div>
               <style jsx>{`
                 .mapouter {

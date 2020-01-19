@@ -7,6 +7,7 @@ body {
   // overflow-y: scroll;
   // overflow-x: hidden;
   overflow: hidden;
+  // background: rgb(42, 42, 42);
 }
 a {
   color: #0078ff;
@@ -72,7 +73,7 @@ $samplesColor: rgba(228, 0, 124, 1);
     right: 30px;
     height: 40px;
     transition: width $transitionDuration ($transitionDuration / 1.5);
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 20px 5px 5px 20px;
   }
   > div {
     position: absolute;
@@ -90,6 +91,9 @@ $samplesColor: rgba(228, 0, 124, 1);
       width: 100%;
     }
   }
+  > div {
+    z-index: 1;
+  }
   .dot-1 {
     right: 12.2%;
     top: 20%;
@@ -100,10 +104,6 @@ $samplesColor: rgba(228, 0, 124, 1);
         rgba(228, 0, 124, 1) 88.7%
       );
     }
-
-    // &:hover > i {
-    //   background-color: $mainColor;
-    // }
   }
   .dot-2 {
     right: 17.3%;
@@ -111,9 +111,6 @@ $samplesColor: rgba(228, 0, 124, 1);
     .background {
       background-color: gold;
     }
-    // &:hover > i {
-    //   background-color: gold;
-    // }
   }
   .dot-3 {
     right: 18.5%;
@@ -125,9 +122,6 @@ $samplesColor: rgba(228, 0, 124, 1);
         rgba(251, 112, 71, 1) 124.3%
       );
     }
-    // &:hover > i {
-    //   background-color: $samplesColor;
-    // }
   }
   .dot-4 {
     right: 16.5%;
@@ -135,11 +129,9 @@ $samplesColor: rgba(228, 0, 124, 1);
     .background {
       background-image: linear-gradient(117.8deg, #0f9d58 22.2%, #4285f4 88.7%);
     }
-    // &:hover > i {
-    //   background-color: $samplesColor;
-    // }
   }
   .dot-5 {
+    z-index: 1;
     right: 11%;
     top: 78%;
     .background {
@@ -149,8 +141,5 @@ $samplesColor: rgba(228, 0, 124, 1);
         rgba(228, 0, 124, 1) 88.7%
       );
     }
-    // &:hover > i {
-    //   background-color: $samplesColor;
-    // }
   }
 }

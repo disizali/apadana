@@ -3,6 +3,14 @@
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.198);
   width: 900px;
+  .spinner-border {
+    &.active {
+      opacity: 1;
+    }
+    &.deactive {
+      opacity: 0;
+    }
+  }
   .row-price {
     font-size: 1.2rem;
   }
@@ -14,16 +22,21 @@
     li {
       span {
         &:hover {
-          i {
+          i,
+          span {
             font-size: 1rem;
           }
         }
-        i {
+        .remove,
+        span {
           font-size: 0;
           transition-duration: 0.3s;
-          &:hover {
-            color: red;
-          }
+        }
+        .remove:hover {
+          color: red;
+        }
+        .point{
+          transform: rotate(90deg);
         }
         cursor: pointer;
         margin: 10px 0;
