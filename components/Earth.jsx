@@ -6,7 +6,7 @@ export default class Earth extends Component {
   render() {
     const { changeTab, tab } = this.props;
     return (
-      <div>
+      <div className="d-none d-md-block">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js" />
         <canvas id="earth"></canvas>
         <div className="dots">

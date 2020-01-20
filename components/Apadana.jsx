@@ -6,7 +6,7 @@ export default class Apadana extends Component {
     return (
       <div className="apadana">
         <Sky title="ویرا وب آپادانا" />
-        <div className="d-flex rtl mt-5">
+        <div className="d-flex rtl mt-5 flex-column flex-md-row">
           <div className="w-50 text-right">
             <h5 className="my-3">آنچه از ما باید بدانید</h5>
             <ul>

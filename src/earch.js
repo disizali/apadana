@@ -13,9 +13,7 @@ var AMOUNT = 200,
   color = "#C0C0C0",
   fogC = "#A9A9A9",
   T_earth = "images/earth.png";
-
 var camera, scene, renderer;
-
 var positions = [],
   particles,
   particle,

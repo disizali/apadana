@@ -42,7 +42,15 @@ export default class index extends Component {
     return (
       <Layout>
         <Head>
-          <title>ویرا وب آپادانا</title>
+          <title>برنامه نویسی و طراحی ویرا وب آپادانا</title>
+          <meta
+            name="description"
+            content="تیم ویرا وب آپادانا با تیم جوان و خلاق ایده های شما را به واقعیت تبدیل خواهد کرد | خدمات ما شامل طراحی سایت ٬برنامه نویسی اختصاصی ٬ ساخت اپلیکیشن ٬ سئو و پشتیبانی شبکه های اجتماعی و تبلیغات در گوگل می باشد"
+          />
+          <meta
+            name="keywords"
+            content="bootstrap,node,node.js,react,vue,angular,front-end,back-end,seo,php,wordpress,ads,google ads,application ,mobile application ,mobile app,HTML,CSS,XML,JavaScript,طراحی,طراحی سایت,برنامه نویسی,سئو,شبکه اجتماعی,برنامه نویسی سایت,ساخت سایت,تبلیغات در گوگل,گوگل ادوردز,تیزر,قالب اختصاصیوقالب آماده,سایت وردپرسی"
+          ></meta>
         </Head>
         <Contact
           modal={modal}

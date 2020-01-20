@@ -34,3 +34,10 @@ nav {
     }
   }
 }
+
+@media (max-width : 500px){
+  nav {
+      background: white;
+      z-index: 2;
+  }
+}

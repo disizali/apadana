@@ -1,7 +1,8 @@
 $countOfStars: 200;
 .sky {
   height: 150px;
-  width: 900px;
+  width: 100%;
+
   border-radius: 5px 5px 0 0;
   background-color: $skyColor;
   position: relative;
@@ -23,25 +24,10 @@ $countOfStars: 200;
     transform: translateX(-50%);
   }
 
-  // .star {
-  //   width: 2px;
-  //   height: 2px;
-  //   background: white;
-  //   opacity: 0.2;
-  //   position: absolute;
-  //   animation-duration: 50s;
-  //   animation-iteration-count: infinite;
-  //   animation-direction: alternate;
-  // }
 }
 
-// @for $i from 0 through $countOfStars {
-//   @keyframes starAnimation-#{$i} {
-//     from {
-//       transform: translate(0, 0);
-//     }
-//     to {
-//       transform: translate(((random(50)) + px), ((random(50)) + px));
-//     }
-//   }
-// }
+@media (max-width : 500px){
+  .sky {
+    display: none;
+  }
+}
