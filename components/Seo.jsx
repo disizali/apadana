@@ -31,8 +31,9 @@ export class Seo extends Component {
       const { data } = await axios.get(
         `http://localhost:3000/api/google/${encodeURI(query)}`
       );
+      const count = data.totalResults < 300000 ? 300000 : data.totalResults * 2;
       this.setState({
-        keywords: [{ query: query, count: data.totalResults * 2 }, ...keywords],
+        keywords: [{ query: query, count }, ...keywords],
         keyword: "",
         loading: false
       });
@@ -85,7 +86,9 @@ export class Seo extends Component {
 
   nativeToggleModal() {
     const { toggleModal: parentToggleModal } = this.props;
-    parentToggleModal({ seo: { ...this.state, price: this.getTotalPrice()[1] } });
+    parentToggleModal({
+      seo: { ...this.state, price: this.getTotalPrice()[1] }
+    });
   }
 
   render() {

@@ -5,16 +5,17 @@
 @import "samples";
 @import "develop";
 .content {
-    position: absolute;
-    right: 40%;
     top: 10%;
-    height: 80%;
     z-index: 1;
+    width: 60%;
 }
 
-
-@media (max-width : 500px){
+@media (max-width : 1024px){
     .content {
-        right: 0;
+        width: 90%;
+        right: 10%;
+    }
+    .earth {
+        display: none;
     }
 }

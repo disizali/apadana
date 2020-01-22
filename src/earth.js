@@ -1,4 +1,5 @@
 //(function(){
+const THREE = require("./three.min.js");
 var AMOUNT = 200,
   d = 25,
   R = 200,

@@ -71,7 +71,7 @@ export default class Ads extends Component {
       keywords
     } = this.state;
     return (
-      <div className="ads">
+      <div className="ads w-100">
         <Sky title="تبلیغات در گوگل" />
         <div className="d-flex mt-5 rtl">
           <div className="google-results w-50 ml-5">

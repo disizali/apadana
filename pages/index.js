@@ -12,7 +12,7 @@ import Contact from "../components/Contact";
 export default class index extends Component {
   constructor(props) {
     super(props);
-    this.state = { tab: 1, modal: false, information: {} };
+    this.state = { tab: 3, modal: false, information: {} };
     this.changeTab = this.changeTab.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
   }
@@ -56,9 +56,12 @@ export default class index extends Component {
           modal={modal}
           toggleModal={this.toggleModal}
           information={information}
+          className="w-100"
         />
-        <Earth changeTab={this.changeTab} tab={this.state.tab} />
-        <div className="content">{this.getContent()}</div>
+        <div className="d-flex flex-column p-5">
+          <Earth changeTab={this.changeTab} tab={this.state.tab} />
+          <div className="content">{this.getContent()}</div>
+        </div>
       </Layout>
     );
   }

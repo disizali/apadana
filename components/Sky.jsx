@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-// const countOfStars = 200;
 import Particles from "react-particles-js";
 
 export default class SkyBanner extends Component {
   render() {
     return (
-      <div className="sky d-flex jsutifu-content-center align-items-center">
+      <div className="sky d-flex jsutifu-content-center align-items-center w-100">
         <Particles
           className="particles"
           params={{

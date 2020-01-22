@@ -7,7 +7,7 @@ export default class Apadana extends Component {
       <div className="apadana">
         <Sky title="ویرا وب آپادانا" />
         <div className="d-flex rtl mt-5 flex-column flex-md-row">
-          <div className="w-50 text-right">
+          <div className="text-right w-100">
             <h5 className="my-3">آنچه از ما باید بدانید</h5>
             <ul>
               <li className="my-3">
@@ -71,44 +71,19 @@ export default class Apadana extends Component {
                 <img src="/images/zarinpal.png" alt="zarinpal" width="50" />
               </li>
               <li>
-              <div id="iwmf-certificate"></div>
+                <div id="iwmf-certificate"></div>
               </li>
             </ul>
           </div>
-          <div className="w-50">
-            <div className="mapouter rounded">
-              <div className="gmap_canvas rounded">
-                <img
-                  src="/images/map.png"
-                  width="480"
-                  height="460"
-                  className="rounded"
-                />
-                {/* <iframe
-                  width="100%"
-                  height="500"
-                  className="rounded"
-                  id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=%D8%A8%D8%B1%D8%AC%20%D8%A7%D9%84%D9%88%D9%86%D8%AF&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                  frameBorder="0"
-                  scrolling="no"
-                ></iframe> */}
-              </div>
-              <style jsx>{`
-                .mapouter {
-                  position: relative;
-                  text-align: right;
-                  height: 500px;
-                  width: 600px;
-                }
-                .gmap_canvas {
-                  overflow: hidden;
-                  background: none !important;
-                  height: 500px;
-                  width: 600px;
-                }
-              `}</style>
-            </div>
+          <div className="w-100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.699251699539!2d51.34322471561307!3d35.73361433470401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfdcbf217f9b7%3A0xe3bc68f13b54059f!2z2YjbjNix2Kcg2YjYqCDYotm-2KfYr9in2YbYpw!5e0!3m2!1sen!2suk!4v1579678335188!5m2!1sen!2suk"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen=""
+            ></iframe>
           </div>
         </div>
       </div>

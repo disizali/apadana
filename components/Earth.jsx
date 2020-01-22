@@ -1,13 +1,33 @@
 import React, { Component } from "react";
 export default class Earth extends Component {
   componentDidMount() {
-    require("../src/earch.js");
+    require("../src/earth.js");
+    const earthHeight = document.getElementById("earth").height;
+
+    const dot1 = document.getElementsByClassName("dot-1")[0];
+    const dot2 = document.getElementsByClassName("dot-2")[0];
+    const dot3 = document.getElementsByClassName("dot-3")[0];
+    const dot4 = document.getElementsByClassName("dot-4")[0];
+    const dot5 = document.getElementsByClassName("dot-5")[0];
+    dot1.style.right = `${earthHeight / 4.6}px`;
+    dot2.style.right = `${earthHeight / 3.65}px`;
+    dot3.style.right = `${earthHeight / 3.45}px`;
+    dot4.style.right = `${earthHeight / 3.89}px`;
+    dot5.style.right = `${earthHeight / 5.9}px`;
+
+    window.addEventListener("resize", e => {
+      const earthHeight = document.getElementById("earth").height;
+      dot1.style.right = `${earthHeight / 4.6}px`;
+      dot2.style.right = `${earthHeight / 3.65}px`;
+      dot3.style.right = `${earthHeight / 3.45}px`;
+      dot4.style.right = `${earthHeight / 3.89}px`;
+      dot5.style.right = `${earthHeight / 5.9}px`;
+    });
   }
   render() {
     const { changeTab, tab } = this.props;
     return (
-      <div className="d-none d-md-block">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js" />
+      <div className="earth">
         <canvas id="earth"></canvas>
         <div className="dots">
           <div

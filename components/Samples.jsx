@@ -41,9 +41,9 @@ export default class Samples extends Component {
           return <div className={`star sample-star-${item}`} key={item} />;
         })}
         <ul className="rtl mx-2 samples-list">
-          {samples.map(item => {
+          {samples.map((item,index) => {
             return (
-              <li className="mb-4">
+              <li className="mb-4" key={index}>
                 <Row className="d-flex justify-content-between">
                   <Col
                     className="d-flex align-items-center justify-content-center flex-column text-right"
@@ -88,9 +88,9 @@ export default class Samples extends Component {
                   </Col>
                   <Col sm={3}>
                     <div className="d-flex flex-column">
-                      {item.technologies.map(technology => {
+                      {item.technologies.map((technology,index) => {
                         return (
-                          <div className="d-flex align-items-center justify-content-around">
+                          <div className="d-flex align-items-center justify-content-around" key={index}>
                             <img
                               src={`/images/technologies/${technology.image}.png`}
                               alt={technology.name}
