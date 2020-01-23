@@ -12,7 +12,7 @@ import Contact from "../components/Contact";
 export default class index extends Component {
   constructor(props) {
     super(props);
-    this.state = { tab: 3, modal: false, information: {} };
+    this.state = { tab: 2, modal: false, information: {} };
     this.changeTab = this.changeTab.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
   }

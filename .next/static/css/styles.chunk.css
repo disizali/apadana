@@ -19256,7 +19256,6 @@ readers do not read off random characters that represent icons */
     font-size: 1.2rem; }
   .seo ul.keywoards {
     list-style: none;
-    height: 300px;
     padding: 0;
     overflow-y: scroll; }
     .seo ul.keywoards li span {

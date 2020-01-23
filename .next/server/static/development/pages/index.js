@@ -3964,7 +3964,7 @@ class index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 3,
+      tab: 2,
       modal: false,
       information: {}
     };
