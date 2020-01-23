@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Sky from "./Sky";
 import persianJs from "persianjs";
 import _ from "lodash";
-import { Button } from "reactstrap";
+import { Button, Row, Col } from "reactstrap";
 
 const newPositions = { 1: 0, 2: 1, 3: 2, 4: 3, 5: 6, 6: 7, 7: 8, 8: 9 };
 export default class Ads extends Component {
@@ -74,7 +74,7 @@ export default class Ads extends Component {
       <div className="ads w-100">
         <Sky title="تبلیغات در گوگل" />
         <div className="d-flex mt-5 rtl">
-          <div className="google-results w-50 ml-5">
+           <div className="google-results w-50 ml-5">
             {[...Array(10).keys()].map((item, index) => {
               if (index == targetPosition) {
                 return (
@@ -102,7 +102,36 @@ export default class Ads extends Component {
                 </div>
               );
             })}
-          </div>
+          </div> 
+          {/* <Row className="flex-column w-50">
+            {[...Array(10).keys()].map((item, index) => {
+              if (index == targetPosition) {
+                return (
+                  <Col className="result target" key={index} sm={12}>
+                    <h3 className="text-primary bg-white text-right mb-4">
+                      {title}
+                    </h3>
+                    <p className="link bg-transparent text-success text-right my-4">
+                      {link}
+                      <span className="rounded ml-1 px-1 border border-success text-success">
+                        Ad
+                      </span>
+                    </p>
+                    <p className="description text-muted bg-transparent text-right mt-4">
+                      {description}
+                    </p>
+                  </Col>
+                );
+              }
+              return (
+                <Col className="result" key={index} sm={12}>
+                  <h3>--</h3>
+                  <p className="link" />
+                  <p className="description" />
+                </Col>
+              );
+            })}
+          </Row> */}
           <div className="google-target d-flex flex-column justify-content-around w-50 mr-5 rtl">
             <div>
               <label htmlFor="ad-title" className="w-100 text-right">

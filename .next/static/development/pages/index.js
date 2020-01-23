@@ -245,13 +245,13 @@ function (_Component) {
         className: "google-target d-flex flex-column justify-content-around w-50 mr-5 rtl",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 135
         },
         __self: this
       }, __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 136
         },
         __self: this
       }, __jsx("label", {
@@ -259,7 +259,7 @@ function (_Component) {
         className: "w-100 text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 137
         },
         __self: this
       }, "\u0633\u0631\u0628\u0631\u06AF \u0648\u0628 \u0633\u0627\u06CC\u062A"), __jsx("input", {
@@ -270,7 +270,7 @@ function (_Component) {
         onChange: this.changeHandler,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 140
         },
         __self: this
       }), __jsx("label", {
@@ -278,7 +278,7 @@ function (_Component) {
         className: "w-100 text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 147
         },
         __self: this
       }, "\u0644\u06CC\u0646\u06A9 \u0633\u0627\u06CC\u062A"), __jsx("input", {
@@ -289,7 +289,7 @@ function (_Component) {
         onChange: this.changeHandler,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 150
         },
         __self: this
       }), __jsx("label", {
@@ -297,7 +297,7 @@ function (_Component) {
         className: "w-100 text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 157
         },
         __self: this
       }, "\u062A\u0648\u0636\u06CC\u062D\u0627\u062A"), __jsx("textarea", {
@@ -307,7 +307,7 @@ function (_Component) {
         onChange: this.changeHandler,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 160
         },
         __self: this
       }), __jsx("label", {
@@ -315,14 +315,14 @@ function (_Component) {
         className: "w-100 text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 166
         },
         __self: this
       }, "\u06A9\u0644\u0645\u0627\u062A \u06A9\u0644\u06CC\u062F\u06CC"), __jsx("ul", {
         className: "d-flex p-0 keywords-list py-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 169
         },
         __self: this
       }, keywords.map(function (item, index) {
@@ -330,7 +330,7 @@ function (_Component) {
           className: "bg-success text-light rounded mx-1 border p-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143
+            lineNumber: 172
           },
           __self: this
         }, __jsx("i", {
@@ -340,7 +340,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 144
+            lineNumber: 173
           },
           __self: this
         }), item);
@@ -351,7 +351,7 @@ function (_Component) {
         onKeyDown: this.addKeyword,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 182
         },
         __self: this
       }), __jsx("label", {
@@ -359,7 +359,7 @@ function (_Component) {
         className: "w-100 text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 159
+          lineNumber: 188
         },
         __self: this
       }, "\u0645\u0648\u0642\u0639\u06CC\u062A"), __jsx("input", {
@@ -372,63 +372,63 @@ function (_Component) {
         onChange: this.changePositionHandler,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 191
         },
         __self: this
       }), __jsx("div", {
         className: "d-flex w-100",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171
+          lineNumber: 200
         },
         __self: this
       }, __jsx("hr", {
         className: "w-50 bg-muted mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 172
+          lineNumber: 201
         },
         __self: this
       }), __jsx("hr", {
         className: "w-50 bg-muted mx-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 173
+          lineNumber: 202
         },
         __self: this
       })), __jsx("div", {
         className: "d-flex w-100 text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175
+          lineNumber: 204
         },
         __self: this
       }, __jsx("span", {
         className: "text-muted w-50",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 205
         },
         __self: this
       }, "\u0686\u0647\u0627\u0631 \u062A\u0627\u06CC \u0628\u0627\u0644\u0627"), __jsx("span", {
         className: "text-muted w-50",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 206
         },
         __self: this
       }, "\u0686\u0647\u0627\u0631 \u062A\u0627\u06CC \u067E\u0627\u06CC\u06CC\u0646"))), __jsx("div", {
         className: "d-flex justify-content-between align-items-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180
+          lineNumber: 209
         },
         __self: this
       }, __jsx("span", {
         className: "text-muted",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 210
         },
         __self: this
       }, "\u062F\u0631\u062E\u0648\u0627\u0633\u062A \u0645\u0634\u0627\u0648\u0631\u0647 \u0631\u0627\u06CC\u06AF\u0627\u0646"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_12__["Button"], {
@@ -436,7 +436,7 @@ function (_Component) {
         onClick: this.nativeToggleModal,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 211
         },
         __self: this
       }, "\u062F\u0631\u062E\u0648\u0627\u0633\u062A")))));

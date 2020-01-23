@@ -19339,20 +19339,20 @@ readers do not read off random characters that represent icons */
   direction: rtl; }
   .ads .google-results .result {
     width: 100%;
-    margin: 0.2rem 0; }
+    margin: 0.1vh 0; }
     .ads .google-results .result h3 {
       background: #4285f4;
       width: 50%;
-      height: 0.3rem; }
+      height: 0.5vh; }
     .ads .google-results .result p.link {
       background: #0f9d58;
       width: 20%;
-      height: 0.3rem;
-      margin: 0.2rem 0; }
+      height: 0.3vh;
+      margin: 0.2vh 0; }
     .ads .google-results .result p.description {
       background: #f2f2f2;
       width: 20%;
-      height: 0.7rem; }
+      height: 0.7vh; }
     .ads .google-results .result.target h3 {
       background: transparent;
       color: #4285f4;
@@ -19367,7 +19367,7 @@ readers do not read off random characters that represent icons */
       font-size: 0.9rem; }
 
 .sky {
-  height: 100px;
+  height: 10vh;
   border-radius: 5px 5px 0 0;
   background-color: #2a2a2a;
   position: relative; }
