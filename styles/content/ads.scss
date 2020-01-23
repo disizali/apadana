@@ -43,22 +43,22 @@
     direction: rtl;
     .result {
       width: 100%;
-      margin: 7px 0;
+      margin: 0.2rem 0;
       h3 {
         background: #4285f4;
         width: 50%;
-        height: 7px;
+        height: 0.3rem;
       }
       p.link {
         background: #0f9d58;
         width: 20%;
-        height: 7px;
-        margin: 3px 0;
+        height: 0.3rem;
+        margin: 0.2rem 0;
       }
       p.description {
         background: #f2f2f2;
         width: 20%;
-        height: 20px;
+        height: 0.7rem;
       }
       &.target {
         h3 {

@@ -19257,6 +19257,7 @@ readers do not read off random characters that represent icons */
   .seo ul.keywoards {
     list-style: none;
     padding: 0;
+    max-height: 300px;
     overflow-y: scroll; }
     .seo ul.keywoards li span {
       cursor: pointer;
@@ -19338,20 +19339,20 @@ readers do not read off random characters that represent icons */
   direction: rtl; }
   .ads .google-results .result {
     width: 100%;
-    margin: 7px 0; }
+    margin: 0.2rem 0; }
     .ads .google-results .result h3 {
       background: #4285f4;
       width: 50%;
-      height: 7px; }
+      height: 0.3rem; }
     .ads .google-results .result p.link {
       background: #0f9d58;
       width: 20%;
-      height: 7px;
-      margin: 3px 0; }
+      height: 0.3rem;
+      margin: 0.2rem 0; }
     .ads .google-results .result p.description {
       background: #f2f2f2;
       width: 20%;
-      height: 20px; }
+      height: 0.7rem; }
     .ads .google-results .result.target h3 {
       background: transparent;
       color: #4285f4;
@@ -19366,7 +19367,7 @@ readers do not read off random characters that represent icons */
       font-size: 0.9rem; }
 
 .sky {
-  height: 150px;
+  height: 100px;
   border-radius: 5px 5px 0 0;
   background-color: #2a2a2a;
   position: relative; }
