@@ -58,7 +58,7 @@ export default class index extends Component {
           information={information}
           className="w-100"
         />
-        <div className="d-flex flex-column p-5">
+        <div className="d-flex flex-column px-5 py-1">
           <Earth changeTab={this.changeTab} tab={this.state.tab} />
           <div className="content">{this.getContent()}</div>
         </div>
