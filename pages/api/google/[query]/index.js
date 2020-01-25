@@ -5,7 +5,7 @@ const { Key } = db.models;
 const { Op } = Sequelize;
 import { HOST } from "../../../../src/config";
 export default async (req, res) => {
-  if (req.headers.host == HOST) {
+  if (HOST.endsWith(req.headers.host)) {
     const { query } = req.query;
     const activeKey = await Key.findOne({
       where: { active: 1, used: { [Op.lt]: 100 } }
