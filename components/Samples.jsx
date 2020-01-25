@@ -31,6 +31,25 @@ const samples = [
       { name: "Next.js", image: "nextjs" }
     ]
   }
+  ,  {
+    title: "دارالترجمه ونک",
+    link: "vanaktranslation.com",
+    image: "vanaktranslation",
+    technologies: [
+      { name: "Wordpress", image: "wordpress" },
+      { name: "Elementor", image: "elementor" },
+      { name: "Next.js", image: "nextjs" }
+    ]
+  } ,  {
+    title: "تهران راوی",
+    link: "tehranravy.com",
+    image: "tehranravy",
+    technologies: [
+      { name: "Wordpress", image: "wordpress" },
+      { name: "Elementor", image: "elementor" },
+      { name: "Next.js", image: "nextjs" }
+    ]
+  }
 ];
 export default class Samples extends Component {
   render() {

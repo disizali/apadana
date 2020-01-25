@@ -201,7 +201,7 @@ export default class Ads extends Component {
                 <hr className="w-50 bg-muted mx-1" />
                 <hr className="w-50 bg-muted mx-1" />
               </div>
-              <div className="d-flex w-100 text-center">
+              <div className="d-flex w-100 text-center mb-2">
                 <span className="text-muted w-50">چهار تای بالا</span>
                 <span className="text-muted w-50">چهار تای پایین</span>
               </div>

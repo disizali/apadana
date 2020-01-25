@@ -6,13 +6,29 @@
 @import "navbar";
 @import "footer";
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+  overflow: hidden;
+  font-size: 1vmax;
+}
+
 .rtl {
   direction: rtl;
 }
 
-.bg-orange{
+.bg-orange {
   background-color: #fb7047 !important;
 }
-.text-orange{
+.text-orange {
   color: #fb7047 !important;
+}
+
+@media (min-width: 1500px) {
+  html,
+  body {
+    font-size: 0.9vmax;
+  }
 }

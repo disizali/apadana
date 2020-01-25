@@ -94,254 +94,266 @@ export default class Develop extends Component {
     }, 0);
     return (+this.state[`${plan}Price`] + +totalSelectedPlan).toLocaleString();
   }
+  render2() {
+    return (
+      <Row className="plans2 bg-dark h-100 w-100">
+        <Col className="plan">
+          <img src="/images/plan-personal-2.png" alt="" />
+          <div className="square w-100 h-25 bg-dark"></div>
+        </Col>
+        <Col className="plan">
+          <img src="/images/plan-standard-2.png" alt="" />
+          <div className="square w-100 h-25 bg-dark"></div>
+        </Col>
+        <Col className="plan">
+          <img src="/images/plan-customize-2.png" alt="" />
+          <div className="square w-100 h-25 bg-dark"></div>
+        </Col>
+      </Row>
+    );
+  }
   render() {
     return (
       <div className="develop h-100">
-        <div className="plans d-flex flex-column h-100">
-          <Row className="d-flex flex-column">
-            <Col className="plan w-100 d-flex justify-content-start align-items-center p-4">
-              <img src="/images/plan-personal-2.png" alt="" />
-              <div className="circle"></div>
-              <div className="square"></div>
-              <div className="title">
-                <h2>پلن شخصی</h2>
-                <strong className="text-success">
-                  {persianJs(this.getTotalPrice("personal"))
-                    .englishNumber()
-                    .toString()}{" "}
-                  تومان
-                </strong>
-              </div>
-              <div className="d-flex flex-column body">
-                <p className="text-dark">
-                  <b>طراحی سایت برای افراد با هزینه کم و اقتصادی</b>
-                </p>
-                <ul className="features d-flex">
-                  {personalArray
-                    .filter(item => item.active)
-                    .map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className={`feature rounded d-flex align-items-center ml-2 active`}
-                        >
-                          <i className={`fal fa-${item.icon} mx-1`} />
-                          <span className="mx-1">{item.text}</span>
-                        </li>
-                      );
-                    })}
-                </ul>
-                <p className="text-dark mt-3 description">
-                  <span className="text-dark">امکانات سفارشی</span>
-                  <span className="text-muted mr-1">
-                    ( در صورت نیاز کلیک کنید )
-                  </span>
-                </p>
-                <ul className="features d-flex">
-                  {personalArray
-                    .filter(item => !item.active)
-                    .map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
-                            this.state.personal,
-                            { data: item.text }
-                          ) != -1 && "bg-success text-white selected"}`}
-                          onClick={() =>
-                            this.selectFeature(
-                              "personal",
-                              item.text,
-                              item.price
-                            )
-                          }
-                          key={index}
-                        >
-                          <i className={`fal fa-${item.icon} mx-1`} />
-                          <span className="mx-1">{item.text}</span>
-                        </li>
-                      );
-                    })}
-                </ul>
-              </div>
-              <button
-                className="order btn d-flex"
-                onClick={() => this.props.toggleModal({ develop: "personal" })}
-              >
-                <div className="d-flex">
-                  <i className="fal fa-rocket mx-1"></i>
-                  <div className="wind" />
-                </div>
-                <span>شروع کشوری شدن</span>
-              </button>
-              <button className="description btn d-flex">
-                <span className="mx-1">توضیحات</span>
-                <i className="fas fa-sort-down"></i>
-              </button>
-            </Col>
-            <Col className="plan w-100 d-flex justify-content-start align-items-center p-3">
-              <img src="/images/plan-standard-2.png" alt="" />
-              <div className="circle"></div>
-              <div className="square"></div>
-              <div className="title">
-                <h2>پلن شرکتی</h2>
-                <strong className="text-success">
-                  {persianJs(this.getTotalPrice("organization"))
-                    .englishNumber()
-                    .toString()}{" "}
-                  تومان
-                </strong>
-              </div>
-              <div className="d-flex flex-column body">
-                <p className="text-dark">
-                  <b>طراحی سایت برای شرکت ها و سازمان های کوچک</b>
-                </p>
-                <ul className="features d-flex flex-column">
-                  {_.chunk(
-                    organisationArray.filter(item => item.active),
-                    3
-                  ).map((item, index) => {
+        <Row className="plans flex-column">
+          <Col className="plan w-100 d-flex justify-content-start align-items-center p-3">
+            <img src="/images/plan-personal-2.png" alt="" />
+            <div className="circle"></div>
+            <div className="square"></div>
+            <div className="title">
+              <h2>پلن شخصی</h2>
+              <strong className="text-success">
+                {persianJs(this.getTotalPrice("personal"))
+                  .englishNumber()
+                  .toString()}{" "}
+                تومان
+              </strong>
+            </div>
+            <div className="d-flex flex-column body">
+              <p className="text-dark">
+                <b>طراحی سایت برای افراد با هزینه کم و اقتصادی</b>
+              </p>
+              <ul className="features d-flex">
+                {personalArray
+                  .filter(item => item.active)
+                  .map((item, index) => {
                     return (
-                      <ul className="d-flex pb-1" key={index}>
-                        {item.map((feature, index) => {
-                          return (
-                            <li
-                              key={index}
-                              className={`feature rounded d-flex align-items-center ml-2 active`}
-                            >
-                              <i className={`fal fa-${feature.icon} mx-1`} />
-                              <span className="mx-1">{feature.text}</span>
-                            </li>
-                          );
-                        })}
-                      </ul>
+                      <li
+                        key={index}
+                        className={`feature rounded d-flex align-items-center ml-2 active`}
+                      >
+                        <i className={`fal fa-${item.icon} mx-1`} />
+                        <span className="mx-1">{item.text}</span>
+                      </li>
                     );
                   })}
-                </ul>
-                <p className="text-dark mt-3 description">
-                  <span className="text-dark">امکانات سفارشی</span>
-                  <span className="text-muted mr-1">
-                    ( در صورت نیاز کلیک کنید )
-                  </span>
-                </p>
-                <ul className="features d-flex">
-                  {organisationArray
-                    .filter(item => !item.active)
-                    .map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
-                            this.state.organization,
-                            { data: item.text }
-                          ) != -1 && "bg-success text-white selected"}`}
-                          onClick={() =>
-                            this.selectFeature(
-                              "organization",
-                              item.text,
-                              item.price
-                            )
-                          }
-                        >
-                          <i className={`fal fa-${item.icon} mx-1`} />
-                          <span className="mx-1">{item.text}</span>
-                        </li>
-                      );
-                    })}
-                </ul>
-              </div>
-              <button
-                className="order btn d-flex"
-                onClick={() => this.props.toggleModal({ develop: "company" })}
-              >
-                <div className="d-flex">
-                  <i className="far fa-rocket mx-1"></i>
-                  <div className="wind" />
-                </div>
-                <span className="mx-1">شروع جهانی شدن</span>
-              </button>
-              <button className="description btn d-flex">
-                <span className="mx-1">توضیحات</span>
-                <i className="fas fa-sort-down"></i>
-              </button>
-            </Col>
-            <Col className="plan w-100 d-flex justify-content-start align-items-center p-3">
-              <img src="/images/plan-customize-2.png" alt="" />
-              <div className="circle"></div>
-              <div className="square"></div>
-              <div className="title">
-                <h2 className="gold">پلن اختصاصی</h2>
-                <strong className="text-success">تماس بگیرید </strong>
-              </div>
-              <div className="d-flex flex-column body">
-                <p className="text-dark">
-                  <b>طراحی سایت برای شرکت ها اشخاص با امکانات کاملا سفارشی</b>
-                </p>
-                <ul className="features d-flex flex-column">
-                  {_.chunk(
-                    customizeArray.filter(item => item.active),
-                    3
-                  ).map((item, index) => {
+              </ul>
+              <p className="text-dark mt-3 description">
+                <span className="text-dark">امکانات سفارشی</span>
+                <span className="text-muted mr-1">
+                  ( در صورت نیاز کلیک کنید )
+                </span>
+              </p>
+              <ul className="features d-flex">
+                {personalArray
+                  .filter(item => !item.active)
+                  .map((item, index) => {
                     return (
-                      <ul className="d-flex pb-1" key={index}>
-                        {item.map((feature, index) => {
-                          return (
-                            <li
-                              className={`feature rounded d-flex align-items-center ml-2 active`}
-                              key={index}
-                            >
-                              <i className={`fal fa-${feature.icon} mx-1`} />
-                              <span className="mx-1">{feature.text}</span>
-                            </li>
-                          );
-                        })}
-                      </ul>
+                      <li
+                        key={index}
+                        className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
+                          this.state.personal,
+                          { data: item.text }
+                        ) != -1 && "bg-success text-white selected"}`}
+                        onClick={() =>
+                          this.selectFeature("personal", item.text, item.price)
+                        }
+                        key={index}
+                      >
+                        <i className={`fal fa-${item.icon} mx-1`} />
+                        <span className="mx-1">{item.text}</span>
+                      </li>
                     );
                   })}
-                </ul>
-                <ul className="features d-flex">
-                  {customizeArray
-                    .filter(item => !item.active)
-                    .map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
-                            this.state.organization,
-                            { data: item.text }
-                          ) != -1 && "bg-success text-white selected"}`}
-                          onClick={() =>
-                            this.selectFeature(
-                              "organization",
-                              item.text,
-                              item.price
-                            )
-                          }
-                        >
-                          <i className={`fal fa-${item.icon} mx-1`} />
-                          <span className="mx-1">{item.text}</span>
-                        </li>
-                      );
-                    })}
-                </ul>
+              </ul>
+            </div>
+            <button
+              className="order btn d-flex"
+              onClick={() => this.props.toggleModal({ develop: "personal" })}
+            >
+              <div className="d-flex">
+                <i className="fal fa-rocket mx-1"></i>
+                <div className="wind" />
               </div>
-              <button
-                className="order btn d-flex"
-                onClick={() => this.props.toggleModal({ develop: "customize" })}
-              >
-                <div className="d-flex">
-                  <i className="far fa-space-shuttle mx-1"></i>
-                  <div className="wind" />
-                </div>
-                <span className="mx-1">شروع کهکشانی شدن</span>
-              </button>
-              <button className="description btn d-flex">
-                <span className="mx-1">توضیحات</span>
-                <i className="fas fa-sort-down"></i>
-              </button>
-            </Col>
-          </Row>
-        </div>
+              <span>شروع کشوری شدن</span>
+            </button>
+            <button className="description btn d-flex">
+              <span className="mx-1">توضیحات</span>
+              <i className="fas fa-sort-down"></i>
+            </button>
+          </Col>
+          <Col className="plan w-100 d-flex justify-content-start align-items-center p-3">
+            <img src="/images/plan-standard-2.png" alt="" />
+            <div className="circle"></div>
+            <div className="square"></div>
+            <div className="title">
+              <h2>پلن شرکتی</h2>
+              <strong className="text-success">
+                {persianJs(this.getTotalPrice("organization"))
+                  .englishNumber()
+                  .toString()}{" "}
+                تومان
+              </strong>
+            </div>
+            <div className="d-flex flex-column body">
+              <p className="text-dark">
+                <b>طراحی سایت برای شرکت ها و سازمان های کوچک</b>
+              </p>
+              <ul className="features d-flex flex-column">
+                {_.chunk(
+                  organisationArray.filter(item => item.active),
+                  3
+                ).map((item, index) => {
+                  return (
+                    <ul className="d-flex pb-1" key={index}>
+                      {item.map((feature, index) => {
+                        return (
+                          <li
+                            key={index}
+                            className={`feature rounded d-flex align-items-center ml-2 active`}
+                          >
+                            <i className={`fal fa-${feature.icon} mx-1`} />
+                            <span className="mx-1">{feature.text}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  );
+                })}
+              </ul>
+              <p className="text-dark mt-3 description">
+                <span className="text-dark">امکانات سفارشی</span>
+                <span className="text-muted mr-1">
+                  ( در صورت نیاز کلیک کنید )
+                </span>
+              </p>
+              <ul className="features d-flex">
+                {organisationArray
+                  .filter(item => !item.active)
+                  .map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
+                          this.state.organization,
+                          { data: item.text }
+                        ) != -1 && "bg-success text-white selected"}`}
+                        onClick={() =>
+                          this.selectFeature(
+                            "organization",
+                            item.text,
+                            item.price
+                          )
+                        }
+                      >
+                        <i className={`fal fa-${item.icon} mx-1`} />
+                        <span className="mx-1">{item.text}</span>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
+            <button
+              className="order btn d-flex"
+              onClick={() => this.props.toggleModal({ develop: "company" })}
+            >
+              <div className="d-flex">
+                <i className="far fa-rocket mx-1"></i>
+                <div className="wind" />
+              </div>
+              <span className="mx-1">شروع جهانی شدن</span>
+            </button>
+            <button className="description btn d-flex">
+              <span className="mx-1">توضیحات</span>
+              <i className="fas fa-sort-down"></i>
+            </button>
+          </Col>
+          <Col className="plan w-100 d-flex justify-content-start align-items-center p-3">
+            <img src="/images/plan-customize-2.png" alt="" />
+            <div className="circle"></div>
+            <div className="square"></div>
+            <div className="title">
+              <h2 className="gold">پلن اختصاصی</h2>
+              <strong className="text-success">تماس بگیرید </strong>
+            </div>
+            <div className="d-flex flex-column body">
+              <p className="text-dark">
+                <b>طراحی سایت برای شرکت ها اشخاص با امکانات کاملا سفارشی</b>
+              </p>
+              <ul className="features d-flex flex-column">
+                {_.chunk(
+                  customizeArray.filter(item => item.active),
+                  3
+                ).map((item, index) => {
+                  return (
+                    <ul className="d-flex pb-1" key={index}>
+                      {item.map((feature, index) => {
+                        return (
+                          <li
+                            className={`feature rounded d-flex align-items-center ml-2 active`}
+                            key={index}
+                          >
+                            <i className={`fal fa-${feature.icon} mx-1`} />
+                            <span className="mx-1">{feature.text}</span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  );
+                })}
+              </ul>
+              <ul className="features d-flex">
+                {customizeArray
+                  .filter(item => !item.active)
+                  .map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className={`feature rounded d-flex align-items-center ml-2 deactive ${_.findIndex(
+                          this.state.organization,
+                          { data: item.text }
+                        ) != -1 && "bg-success text-white selected"}`}
+                        onClick={() =>
+                          this.selectFeature(
+                            "organization",
+                            item.text,
+                            item.price
+                          )
+                        }
+                      >
+                        <i className={`fal fa-${item.icon} mx-1`} />
+                        <span className="mx-1">{item.text}</span>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
+            <button
+              className="order btn d-flex"
+              onClick={() => this.props.toggleModal({ develop: "customize" })}
+            >
+              <div className="d-flex">
+                <i className="far fa-space-shuttle mx-1"></i>
+                <div className="wind" />
+              </div>
+              <span className="mx-1">شروع کهکشانی شدن</span>
+            </button>
+            <button className="description btn d-flex">
+              <span className="mx-1">توضیحات</span>
+              <i className="fas fa-sort-down"></i>
+            </button>
+          </Col>
+        </Row>
       </div>
     );
   }
