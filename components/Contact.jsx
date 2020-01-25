@@ -18,7 +18,7 @@ export default class ModalExample extends React.Component {
     const { firstName, lastName, website, phoneNumber } = this.state;
     let { information } = this.props;
     information = JSON.stringify(information);
-    axios.post(`http://${HOST}}/api/contact`, {
+    axios.post(`${HOST}}/api/contact`, {
       firstName,
       lastName,
       website,

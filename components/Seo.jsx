@@ -31,7 +31,7 @@ export class Seo extends Component {
     if (e.key == "Enter" && query && !_.includes(keywords, query)) {
       this.setState({ loading: true });
       const { data } = await axios.get(
-        `http://${HOST}/api/google/${encodeURI(query)}`
+        `${HOST}/api/google/${encodeURI(query)}`
       );
       const count = data.totalResults < 300000 ? 300000 : data.totalResults * 2;
       this.setState({
