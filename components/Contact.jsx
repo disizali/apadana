@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import axios from "axios";
+import {HOST} from "../src/config";
 export default class ModalExample extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +18,7 @@ export default class ModalExample extends React.Component {
     const { firstName, lastName, website, phoneNumber } = this.state;
     let { information } = this.props;
     information = JSON.stringify(information);
-    axios.post("http://localhost:3000/api/contact", {
+    axios.post(`http://${HOST}}/api/contact`, {
       firstName,
       lastName,
       website,

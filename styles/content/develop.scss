@@ -6,8 +6,8 @@
     transform: translateX(50%) rotate(360deg);
   }
 }
-$windLeftAfterStart: 12px;
-$windLeftBeforeStart: 16px;
+$windLeftAfterStart: 14px;
+$windLeftBeforeStart: 18px;
 @keyframes wind-after {
   from {
     top: 25px;

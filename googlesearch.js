@@ -1,10 +1,10 @@
 const { google } = require("googleapis");
 const customsearch = google.customsearch("v1");
-q = "خرید";
+q = "فروش";
 customsearch.cse
   .list({
-    auth: "AIzaSyBHB2mAkaEAjKI7rv_Khl7hSPjx0KrXoro",
-    cx: "015248437002989725512:pujuc7nsiyc",
+    auth: "AIzaSyDtB_HTovLn6eCv6WhlH6Kr6J5VUn6BBmk",
+    cx: "006064223291298109214:vtdneqmhmos",
     q
   })
   .then(result => result.data)

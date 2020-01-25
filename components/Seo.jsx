@@ -4,6 +4,8 @@ import _ from "lodash";
 import persianJs from "persianjs";
 import axios from "axios";
 import { Button } from "reactstrap";
+import {HOST} from "../src/config";
+
 export class Seo extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +31,7 @@ export class Seo extends Component {
     if (e.key == "Enter" && query && !_.includes(keywords, query)) {
       this.setState({ loading: true });
       const { data } = await axios.get(
-        `http://localhost:3000/api/google/${encodeURI(query)}`
+        `http://${HOST}/api/google/${encodeURI(query)}`
       );
       const count = data.totalResults < 300000 ? 300000 : data.totalResults * 2;
       this.setState({
