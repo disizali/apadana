@@ -23,7 +23,9 @@ export default async (req, res) => {
       .then(result => {
         const { queries } = result;
         const page = (queries.request || [])[0] || {};
-        return res.json(page);
+        const totalResults =
+          page.totalResults != undefined ? page.totalResults : 0;
+        return res.send(totalResults);
       });
   } else {
     return res.status(400).send("permission error");

@@ -33,7 +33,7 @@ export class Seo extends Component {
       const { data } = await axios.get(
         `${HOST}/api/google/${encodeURI(query)}`
       );
-      const count = data.totalResults < 300000 ? 300000 : data.totalResults * 2;
+      const count = data < 300000 ? 300000 : data * 2;
       this.setState({
         keywords: [{ query: query, count }, ...keywords],
         keyword: "",
